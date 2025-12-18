@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Passero Tiles & Bathware</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assests/css/dev-style.css">
+</head>
+
+<body class="antialiased text-slate-800 bg-white">
+
+    <!-- start NAVBAR -->
+    <header id="main-nav" class="fixed inset-x-0 top-0 z-30 transition-all duration-300 bg-transparent">
+        <nav class="max-w-[1350px] mx-auto px-6 py-4 grid grid-cols-[1fr_auto_1fr] items-center gap-4">
+
+            <!-- left -->
+            <div class="flex items-center gap-3">
+                <button id="mobile-toggle" class="md:hidden text-white">
+                    <i class="fa fa-bars"></i>
+                </button>
+
+                <ul id="nav-left" class="hidden md:flex gap-4 items-center">
+                    <li><a href="#about" class="nav-link text-white font-semibold text-base">About Us</a></li>
+                    <li><a href="#collections" class="nav-link text-white font-semibold text-base">Collections</a></li>
+                    <li><a href="#why" class="nav-link text-white font-semibold text-base">Why Passero</a></li>
+                    <li><a href="#stores" class="nav-link text-white font-semibold text-base">Brand Stores</a></li>
+                </ul>
+            </div>
+
+            <div class="flex justify-center">
+                <a href="#" id="logo-wrapper" class="w-[189px] h-[64px]">
+                    <img src="./assests/img/logo/logo.svg" id="logo-img" data-light="./assests/img/logo/logo.svg"
+                        data-dark="./assests/img/logo/colo-logo.png"
+                        class="object-contain transition-all duration-300" />
+                </a>
+            </div>
+            <div class="flex justify-end items-center gap-3">
+                <div id="nav-right" class="hidden md:flex items-center gap-4">
+                    <a href="#downloads" class="nav-link text-white font-semibold text-base">Downloads</a>
+                    <a href="#news" class="nav-link text-white font-semibold text-base">News & Events</a>
+                    <a href="#contact"
+                        class="nav-link border border-white font-semibold text-base text-white px-4 py-2 rounded transition-all duration-300 ease-in-out hover:bg-white hover:text-[#0c141d] hover:scale-105 hover:shadow-md">
+                        Contact Us
+                    </a>
+                </div>
+                <a href="tel:+911234567890" class="md:hidden text-white"><i class="fa fa-phone"></i></a>
+            </div>
+        </nav>
+    </header>
+    <!-- end NAVBAR -->
+
+    <!--Start HERO SLIDER -->
+    <section class="relative h-screen overflow-hidden">
+        <div class="absolute inset-0 bg-[#00000052] pointer-events-none z-10"></div>
+        <div  class="relative h-screen overflow-hidden">
+            <div class="flex transition-transform duration-700 h-screen custom-slider">
+                <div class="w-full h-screen relative">
+                    <img src="./assests/img/home/hero-1.png" class="w-full h-full object-cover" />
+                </div>
+                <div class="w-full h-screen relative">
+                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1920&fit=crop"
+                        class="w-full h-full object-cover" />
+                </div>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center z-20 px-6">
+                <div class="max-w-2xl text-center text-white">
+                    <h1 class="text-4xl md:text-[68px] font-regular mb-6 leading-[100%] font-forum text-[#FFFFFF]">
+                       Where Design Meets Experience
+                    </h1>
+                    <p class="text-base md:text-lg text-white/90 mb-6 font-regular">
+                       Step into thoughtfully designed brand stores where premium collections, full-space mockups, and personalized assistance come together.
+                    </p>
+                    <div class="flex justify-center gap-4 flex-wrap">
+                        <a href="#stores"
+                            class="px-8 py-3 bg-white font-bold text-[#0c141d] text-sm rounded shadow transition-all duration-300 ease-in-out hover:outline hover:outline-2 hover:bg-transparent hover:outline-white hover:text-white hover:outline-offset-2 hover:scale-105 hover:shadow-lg">
+                            Partner With Us
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End HERO SLIDER -->
+
+    <!-- start The Passero Brand Store Experience section -->
+    <section class="bg-[#F8F3EC]">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-14 py-12 lg:py-20">
+            <div class="grid lg:grid-cols-3 gap-6">
+                <div class="lg:col-span-1">
+                    <h1 class="text-4xl sm:text-5xl lg:text-[56px] font-light mb-2 font-forum text-title">
+                        The Passero Brand Store Experience
+                    </h1>
+                    <p class="font-poppins font-normal text-[#0C141DE5] mb-4 max-w-md text-left text-sm lg:text-[18px] leading-relaxed">
+                        Passero Brand Stores are designed to offer a complete, transparent, and design-led tile selection experience. Unlike traditional dealership formats, our stores focus on inspiration, guidance, and real-life visualization — helping customers and designers make confident choices.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h2 class="text-xl sm:text-3xl lg:text-[32px] font-light mb-2 font-forum text-title ">Brand Store Experience</h2>
+                    <div class="border-b border-[#1F32473D]  mb-4"></div>
+                    <div class="space-y-4">
+                        <div class="flex gap-3">
+                            <div class="flex-shrink-0">
+                                <img src="./assests/img/icon/tabler-icon-circle-check.svg" alt="">
+                            </div>
+                            <p class="font-poppins text-[#000000] text-base font-normal lg:text-sm leading-relaxed max-w-xl">
+                                Passero Brand Stores feature curated product displays that allow customers to explore tiles in a relaxed, organized environment.
+                            </p>
+                        </div>
+                        <div class="flex gap-3">
+                            <div class="flex-shrink-0">
+                                <img src="./assests/img/icon/tabler-icon-circle-check.svg" alt="">
+                            </div>
+                            <p class="font-poppins text-[#000000] text-base font-normal lg:text-sm leading-relaxed max-w-xl">
+                                Customers receive full-space mockups and room settings that help visualize how tiles look in real-life contexts.
+                            </p>
+                        </div>
+                        <div class="flex gap-3">
+                            <div class="flex-shrink-0">
+                                <img src="./assests/img/icon/tabler-icon-circle-check.svg" alt="">
+                            </div>
+                            <p class="font-poppins text-[#000000] text-base font-normal lg:text-sm leading-relaxed max-w-xl">
+                                Expert in-store design guidance ensures informed decisions, mixing based on space, style and functional requirements.
+                            </p>
+                        </div>
+                        <div class="flex gap-3">
+                            <div class="flex-shrink-0">
+                                <img src="./assests/img/icon/tabler-icon-circle-check.svg" alt="">
+                            </div>
+                            <p class="font-poppins text-[#000000] text-base font-normal lg:text-sm leading-relaxed max-w-xl">
+                                Each store showcases the complete Passero product range, offering access to all collections under one roof.
+                            </p>
+                        </div>
+                        <div class="flex gap-3">
+                            <div class="flex-shrink-0">
+                                <img src="./assests/img/icon/tabler-icon-circle-check.svg" alt="">
+                            </div>
+                            <p class="font-poppins text-[#000000] text-base font-normal lg:text-sm leading-relaxed max-w-xl">
+                                Transparent pricing and clear product availability create a seamless and trustworthy buying experience.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h2 class="text-xl sm:text-3xl lg:text-[32px] font-light mb-2 font-forum text-title">Traditional Dealership Model</h2>
+                    <div class="border-b border-[#1F32473D]  mb-4"></div>
+                    <div class="space-y-4">
+                        <div class="flex gap-3">
+                            <div class="flex-shrink-0">
+                                <img src="./assests/img/icon/tabler-icon-circle-dashed-x.svg" alt="">
+                            </div>
+                            <p class="font-poppins text-[#000000] text-base font-normal lg:text-sm leading-relaxed max-w-xl">
+                                Traditional dealership formats often offer limited product visibility, restricting the ability to explore design options fully.
+                            </p>
+                        </div>
+                        <div class="flex gap-3">
+                            <div class="flex-shrink-0">
+                                <img src="./assests/img/icon/tabler-icon-circle-dashed-x.svg" alt="">
+                            </div>
+                            <p class="font-poppins text-[#000000] text-base font-normal lg:text-sm leading-relaxed max-w-xl">
+                                Tile selection is typically sample-based, making it difficult to visualize real-life applications.
+                            </p>
+                        </div>
+                        <div class="flex gap-3">
+                            <div class="flex-shrink-0">
+                                <img src="./assests/img/icon/tabler-icon-circle-dashed-x.svg" alt="">
+                            </div>
+                            <p class="font-poppins text-[#000000] text-base font-normal lg:text-sm leading-relaxed max-w-xl">
+                                Design advice is largely user-driven, with limited focus on design consultation or guidance.
+                            </p>
+                        </div>
+                        <div class="flex gap-3">
+                            <div class="flex-shrink-0">
+                                <img src="./assests/img/icon/tabler-icon-circle-dashed-x.svg" alt="">
+                            </div>
+                            <p class="font-poppins text-[#000000] text-base font-normal lg:text-sm leading-relaxed max-w-xl">
+                                Only a partial product range is usually available, resulting in inconsistent choices and experiences.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End The Passero Brand Store Experience section -->
+
+    <!--StartDiscover Our Exclusive Brand Stores Stores -->
+    <section class="bg-[#0F1924] py-16 px-14">
+        <div class="max-w-8xl mx-auto">
+            <div class="text-center mb-16">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-normal font-forum text-white mb-4">
+                    Discover Our Exclusive Brand Stores
+                </h1>
+                <p
+                    class="font-poppins text-[#FFFFFFC7] max-w-3xl mx-auto text-sm sm:text-base md:text-[18px] font-normal">
+                    Explore our curated brand stores designed to showcase complete tile experiences — from textures and
+                    finishes to full interior applications.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <div
+                    class="group bg-white rounded-md shadow-[0_4px_12px_#00000024] overflow-hidden transition-transform duration-500 ease-in-out hover:shadow-xl hover:-translate-y-2 hover:scale-105">
+                    <div class="relative m-4">
+                        <img src="./assests/img/home/OurExclusiveBrand.png" alt="Passero Store Front"
+                            class="w-full h-[300px] object-cover rounded-[4px]">
+                    </div>
+                    <div class="p-4 pt-0">
+                        <div class="flex items-start">
+                            <svg class="mr-2 mt-1 flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18.364 4.63606C20.0163 6.28819 20.9613 8.51817 20.9992 10.8545C21.0371 13.1908 20.1649 15.4502 18.567 17.1551L18.364 17.3651L14.121 21.6071C13.5826 22.1451 12.8599 22.4584 12.0991 22.4834C11.3384 22.5085 10.5966 22.2435 10.024 21.7421L9.87999 21.6071L5.63599 17.3641C3.94816 15.6762 2.99994 13.387 2.99994 11.0001C2.99994 8.61309 3.94816 6.32389 5.63599 4.63606C7.32383 2.94822 9.61303 2 12 2C14.387 2 16.6762 2.94822 18.364 4.63606ZM12 8.00006C11.606 8.00006 11.2159 8.07765 10.8519 8.22842C10.488 8.37918 10.1572 8.60016 9.87867 8.87873C9.6001 9.15731 9.37912 9.48803 9.22836 9.85201C9.07759 10.216 8.99999 10.6061 8.99999 11.0001C8.99999 11.394 9.07759 11.7841 9.22836 12.1481C9.37912 12.5121 9.6001 12.8428 9.87867 13.1214C10.1572 13.4 10.488 13.6209 10.8519 13.7717C11.2159 13.9225 11.606 14.0001 12 14.0001C12.7956 14.0001 13.5587 13.684 14.1213 13.1214C14.6839 12.5588 15 11.7957 15 11.0001C15 10.2044 14.6839 9.44134 14.1213 8.87873C13.5587 8.31613 12.7956 8.00006 12 8.00006Z"
+                                    fill="#935C10" />
+                            </svg>
+                            <div>
+                                <h3
+                                    class="font-poppins font-semibold text-base sm:text-[17px] md:text-[18px] text-[#0C141DE5] mb-1">
+                                    Dewas, Madhya Pradesh
+                                </h3>
+                                <p
+                                    class="font-poppins font-normal text-sm leading-[22px] tracking-normal text-[#0C141DE5] mb-3">
+                                    80, Maksi Rd, Vrindavan Nagar Colony, Jamuna Nagar, Itawa, Dewas, 455001
+                                </p>
+                                <div class="border-t border-[#1F32473D] pt-3">
+                                    <p class="font-poppins text-[#152332] font-bold text-sm underline decoration-solid">
+                                        097278 33338
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="group bg-white rounded-md shadow-[0_4px_12px_#00000024] overflow-hidden transition-transform duration-500 ease-in-out hover:shadow-xl hover:-translate-y-2 hover:scale-105">
+                    <div class="relative m-4">
+                        <img src="./assests/img/home/OurExclusiveBrand.png" alt="Passero Store Front"
+                            class="w-full h-[300px] object-cover rounded-[4px]">
+                    </div>
+                    <div class="p-4 pt-0">
+                        <div class="flex items-start">
+                            <svg class="mr-2 mt-1 flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18.364 4.63606C20.0163 6.28819 20.9613 8.51817 20.9992 10.8545C21.0371 13.1908 20.1649 15.4502 18.567 17.1551L18.364 17.3651L14.121 21.6071C13.5826 22.1451 12.8599 22.4584 12.0991 22.4834C11.3384 22.5085 10.5966 22.2435 10.024 21.7421L9.87999 21.6071L5.63599 17.3641C3.94816 15.6762 2.99994 13.387 2.99994 11.0001C2.99994 8.61309 3.94816 6.32389 5.63599 4.63606C7.32383 2.94822 9.61303 2 12 2C14.387 2 16.6762 2.94822 18.364 4.63606ZM12 8.00006C11.606 8.00006 11.2159 8.07765 10.8519 8.22842C10.488 8.37918 10.1572 8.60016 9.87867 8.87873C9.6001 9.15731 9.37912 9.48803 9.22836 9.85201C9.07759 10.216 8.99999 10.6061 8.99999 11.0001C8.99999 11.394 9.07759 11.7841 9.22836 12.1481C9.37912 12.5121 9.6001 12.8428 9.87867 13.1214C10.1572 13.4 10.488 13.6209 10.8519 13.7717C11.2159 13.9225 11.606 14.0001 12 14.0001C12.7956 14.0001 13.5587 13.684 14.1213 13.1214C14.6839 12.5588 15 11.7957 15 11.0001C15 10.2044 14.6839 9.44134 14.1213 8.87873C13.5587 8.31613 12.7956 8.00006 12 8.00006Z"
+                                    fill="#935C10" />
+                            </svg>
+                            <div>
+                                <h3
+                                    class="font-poppins font-semibold text-base sm:text-[17px] md:text-[18px] text-[#0C141DE5] mb-1">
+                                    Indore, Madhya Pradesh
+                                </h3>
+                                <p
+                                    class="font-poppins font-normal text-sm leading-[22px] tracking-normal text-[#0C141DE5] mb-3">
+                                    Dewas Naka, Lasudla Mori, Indore, 452012
+                                </p>
+                                <div class="border-t border-[#1F32473D] pt-3">
+                                    <p class="font-poppins text-[#152332] font-bold text-sm underline decoration-solid">
+                                        097278 33337
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="group bg-white rounded-md shadow-[0_4px_12px_#00000024] overflow-hidden transition-transform duration-500 ease-in-out hover:shadow-xl hover:-translate-y-2 hover:scale-105">
+                    <div class="relative m-4">
+                        <img src="./assests/img/home/OurExclusiveBrand.png" alt="Passero Store Front"
+                            class="w-full h-[300px] object-cover rounded-[4px]">
+                    </div>
+                    <div class="p-4 pt-0">
+                        <div class="flex items-start">
+                            <svg class="mr-2 mt-1 flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18.364 4.63606C20.0163 6.28819 20.9613 8.51817 20.9992 10.8545C21.0371 13.1908 20.1649 15.4502 18.567 17.1551L18.364 17.3651L14.121 21.6071C13.5826 22.1451 12.8599 22.4584 12.0991 22.4834C11.3384 22.5085 10.5966 22.2435 10.024 21.7421L9.87999 21.6071L5.63599 17.3641C3.94816 15.6762 2.99994 13.387 2.99994 11.0001C2.99994 8.61309 3.94816 6.32389 5.63599 4.63606C7.32383 2.94822 9.61303 2 12 2C14.387 2 16.6762 2.94822 18.364 4.63606ZM12 8.00006C11.606 8.00006 11.2159 8.07765 10.8519 8.22842C10.488 8.37918 10.1572 8.60016 9.87867 8.87873C9.6001 9.15731 9.37912 9.48803 9.22836 9.85201C9.07759 10.216 8.99999 10.6061 8.99999 11.0001C8.99999 11.394 9.07759 11.7841 9.22836 12.1481C9.37912 12.5121 9.6001 12.8428 9.87867 13.1214C10.1572 13.4 10.488 13.6209 10.8519 13.7717C11.2159 13.9225 11.606 14.0001 12 14.0001C12.7956 14.0001 13.5587 13.684 14.1213 13.1214C14.6839 12.5588 15 11.7957 15 11.0001C15 10.2044 14.6839 9.44134 14.1213 8.87873C13.5587 8.31613 12.7956 8.00006 12 8.00006Z"
+                                    fill="#935C10" />
+                            </svg>
+                            <div>
+                                <h3
+                                    class="font-poppins font-semibold text-base sm:text-[17px] md:text-[18px] text-[#0C141DE5] mb-1">
+                                    Ujjain, Madhya Pradesh
+                                </h3>
+                                <p
+                                    class="font-poppins font-normal text-sm leading-[22px] tracking-normal text-[#0C141DE5] mb-3">
+                                    23, Shanti Vihar Colony, Mahakal Road, Keshav Nagar, Ujjain, 456010
+                                </p>
+                                <div class="border-t border-[#1F32473D] pt-3">
+                                    <p class="font-poppins text-[#152332] font-bold text-sm underline decoration-solid">
+                                        097278 33338
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End Discover Our Exclusive Brand Stores Stores -->
+
+    <!-- start Partner With Passero Section -->
+    <section class="bg-[#F8F3EC]">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-14 py-12 lg:py-20 border-b border-[#1F32473D]">
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                <div class="order-2 md:order-1  max-w-lg">
+                    <h2 class="text-4xl sm:text-5xl lg:text-[56px] font-normal mb-2 font-forum text-title">
+                        Partner With Passero
+                    </h2>
+                    <p class="font-poppins text-[#0F1924B8] text-base font-normal lg:text-lg leading-relaxed">
+                        Passero invites like-minded partners to be part of its growing brand store network. Backed by quality manufacturing, strong brand identity, and complete operational support, we offer a transparent and growth-driven partnership model.
+                    </p>
+                    <button class="mt-9 bg-gray-900 text-white px-8 py-3 rounded text-sm font-medium transition-transform transition-colors duration-300 ease-in-out
+                       hover:bg-gray-800 hover:scale-105 hover:shadow-lg">
+                         Enquire for Franchise
+                    </button>
+                </div>
+                <div class="order-1 md:order-2">
+                    <img src="./assests/img/Brand-Stores/Partner-With-Passero.jpg" alt="Business professionals handshake" class="w-full h-auto rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end Partner With Passero Section -->
+
+    <!-- Footer Section -->
+    <footer class="bg-[#F8F3EC]">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-14 pt-12 lg:pt-20 pb-6 lg:pb-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 mb-12">
+                <div class="lg:col-span-1">
+                    <div class="mb-6">
+                        <img src="./assests/img/logo/colo-logo.png" id="logo-img"
+                            data-light="./assests/img/logo/logo.svg" data-dark="./assests/img/logo/colo-logo.png"
+                            class="object-contain transition-all duration-300">
+                    </div>
+                    <p class="text-[#0C141DE5] text-sm font-normal font-poppins leading-relaxed">
+                        Passero Vitrified creates premium surfaces crafted for design, durability, and modern living.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-forum text-2xl font-normal text-[#935C10] mb-4">Company</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">About
+                                Us</a></li>
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Brand
+                                Stores</a>
+                        </li>
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Career</a>
+                        </li>
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Contact
+                                Us</a></li>
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Why
+                                Passero</a></li>
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Packing
+                                Details</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-forum text-2xl font-normal text-[#935C10] mb-4">Products</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Floor
+                                Tiles</a></li>
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Wall
+                                Tiles</a></li>
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Outdoor
+                                Tiles</a>
+                        </li>
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Full
+                                Body Tiles</a>
+                        </li>
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Large
+                                Slabs</a></li>
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Special
+                                Finishes</a>
+                        </li>
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">View
+                                All
+                                Products</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-forum text-2xl font-normal text-[#935C10] mb-4">Resources</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Downloads</a>
+                        </li>
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">News
+                                & Events</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-forum text-2xl font-normal text-[#935C10] mb-4">Contact</h3>
+                    <div class="space-y-4 text-sm">
+                        <div>
+                            <p class="font-semibold text-[#0C141DE5] text-base font-poppins mb-1">Address</p>
+                            <p class="text-[#0C141DE5] font-normal text-base">B-A, NATIONAL HIGHWAY Timbdi, Gujarat
+                                363642</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-[#0C141DE5] text-base font-poppins mb-1">Ketanbhai Patel</p>
+                            <a href="tel:+919723581081"
+                                class="underline text-[#0C141DE5] font-normal text-base hover:text-gray-900 block">(+91)
+                                9723581081</a>
+                            <a href="tel:+919737228030"
+                                class="underline text-[#0C141DE5] font-normal text-base hover:text-gray-900 block">(+91)
+                                9737228030</a>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-[#0C141DE5] text-base font-poppins mb-1">Dhruvbhai Patel</p>
+                            <a href="tel:+919712981081"
+                                class="underline text-[#0C141DE5] font-normal text-base hover:text-gray-900 block">(+91)
+                                9712981081</a>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-[#0C141DE5] text-base font-poppins mb-1">Write us</p>
+                            <a href="mailto:kpatel@passerovitrified.com"
+                                class="underline text-[#0C141DE5] font-normal text-base hover:text-gray-900">kpatel@passerovitrified.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-[#1F32473D] pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p class="font-poppins font-normal text-sm leading-[22px] tracking-normal text-[#0C141DE5]">© 2025
+                    Passero Vitrified. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <a href="#"
+                        class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16.5 7.5V7.51M4 8C4 6.93913 4.42143 5.92172 5.17157 5.17157C5.92172 4.42143 6.93913 4 8 4H16C17.0609 4 18.0783 4.42143 18.8284 5.17157C19.5786 5.92172 20 6.93913 20 8V16C20 17.0609 19.5786 18.0783 18.8284 18.8284C18.0783 19.5786 17.0609 20 16 20H8C6.93913 20 5.92172 19.5786 5.17157 18.8284C4.42143 18.0783 4 17.0609 4 16V8ZM9 12C9 12.7956 9.31607 13.5587 9.87868 14.1213C10.4413 14.6839 11.2044 15 12 15C12.7956 15 13.5587 14.6839 14.1213 14.1213C14.6839 13.5587 15 12.7956 15 12C15 11.2044 14.6839 10.4413 14.1213 9.87868C13.5587 9.31607 12.7956 9 12 9C11.2044 9 10.4413 9.31607 9.87868 9.87868C9.31607 10.4413 9 11.2044 9 12Z"
+                                stroke="#935C10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <a href="#"
+                        class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7 10V14H10V21H14V14H17L18 10H14V8C14 7.73478 14.1054 7.48043 14.2929 7.29289C14.4804 7.10536 14.7348 7 15 7H18V3H15C13.6739 3 12.4021 3.52678 11.4645 4.46447C10.5268 5.40215 10 6.67392 10 8V10H7Z"
+                                stroke="#935C10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="./assests/js/dev-script.js"></script>
+
+</body>
+
+</html>

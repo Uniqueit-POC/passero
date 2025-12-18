@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Brochure Section</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+    <style>
+        .font-forum {
+            font-family: 'Forum', serif;
+        }
+        
+        .circle-frame {
+            position: relative;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        
+        .decorative-border {
+            position: absolute;
+            border: 2px solid #C9A961;
+            border-radius: 50%;
+            opacity: 0.6;
+        }
+        
+        /* Left side borders */
+        .border-left-1 {
+            width: 320px;
+            height: 320px;
+            top: -20px;
+            left: -20px;
+            border-right: none;
+            border-bottom: none;
+        }
+        
+        .border-left-2 {
+            width: 350px;
+            height: 350px;
+            top: -35px;
+            left: -35px;
+            border-right: none;
+            border-bottom: none;
+        }
+        
+        .border-left-3 {
+            width: 380px;
+            height: 380px;
+            top: -50px;
+            left: -50px;
+            border-right: none;
+            border-bottom: none;
+        }
+        
+        /* Right side borders */
+        .border-right-1 {
+            width: 320px;
+            height: 320px;
+            bottom: -20px;
+            right: -20px;
+            border-left: none;
+            border-top: none;
+        }
+        
+        .border-right-2 {
+            width: 350px;
+            height: 350px;
+            bottom: -35px;
+            right: -35px;
+            border-left: none;
+            border-top: none;
+        }
+        
+        .border-right-3 {
+            width: 380px;
+            height: 380px;
+            bottom: -50px;
+            right: -50px;
+            border-left: none;
+            border-top: none;
+        }
+        
+        .circle-container {
+            position: relative;
+            display: inline-block;
+        }
+        
+        @media (max-width: 1024px) {
+            .circle-frame {
+                width: 200px;
+                height: 200px;
+            }
+            .border-left-1, .border-right-1 { width: 240px; height: 240px; top: -20px; left: -20px; }
+            .border-left-2, .border-right-2 { width: 270px; height: 270px; top: -35px; left: -35px; }
+            .border-left-3, .border-right-3 { width: 300px; height: 300px; top: -50px; left: -50px; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+        <div class="relative bg-[#152231] overflow-hidden rounded-lg">
+            <div class="grid grid-cols-1 lg:grid-cols-3 items-center gap-8 lg:gap-0">
+                <!-- Left Circle Image with Decorative Borders -->
+                <div class="hidden lg:flex justify-center items-center p-8 lg:p-12">
+                    <div class="circle-container">
+                        <div class="decorative-border border-left-1"></div>
+                        <div class="decorative-border border-left-2"></div>
+                        <div class="decorative-border border-left-3"></div>
+                        <div class="circle-frame">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=400&fit=crop"
+                                alt="Modern Bathroom" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Center Content -->
+                <div class="text-center py-12 px-6 lg:px-8">
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-normal text-white mb-6 font-forum leading-tight">
+                        Download Our Latest<br>Product Brochure
+                    </h1>
+                    <p class="text-gray-300 text-base lg:text-lg font-light mb-8 max-w-lg mx-auto leading-relaxed">
+                        Explore our complete collection of tiles, surfaces, finishes, and technical details — all in
+                        one beautifully crafted catalog. Perfect for homeowners, dealers, designers, and architects.
+                    </p>
+                    <button
+                        class="bg-white text-gray-900 px-8 py-3.5 rounded hover:bg-gray-100 transition-all duration-300 flex items-center gap-3 mx-auto text-sm font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        Download Brochure
+                    </button>
+                </div>
+
+                <!-- Right Circle Image with Decorative Borders -->
+                <div class="hidden lg:flex justify-center items-center p-8 lg:p-12">
+                    <div class="circle-container">
+                        <div class="decorative-border border-right-1"></div>
+                        <div class="decorative-border border-right-2"></div>
+                        <div class="decorative-border border-right-3"></div>
+                        <div class="circle-frame">
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&h=400&fit=crop"
+                                alt="Modern Kitchen" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

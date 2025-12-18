@@ -1,0 +1,183 @@
+   .custom-slider>div {
+       min-width: 100%;
+       width: 100%;
+   }
+
+   .decor-shape {
+       position: absolute;
+       border-radius: 9999px;
+       pointer-events: none;
+   }
+
+   /* about us  */
+   .timeline-year h2 {
+       color: #0F1924B8;
+       font-family: 'Forum', serif;
+       font-size: 44px;
+       font-weight: 400;
+       position: relative;
+       cursor: pointer;
+       transition: all 0.3s ease;
+   }
+
+   .timeline-year h2.active-year {
+       color: #935C10;
+       font-size: 68px;
+       font-weight: 400;
+       position: relative;
+   }
+
+   .timeline-year h2.active-year::before {
+       content: '';
+       position: absolute;
+       left: -1.5rem;
+       top: 0;
+       width: 4px;
+       height: 100%;
+       background: #F1C17E;
+       border-radius: 2px;
+   }
+
+   /* products page */
+   .collection-card {
+       position: relative;
+       overflow: hidden;
+       transition: transform 0.3s ease;
+   }
+
+   .collection-card:hover {
+       transform: translateY(-5px);
+   }
+
+   .collection-overlay {
+       background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+   }
+
+   /* collection details page  */
+   .tile-card {
+       position: relative;
+       overflow: hidden;
+       transition: transform 0.3s ease;
+   }
+
+   .tile-card:hover {
+       transform: scale(1.02);
+   }
+
+   .tile-overlay {
+       background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 60%);
+   }
+
+   .collection-slide {
+       transition: transform 0.3s ease, box-shadow 0.3s ease;
+   }
+
+   .collection-slide:hover {
+       transform: translateY(-5px);
+       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+   }
+
+   .collection-overlay {
+       background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+   }
+
+   /* product details page  */
+   .thumbnail {
+       cursor: pointer;
+       transition: all 0.3s ease;
+   }
+
+   .thumbnail:hover {
+       transform: scale(1.05);
+       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+   }
+
+   .thumbnail.active {
+       border: 2px solid #935C10;
+   }
+
+   .main-image {
+       transition: opacity 0.3s ease;
+   }
+
+   .tab-content {
+       display: none;
+   }
+
+   .tab-content.active {
+       display: block;
+   }
+
+   .icon-box {
+       transition: all 0.3s ease;
+   }
+
+   .icon-box:hover {
+       transform: translateY(-5px);
+   }
+
+   .overlay-gradient {
+       background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+   }
+
+   .font-forum {
+       font-family: 'Forum', serif;
+   }
+
+   .font-poppins {
+       font-family: 'Poppins', sans-serif;
+   }
+
+   /* career page tyle */
+   .grid-layout {
+       display: grid;
+       gap: 1rem;
+       grid-template-columns: repeat(2, 1fr);
+       align-items: end;
+   }
+
+   @media (min-width: 1024px) {
+       .grid-layout {
+           grid-template-columns: repeat(5, 1fr);
+       }
+   }
+
+   .grid-layout {
+       position: relative;
+       margin-top: -2rem;
+   }
+
+   .bottom-svg {
+       position: absolute;
+       bottom: 0;
+       left: 0;
+       width: 100%;
+   }
+   /* download page style */
+     .modal {
+            display: none;
+            position: fixed;
+            z-index: 50;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            animation: fadeIn 0.3s ease;
+        }
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            animation: slideIn 0.3s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }

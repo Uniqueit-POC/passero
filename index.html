@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Passero Tiles & Bathware</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assests/css/dev-style.css">
+</head>
+
+<body class="antialiased text-slate-800 bg-white">
+
+    <!-- start NAVBAR -->
+    <header id="main-nav" class="fixed inset-x-0 top-0 z-30 transition-all duration-300 bg-transparent">
+        <nav class="max-w-[1350px] mx-auto px-6 py-4 grid grid-cols-[1fr_auto_1fr] items-center gap-4">
+
+            <!-- left -->
+            <div class="flex items-center gap-3">
+                <button id="mobile-toggle" class="md:hidden text-white">
+                    <i class="fa fa-bars"></i>
+                </button>
+
+                <ul id="nav-left" class="hidden md:flex gap-4 items-center">
+                    <li><a href="#about" class="nav-link text-white font-semibold text-base">About Us</a></li>
+                    <li><a href="#collections" class="nav-link text-white font-semibold text-base">Collections</a></li>
+                    <li><a href="#why" class="nav-link text-white font-semibold text-base">Why Passero</a></li>
+                    <li><a href="#stores" class="nav-link text-white font-semibold text-base">Brand Stores</a></li>
+                </ul>
+            </div>
+
+            <div class="flex justify-center">
+                <a href="#" id="logo-wrapper" class="w-[189px] h-[64px]">
+                    <img src="./assests/img/logo/logo.svg" id="logo-img" data-light="./assests/img/logo/logo.svg"
+                        data-dark="./assests/img/logo/colo-logo.png"
+                        class="object-contain transition-all duration-300" />
+                </a>
+            </div>
+            <div class="flex justify-end items-center gap-3">
+                <div id="nav-right" class="hidden md:flex items-center gap-4">
+                    <a href="#downloads" class="nav-link text-white font-semibold text-base">Downloads</a>
+                    <a href="#news" class="nav-link text-white font-semibold text-base">News & Events</a>
+                    <a href="#contact"
+                        class="nav-link border border-white font-semibold text-base text-white px-4 py-2 rounded transition-all duration-300 ease-in-out hover:bg-white hover:text-[#0c141d] hover:scale-105 hover:shadow-md">
+                        Contact Us
+                    </a>
+                </div>
+                <a href="tel:+911234567890" class="md:hidden text-white"><i class="fa fa-phone"></i></a>
+            </div>
+        </nav>
+    </header>
+    <!-- end NAVBAR -->
+
+    <!--Start HERO SLIDER -->
+    <section class="relative h-screen overflow-hidden">
+        <div class="absolute inset-0 bg-[#00000052] pointer-events-none z-10"></div>
+        <div id="slider" class="relative h-screen overflow-hidden">
+            <div class="slides flex transition-transform duration-700 h-screen custom-slider">
+                <div class="w-full h-screen relative">
+                    <img src="./assests/img/home/hero-1.png" class="w-full h-full object-cover" />
+                </div>
+                <div class="w-full h-screen relative">
+                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1920&fit=crop"
+                        class="w-full h-full object-cover" />
+                </div>
+                <div class="w-full h-screen relative">
+                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1920&fit=crop"
+                        class="w-full h-full object-cover" />
+                </div>
+                <div class="w-full h-screen relative">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&fit=crop"
+                        class="w-full h-full object-cover" />
+                </div>
+            </div>
+            <button id="prev" class="absolute left-4 top-1/2 -translate-y-1/2 text-white p-3 rounded-full z-20 ">
+                <i class="fa fa-chevron-left text-2xl"></i>
+            </button>
+            <button id="next" class="absolute right-4 top-1/2 -translate-y-1/2 text-white p-3 rounded-full z-20 ">
+                <i class="fa fa-chevron-right text-2xl"></i>
+            </button>
+            <div class="absolute inset-0 flex items-center justify-center z-20 px-6">
+                <div class="text-center max-w-5xl text-white">
+                    <h1 class="text-4xl md:text-[68px] font-regular mb-6 leading-[100%] font-forum text-[#FFFFFF]">
+                        From Manufacturers to<br />Inspired Spaces.
+                    </h1>
+                    <p class="text-base md:text-lg text-white/90 mb-6 font-regular">
+                        Discover Passero Brand Stores — where quality meets curated design.
+                    </p>
+                    <div class="flex justify-center gap-4 flex-wrap">
+                        <a href="#stores"
+                            class="px-8 py-3 bg-white font-bold text-[#0c141d] text-sm rounded shadow transition-all duration-300 ease-in-out hover:outline hover:outline-2 hover:bg-transparent hover:outline-white hover:text-white hover:outline-offset-2 hover:scale-105 hover:shadow-lg">
+                            Find a Brand Store
+                        </a>
+
+                        <a href="#collections"
+                            class="px-6 py-3 border border-white text-sm font-bold text-white rounded transition-all duration-300 ease-in-out hover:bg-white hover:text-[#0c141d] hover:scale-105 hover:shadow-lg">
+                            Explore Collections
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <ul class="indicators absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-1 z-30">
+            <li class="w-6 h-1 rounded-full bg-[#FFFFFF99]"></li>
+            <li class="w-2 h-1 rounded-full bg-[#FFFFFF52]"></li>
+            <li class="w-2 h-1 rounded-full bg-[#FFFFFF52]"></li>
+        </ul>
+    </section>
+    <!--End HERO SLIDER -->
+
+    <!--StartDiscover Our Exclusive Brand Stores Stores -->
+    <section class="bg-[#F8F3EC] py-16 px-14">
+        <div class="max-w-8xl mx-auto">
+            <div class="text-center mb-16">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-normal font-forum text-title mb-4">
+                    Discover Our Exclusive Brand Stores
+                </h1>
+                <p
+                    class="font-poppins text-[#0F1924B8] max-w-3xl mx-auto text-sm sm:text-base md:text-[18px] font-normal">
+                    Explore our curated brand stores designed to showcase complete tile experiences — from textures and
+                    finishes to full interior applications.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <div
+                    class="group bg-white rounded-md shadow-[0_4px_12px_#00000024] overflow-hidden transition-transform duration-500 ease-in-out hover:shadow-xl hover:-translate-y-2 hover:scale-105">
+                    <div class="relative m-4">
+                        <img src="./assests/img/home/OurExclusiveBrand.png" alt="Passero Store Front"
+                            class="w-full h-[300px] object-cover rounded-[4px]">
+                    </div>
+                    <div class="p-4 pt-0">
+                        <div class="flex items-start">
+                            <svg class="mr-2 mt-1 flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18.364 4.63606C20.0163 6.28819 20.9613 8.51817 20.9992 10.8545C21.0371 13.1908 20.1649 15.4502 18.567 17.1551L18.364 17.3651L14.121 21.6071C13.5826 22.1451 12.8599 22.4584 12.0991 22.4834C11.3384 22.5085 10.5966 22.2435 10.024 21.7421L9.87999 21.6071L5.63599 17.3641C3.94816 15.6762 2.99994 13.387 2.99994 11.0001C2.99994 8.61309 3.94816 6.32389 5.63599 4.63606C7.32383 2.94822 9.61303 2 12 2C14.387 2 16.6762 2.94822 18.364 4.63606ZM12 8.00006C11.606 8.00006 11.2159 8.07765 10.8519 8.22842C10.488 8.37918 10.1572 8.60016 9.87867 8.87873C9.6001 9.15731 9.37912 9.48803 9.22836 9.85201C9.07759 10.216 8.99999 10.6061 8.99999 11.0001C8.99999 11.394 9.07759 11.7841 9.22836 12.1481C9.37912 12.5121 9.6001 12.8428 9.87867 13.1214C10.1572 13.4 10.488 13.6209 10.8519 13.7717C11.2159 13.9225 11.606 14.0001 12 14.0001C12.7956 14.0001 13.5587 13.684 14.1213 13.1214C14.6839 12.5588 15 11.7957 15 11.0001C15 10.2044 14.6839 9.44134 14.1213 8.87873C13.5587 8.31613 12.7956 8.00006 12 8.00006Z"
+                                    fill="#935C10" />
+                            </svg>
+                            <div>
+                                <h3
+                                    class="font-poppins font-semibold text-base sm:text-[17px] md:text-[18px] text-[#0C141DE5] mb-1">
+                                    Dewas, Madhya Pradesh
+                                </h3>
+                                <p
+                                    class="font-poppins font-normal text-sm leading-[22px] tracking-normal text-[#0C141DE5] mb-3">
+                                    80, Maksi Rd, Vrindavan Nagar Colony, Jamuna Nagar, Itawa, Dewas, 455001
+                                </p>
+                                <div class="border-t border-[#1F32473D] pt-3">
+                                    <p class="font-poppins text-[#152332] font-bold text-sm underline decoration-solid">
+                                        097278 33338
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="group bg-white rounded-md shadow-[0_4px_12px_#00000024] overflow-hidden transition-transform duration-500 ease-in-out hover:shadow-xl hover:-translate-y-2 hover:scale-105">
+                    <div class="relative m-4">
+                        <img src="./assests/img/home/OurExclusiveBrand.png" alt="Passero Store Front"
+                            class="w-full h-[300px] object-cover rounded-[4px]">
+                    </div>
+                    <div class="p-4 pt-0">
+                        <div class="flex items-start">
+                            <svg class="mr-2 mt-1 flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18.364 4.63606C20.0163 6.28819 20.9613 8.51817 20.9992 10.8545C21.0371 13.1908 20.1649 15.4502 18.567 17.1551L18.364 17.3651L14.121 21.6071C13.5826 22.1451 12.8599 22.4584 12.0991 22.4834C11.3384 22.5085 10.5966 22.2435 10.024 21.7421L9.87999 21.6071L5.63599 17.3641C3.94816 15.6762 2.99994 13.387 2.99994 11.0001C2.99994 8.61309 3.94816 6.32389 5.63599 4.63606C7.32383 2.94822 9.61303 2 12 2C14.387 2 16.6762 2.94822 18.364 4.63606ZM12 8.00006C11.606 8.00006 11.2159 8.07765 10.8519 8.22842C10.488 8.37918 10.1572 8.60016 9.87867 8.87873C9.6001 9.15731 9.37912 9.48803 9.22836 9.85201C9.07759 10.216 8.99999 10.6061 8.99999 11.0001C8.99999 11.394 9.07759 11.7841 9.22836 12.1481C9.37912 12.5121 9.6001 12.8428 9.87867 13.1214C10.1572 13.4 10.488 13.6209 10.8519 13.7717C11.2159 13.9225 11.606 14.0001 12 14.0001C12.7956 14.0001 13.5587 13.684 14.1213 13.1214C14.6839 12.5588 15 11.7957 15 11.0001C15 10.2044 14.6839 9.44134 14.1213 8.87873C13.5587 8.31613 12.7956 8.00006 12 8.00006Z"
+                                    fill="#935C10" />
+                            </svg>
+                            <div>
+                                <h3
+                                    class="font-poppins font-semibold text-base sm:text-[17px] md:text-[18px] text-[#0C141DE5] mb-1">
+                                    Indore, Madhya Pradesh
+                                </h3>
+                                <p
+                                    class="font-poppins font-normal text-sm leading-[22px] tracking-normal text-[#0C141DE5] mb-3">
+                                    Dewas Naka, Lasudla Mori, Indore, 452012
+                                </p>
+                                <div class="border-t border-[#1F32473D] pt-3">
+                                    <p class="font-poppins text-[#152332] font-bold text-sm underline decoration-solid">
+                                        097278 33337
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="group bg-white rounded-md shadow-[0_4px_12px_#00000024] overflow-hidden transition-transform duration-500 ease-in-out hover:shadow-xl hover:-translate-y-2 hover:scale-105">
+                    <div class="relative m-4">
+                        <img src="./assests/img/home/OurExclusiveBrand.png" alt="Passero Store Front"
+                            class="w-full h-[300px] object-cover rounded-[4px]">
+                    </div>
+                    <div class="p-4 pt-0">
+                        <div class="flex items-start">
+                            <svg class="mr-2 mt-1 flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18.364 4.63606C20.0163 6.28819 20.9613 8.51817 20.9992 10.8545C21.0371 13.1908 20.1649 15.4502 18.567 17.1551L18.364 17.3651L14.121 21.6071C13.5826 22.1451 12.8599 22.4584 12.0991 22.4834C11.3384 22.5085 10.5966 22.2435 10.024 21.7421L9.87999 21.6071L5.63599 17.3641C3.94816 15.6762 2.99994 13.387 2.99994 11.0001C2.99994 8.61309 3.94816 6.32389 5.63599 4.63606C7.32383 2.94822 9.61303 2 12 2C14.387 2 16.6762 2.94822 18.364 4.63606ZM12 8.00006C11.606 8.00006 11.2159 8.07765 10.8519 8.22842C10.488 8.37918 10.1572 8.60016 9.87867 8.87873C9.6001 9.15731 9.37912 9.48803 9.22836 9.85201C9.07759 10.216 8.99999 10.6061 8.99999 11.0001C8.99999 11.394 9.07759 11.7841 9.22836 12.1481C9.37912 12.5121 9.6001 12.8428 9.87867 13.1214C10.1572 13.4 10.488 13.6209 10.8519 13.7717C11.2159 13.9225 11.606 14.0001 12 14.0001C12.7956 14.0001 13.5587 13.684 14.1213 13.1214C14.6839 12.5588 15 11.7957 15 11.0001C15 10.2044 14.6839 9.44134 14.1213 8.87873C13.5587 8.31613 12.7956 8.00006 12 8.00006Z"
+                                    fill="#935C10" />
+                            </svg>
+                            <div>
+                                <h3
+                                    class="font-poppins font-semibold text-base sm:text-[17px] md:text-[18px] text-[#0C141DE5] mb-1">
+                                    Ujjain, Madhya Pradesh
+                                </h3>
+                                <p
+                                    class="font-poppins font-normal text-sm leading-[22px] tracking-normal text-[#0C141DE5] mb-3">
+                                    23, Shanti Vihar Colony, Mahakal Road, Keshav Nagar, Ujjain, 456010
+                                </p>
+                                <div class="border-t border-[#1F32473D] pt-3">
+                                    <p class="font-poppins text-[#152332] font-bold text-sm underline decoration-solid">
+                                        097278 33338
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button class="bg-[#152231] text-white px-8 py-3 rounded-md flex items-center justify-center mx-auto gap-2 text-sm font-bold
+                       transition-transform transition-colors duration-300 ease-in-out
+                       hover:bg-gray-800 hover:scale-105 hover:shadow-lg">
+                    Learn More
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19M19 12L15 16M19 12L15 8" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+
+            </div>
+        </div>
+    </section>
+    <!--End Discover Our Exclusive Brand Stores Stores -->
+
+    <!--Start Explore Our<br>Product Series -->
+    <section>
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-14 py-12 lg:py-20">
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12 lg:mb-16 gap-6">
+                <div class="max-w-xl">
+                    <h1 class="text-4xl sm:text-5xl lg:text-[56px] font-light mb-2 font-forum text-title">
+                        Explore Our<br>Product Series
+                    </h1>
+                </div>
+                <div class="lg:text-right max-w-sm">
+                    <p class="font-poppins font-normal text-[#0C141DE5] mb-4 max-w-md text-left text-sm lg:text-[18px] leading-relaxed">
+                        Discover our wide range of vitrified tile collections crafted for modern interiors.
+                    </p>
+                    <button class="bg-[#152231] text-white px-8 py-3 rounded-md flex items-start justify-start gap-2 text-sm font-bold
+                       transition-transform transition-colors duration-300 ease-in-out
+                       hover:bg-gray-800 hover:scale-105 hover:shadow-lg">
+                        Explore All Collections
+                    </button>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-4">
+                <div class="relative group cursor-pointer h-64 sm:h-72 lg:h-[240px]">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=800&fit=crop"
+                        alt="Steel Series"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 overlay-gradient"></div>
+                    <div
+                        class="font-forum absolute bottom-0 left-0 w-full bg-[#00000052] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
+                        <h3 class="text-white text-2xl font-normal font-poppins">Steel Series</h3>
+                    </div>
+                </div>
+                <div class="relative group cursor-pointer h-64 sm:h-72 lg:h-[240px]">
+                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=800&fit=crop"
+                        alt="Carving Series"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 overlay-gradient"></div>
+                    <div
+                        class="font-forum absolute bottom-0 left-0 w-full bg-[#00000052] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
+                        <h3 class="text-white text-2xl font-normal font-poppins">Carving Series</h3>
+                    </div>
+                </div>
+                <div class="relative group cursor-pointer h-64 sm:h-72 lg:h-[240px]">
+                    <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&h=800&fit=crop"
+                        alt="Linear Series"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 overlay-gradient"></div>
+                    <div
+                        class="font-forum absolute bottom-0 left-0 w-full bg-[#00000052] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
+                        <h3 class="text-white text-2xl font-normal font-poppins">Linear Series</h3>
+                    </div>
+                </div>
+                <div class="relative group cursor-pointer h-64 sm:h-72 lg:h-[240px]">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=800&fit=crop"
+                        alt="Color Series"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 overlay-gradient"></div>
+                    <div
+                        class="font-forum absolute bottom-0 left-0 w-full bg-[#00000052] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
+                        <h3 class="text-white text-2xl font-normal font-poppins">Color Series</h3>
+                    </div>
+                </div>
+                <div class="relative group cursor-pointer h-64 sm:h-72 lg:h-[240px]">
+                    <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=800&fit=crop"
+                        alt="Glue & Glitter Series"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 overlay-gradient"></div>
+                    <div
+                        class="font-forum absolute bottom-0 left-0 w-full bg-[#00000052] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
+                        <h3 class="text-white text-2xl font-normal font-poppins">Glue & Glitter Series</h3>
+                    </div>
+                </div>
+                <div class="relative group cursor-pointer h-64 sm:h-72 lg:h-[240px]">
+                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=800&fit=crop"
+                        alt="Bookmatch Series"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 overlay-gradient"></div>
+                    <div
+                        class="font-forum absolute bottom-0 left-0 w-full bg-[#00000052] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
+                        <h3 class="text-white text-2xl font-normal font-poppins">Bookmatch Series</h3>
+                    </div>
+                </div>
+                <div class="relative group cursor-pointer h-64 sm:h-72 lg:h-[240px]">
+                    <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&h=800&fit=crop"
+                        alt="Stoney Series"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 overlay-gradient"></div>
+                    <div
+                        class="font-forum absolute bottom-0 left-0 w-full bg-[#00000052] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
+                        <h3 class="text-white text-2xl font-normal font-poppins">Stoney Series</h3>
+                    </div>
+                </div>
+                <div class="relative group cursor-pointer h-64 sm:h-72 lg:h-[240px]">
+                    <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=800&fit=crop"
+                        alt="Lacqure Series"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 overlay-gradient"></div>
+                    <div
+                        class="font-forum absolute bottom-0 left-0 w-full bg-[#00000052] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
+                        <h3 class="text-white text-2xl font-normal font-poppins">Lacqure Series</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End Explore Our<br>Product Series -->
+
+    <!--Start Why Choose Passero Spaces -->
+    <section class="bg-[#0F1924]">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-14 py-12 lg:py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="relative h-[626px]">
+                        <img src="./assests/img/home/Why-Choose-Passero-main.jpg"
+                            alt="Modern Interior with Passero Tiles" class="w-full h-full shadow-2xl">
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 space-y-5">
+                    <div>
+                        <img src="./assests/img/icon/Frame.svg" alt="">
+                    </div>
+                    <div>
+                        <h1 class="text-4xl sm:text-5xl lg:text-[56px] font-normal mb-2 font-forum text-white">
+                            Why Choose Passero
+                        </h1>
+                        <p
+                            class="font-poppins text-[#FFFFFFC7] text-base font-normal lg:text-lg leading-relaxed max-w-xl">
+                            Crafting premium vitrified tiles with advanced technology, refined design, and uncompromised
+                            quality — trusted by homeowners, architects, and global partners.
+                        </p>
+                    </div>
+
+                    <div
+                        class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 lg:gap-16 pb-6 pt-10 max-w-7xl mx-auto">
+                        <div class="flex-1">
+                            <div class="flex gap-8 mb-6">
+                                <div class="flex flex-col">
+                                    <div class="text-4xl lg:text-[44px] font-normal text-white font-forum mb-1">10+
+                                    </div>
+                                    <div class="font-poppins text-white text-[16px]">Years of Excellence</div>
+                                </div>
+                                <div class="flex flex-col">
+                                    <div class="text-4xl lg:text-[44px] font-normal text-white font-forum mb-1">100+
+                                    </div>
+                                    <div class="font-poppins text-white text-[16px]">Product Designs</div>
+                                </div>
+                            </div>
+                            <div class="pt-8">
+                                <button class="bg-white text-[#0C141DE5] px-8 py-3 rounded-md flex items-start justify-start gap-2 text-sm font-bold
+                                       transition-transform transition-colors duration-300 ease-in-out
+                                       hover:bg-gray-800 hover:text-white hover:scale-105 hover:shadow-lg">
+                                    Learn More
+                                    <svg class="stroke-current group-hover:text-white" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12H19M19 12L15 16M19 12L15 8" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex-1 hidden lg:block w-[312px] h-[256px]">
+                            <img src="./assests/img/home/Why-Choose-Passero-sub.jpg" alt="Interior Design"
+                                class="w-full h-full shadow-xl">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End Why Choose Passero Spaces -->
+
+    <!--Start  Tiles for Every Space -->
+    <section class="bg-[#F8F3EC]">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-14 py-12 lg:py-20">
+            <div class="text-center mb-12 lg:mb-16">
+                <h1 class="text-4xl sm:text-5xl lg:text-[56px] font-normal mb-2 font-forum text-title">
+                    Tiles for Every Space
+                </h1>
+                <p
+                    class="mx-auto font-poppins text-[#0F1924B8] text-base font-normal lg:text-lg leading-relaxed max-w-xl">
+                    Passero tiles are engineered for performance, durability, and elegant design — ideal for
+                    residential, commercial, and large-scale architectural projects.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+                <div>
+                    <div class="overflow-hidden h-[480px]">
+                        <img src="./assests/img/home/Tiles-Shopping-Malls-Offices.jpg" alt="Shopping Mall Interior"
+                            class="rounded-t-[240px] w-full transition-transform h-full duration-500 hover:scale-105">
+                    </div>
+                    <div class="py-4 lg:py-6 pe-4">
+                        <h2 class="text-2xl lg:text-[32px] font-normal text-[#0C141DE5] font-forum mb-3">
+                            Tiles for Shopping Malls & Offices
+                        </h2>
+                        <p
+                            class="font-poppins font-normal text-sm leading-[22px] tracking-normal text-[#0C141DE5] lg:text-base mb-5 leading-relaxed">
+                            Durable, stylish, and easy to maintain — perfect for high-traffic commercial spaces like
+                            malls, offices, and corporate buildings.
+                        </p>
+                        <button
+                            class="flex items-center gap-2 text-[#152332] font-bold text-sm hover:gap-3 transition-all duration-300">
+                            Read More
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19M19 12L15 16M19 12L15 8" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="overflow-hidden h-[480px]">
+                        <img src="./assests/img/home/Tiles-Commercial-Government-Projects.jpg" alt="Commercial Interior"
+                            class="rounded-t-[240px] w-full transition-transform h-full duration-500 hover:scale-105">
+                    </div>
+                    <div class="py-4 lg:py-6 pe-4">
+                        <h2 class="text-2xl lg:text-[32px] font-normal text-[#0C141DE5] font-forum mb-3">
+                            Tiles for Commercial & Government Projects
+                        </h2>
+                        <p
+                            class="font-poppins font-normal text-sm leading-[22px] tracking-normal text-[#0C141DE5] lg:text-base mb-5 leading-relaxed">
+                            Trusted for airports, hospitals, educational institutes, and public infrastructure projects
+                            — delivering long-lasting performance at scale.
+                        </p>
+                        <button
+                            class="flex items-center gap-2 text-[#152332] font-bold text-sm hover:gap-3 transition-all duration-300">
+                            Read More
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19M19 12L15 16M19 12L15 8" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="overflow-hidden h-[480px]">
+                        <img src="./assests/img/home/The-Architect-Choice.jpg" alt="Tile Samples"
+                            class="rounded-t-[240px] w-full transition-transform h-full duration-500 hover:scale-105">
+                    </div>
+                    <div class="py-4 lg:py-6 pe-4">
+                        <h2 class="text-2xl lg:text-[32px] font-normal text-[#0C141DE5] font-forum mb-3">
+                            The Architect's Choice
+                        </h2>
+                        <p
+                            class="font-poppins font-normal text-sm leading-[22px] tracking-normal text-[#0C141DE5] lg:text-base mb-5 leading-relaxed">
+                            10+ surface finishes and a wide range of sizes designed to meet architectural requirements
+                            for large venues such as airports, malls, theatres, and premium commercial developments.
+                        </p>
+                        <button
+                            class="flex items-center gap-2 text-[#152332] font-bold text-sm hover:gap-3 transition-all duration-300">
+                            Read More
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19M19 12L15 16M19 12L15 8" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End  Tiles for Every Space -->
+
+    <!--Start Empowering Interior Visionaries -->
+    <section class="bg-[#F8F3EC] relative overflow-visible">
+        <div class="max-w-8xl mx-auto relative">
+            <img src="./assests/img/home/Empowering-Interior-Visionaries-main.jpg" alt="Modern Living Room"
+                class="w-full h-64 sm:h-72 md:h-80 lg:h-[450px] object-cover shadow-md">
+            <div
+                class="lg:flex lg:items-center lg:gap-12 mt-[-100px] lg:mt-[-150px] relative z-10 px-4 sm:px-6 lg:px-14">
+                <div class="relative lg:w-1/3 flex-shrink-0">
+                    <img src="./assests/img/home/Empowering-Interior-Visionaries-sub.jpg" alt="Dining Room"
+                        class="w-2/3 sm:w-1/2 md:w-1/2 lg:w-[536px] h-48 sm:h-56 md:h-64 lg:h-[576px] object-cover shadow-lg"
+                        style="box-shadow: 
+                       0px 4px 10px 0px rgba(0, 0, 0, 0.16),
+                       0px 17px 17px 0px rgba(0, 0, 0, 0.14),
+                       0px 39px 23px 0px rgba(0, 0, 0, 0.08),
+                       0px 69px 28px 0px rgba(0, 0, 0, 0.02),
+                       0px 108px 30px 0px rgba(0, 0, 0, 0);">
+                </div>
+                <div class="mt-8 lg:mt-12 lg:ms-10 flex flex-col justify-center lg:max-w-[512px]">
+                    <h1
+                        class="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-normal mb-6 font-forum text-[#0C141D]">
+                        Empowering Interior Visionaries
+                    </h1>
+                    <p class="text-[#0F1924B8] text-sm font-normal sm:text-base lg:text-lg leading-relaxed">
+                        Passero collaborates closely with designers and interior professionals, providing high-quality
+                        tiles, detailed specs, design resources, and personalized guidance to bring every concept to
+                        life with precision and style.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--End Empowering Interior Visionaries -->
+
+    <!--Start E Curated Material Library -->
+    <section class="bg-[#F8F3EC] relative">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-14 pt-12 lg:pt-20 pb-6 lg:pb-14">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="text-center lg:text-left me-9">
+                    <div class="flex justify-center lg:justify-start mb-4">
+                        <svg width="48" h eight="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.25 12.375L24 1.875L42.75 12.375L24 23.625L5.25 12.375Z" stroke="#935C10"
+                                stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M40.6638 22.373L42.75 23.6248L24 34.8748L5.25 23.6248L7.33622 22.373"
+                                stroke="#152332" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M40.6638 33.623L42.75 34.8748L24 46.1248L5.25 34.8748L7.33622 33.623"
+                                stroke="#935C10" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl lg:text-[32px] font-normal text-[#0C141DE5] font-forum mb-3">
+                        Curated Material Library
+                    </h3>
+                    <p
+                        class="font-poppins font-normal text-sm leading-[22px] tracking-normal text-[#0C141DE5] leading-relaxed">
+                        Access a wide selection of surfaces, textures, and finishes designed to complement modern and
+                        luxury
+                        spaces.
+                    </p>
+                </div>
+
+                <div class="text-center lg:text-left me-9">
+                    <div class="flex justify-center lg:justify-start mb-4">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M34.201 26.061V39.2767" stroke="#935C10" stroke-width="2"
+                                stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M13.7991 39.2767V26.061" stroke="#935C10" stroke-width="2"
+                                stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M17.0625 7.40771H30.9374C31.7109 7.40771 32.3437 8.04053 32.3437 8.81396V13.0299H15.6563V8.81396C15.6563 8.04053 16.2891 7.40771 17.0625 7.40771Z"
+                                stroke="#152332" stroke-width="2" stroke-miterlimit="22.9256" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M16.9688 22.2173H30.8438" stroke="#935C10" stroke-width="2"
+                                stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M10.6017 22.2174H3.28125C2.25 22.2174 1.40625 21.3736 1.40625 20.3424V14.9048C1.40625 13.8735 2.25 13.0298 3.28125 13.0298H44.7188C45.75 13.0298 46.5938 13.8735 46.5938 14.9048V20.3424C46.5938 21.3736 45.75 22.2174 44.7188 22.2174H37.5458"
+                                stroke="#935C10" stroke-width="2" stroke-miterlimit="22.9256" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M30.8438 22.2173H17.2081" stroke="#152332" stroke-width="2"
+                                stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M10.7991 18.6548H16.7991V22.4048C16.7991 24.0548 15.4491 25.4048 13.7991 25.4048C12.1491 25.4048 10.7991 24.0548 10.7991 22.4048V18.6548Z"
+                                stroke="#152332" stroke-width="2" stroke-miterlimit="22.9256" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M31.201 18.6548H37.201V22.4048C37.201 24.0548 35.851 25.4048 34.201 25.4048C32.551 25.4048 31.201 24.0548 31.201 22.4048V18.6548Z"
+                                stroke="#152332" stroke-width="2" stroke-miterlimit="22.9256" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M44.5312 22.2173L42.5818 38.0536C42.4042 39.4972 41.1076 40.592 39.5168 40.592H34.5938L34.2188 39.6548H13.7812L13.4062 40.592H8.47941C6.88866 40.592 5.59172 39.497 5.41434 38.0531L3.46875 22.2173"
+                                stroke="#935C10" stroke-width="2" stroke-miterlimit="22.9256" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl lg:text-[32px] font-normal text-[#0C141DE5] font-forum mb-3">
+                        Designer-Friendly Tools
+                    </h3>
+                    <p
+                        class="font-poppins font-normal text-sm leading-[22px] tracking-normal text-[#0C141DE5] leading-relaxed">
+                        Download-ready catalogues, mood boards, and HD product files to support your design proposals.
+                    </p>
+                </div>
+
+                <div class="text-center lg:text-left me-9">
+                    <div class="flex justify-center lg:justify-start mb-4">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_20_886)">
+                                <path
+                                    d="M12.4456 38.7377C12.4456 40.0564 11.3765 41.1255 10.0579 41.1255C8.73908 41.1255 7.67004 40.0564 7.67004 38.7377C7.67004 37.419 8.73908 36.3499 10.0579 36.3499C11.3765 36.3499 12.4456 37.419 12.4456 38.7377Z"
+                                    stroke="#935C10" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M21.9762 12.1075H9.51838C4.77922 12.1075 0.937439 15.9493 0.937439 20.6884V20.6885C0.937439 25.4275 4.77922 29.2694 9.51838 29.2694H9.84275C9.84275 31.6689 11.7881 33.6143 14.1877 33.6143C16.5874 33.6143 18.5327 31.6689 18.5327 29.2694H21.9762C26.7152 29.2694 30.557 25.4275 30.557 20.6885V20.6884C30.557 15.9493 26.7152 12.1075 21.9762 12.1075Z"
+                                    stroke="#935C10" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M43.5451 18.7945C43.6229 19.1189 43.665 19.4582 43.665 19.8061C43.665 22.2061 41.7197 24.1514 39.3206 24.1514C37.1381 24.1514 35.3325 22.5436 35.0232 20.4482H30.5532C30.4913 18.1748 29.5444 16.1217 28.0434 14.6207C26.491 13.0682 24.345 12.1082 21.976 12.1082H17.4179C17.416 12.0286 17.415 11.9479 17.415 11.8673C17.415 9.49731 18.3751 7.35231 19.9284 5.79981C21.4809 4.24731 23.6269 3.28637 25.996 3.28637H38.4815C40.8507 3.28637 42.9965 4.24731 44.549 5.79981C46.1025 7.35231 47.0626 9.49731 47.0626 11.8673C47.0626 14.7117 45.6779 17.2336 43.5451 18.7945Z"
+                                    stroke="#935C10" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M41.4374 29.2744C41.4374 30.5931 42.5064 31.6621 43.8252 31.6621C45.1439 31.6621 46.2128 30.5931 46.2128 29.2744C46.2128 27.9557 45.1439 26.8866 43.8252 26.8866C42.5064 26.8866 41.4374 27.9557 41.4374 29.2744Z"
+                                    stroke="#935C10" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M7.4967 18.4062H23.5868" stroke="#152332" stroke-width="2"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M7.4967 22.8613H19.2838" stroke="#152332" stroke-width="2"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M27.884 9.77783H40.1909" stroke="#152332" stroke-width="2"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M32.8125 14.2329H40.1909" stroke="#152332" stroke-width="2"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_20_886">
+                                    <rect width="48" height="48" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl lg:text-[32px] font-normal text-[#0C141DE5] font-forum mb-3">
+                        Project Support & Consultation
+                    </h3>
+                    <p
+                        class="font-poppins font-normal text-sm leading-[22px] tracking-normal text-[#0C141DE5] leading-relaxed">
+                        Dedicated experts to help you pick the perfect tiles based on budget, aesthetics, and project
+                        type.
+                    </p>
+                </div>
+
+                <div class="text-center lg:text-left me-9">
+                    <div class="flex justify-center lg:justify-start mb-4">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 46.3704V33.5874" stroke="#152332" stroke-width="2" stroke-miterlimit="10" />
+                            <path d="M34.9094 27.1958L24 33.5872L13.0906 27.1958" stroke="#152332" stroke-width="2"
+                                stroke-miterlimit="10" />
+                            <path d="M13.0906 27.1956V14.4126" stroke="#152332" stroke-width="2"
+                                stroke-miterlimit="10" />
+                            <path d="M24 8.02148L13.0906 14.413L2.18115 8.02148" stroke="#152332" stroke-width="2"
+                                stroke-miterlimit="10" />
+                            <path d="M34.9094 27.1956V14.4126" stroke="#152332" stroke-width="2"
+                                stroke-miterlimit="10" />
+                            <path d="M45.8189 8.02148L34.9094 14.413L24 8.02148" stroke="#152332" stroke-width="2"
+                                stroke-miterlimit="10" />
+                            <path d="M34.9094 27.1957V39.9786L24 46.3702L13.0906 39.9786V27.1957L24 20.8042"
+                                stroke="#935C10" stroke-width="2" stroke-miterlimit="10" />
+                            <path d="M13.0906 27.1958L2.18115 20.8043V8.0213L13.0906 1.62988L24 8.0213" stroke="#935C10"
+                                stroke-width="2" stroke-miterlimit="10" />
+                            <path
+                                d="M24 20.8043V8.0213L34.9094 1.62988L45.8189 8.0213V20.8043L34.9094 27.1958L24 20.8043Z"
+                                stroke="#935C10" stroke-width="2" stroke-miterlimit="10" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl lg:text-[32px] font-normal text-[#0C141DE5] font-forum mb-3">
+                        Bulk & Custom Requirements
+                    </h3>
+                    <p
+                        class="font-poppins font-normal text-sm leading-[22px] tracking-normal text-[#0C141DE5] leading-relaxed">
+                        Special pricing, flexible batch production, and custom solutions for large-scale design
+                        projects.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <button class="bg-[#152231] text-white px-8 py-3 rounded-md flex items-center justify-center mx-auto gap-2 text-sm font-bold
+                       transition-transform transition-colors duration-300 ease-in-out
+                       hover:bg-gray-800 hover:scale-105 hover:shadow-lg">
+                Explore Designer Resources
+            </button>
+        </div>
+    </section>
+    <!--End E Curated Material Library -->
+
+    <!-- start Download Our Latest Product Brochure -->
+    <section class="bg-[#F8F3EC]">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-14 py-12 lg:py-20">
+            <div class="relative bg-[#152231] overflow-hidden"
+                style="background-image: url(./assests/img/home/cta-back.png); background-blend-mode: soft-light;">
+                <div class="grid grid-cols-[2fr_3fr_2fr] items-center w-full">
+                    <div class="hidden lg:flex items-end relative h-full">
+                        <div class="absolute bottom-0 -left-[6%] w-[271px] h-[281px] relative">
+                            <svg class="absolute bottom-[0%] -left-[1%] w-[337px] h-[294px] z-10" width="360"
+                                height="380" viewBox="0 0 229 313" fill="none">
+                                <path
+                                    d="M-65.8715 230.675C-81.924 118.242 -27.9205 14.121 59.2156 2.39461C141.68 -8.7031 210.533 85.0279 225.725 191.433C237.829 276.212 172.56 327.227 106.856 336.069C35.3755 345.689 -52.7031 322.907 -65.8715 230.675Z"
+                                    stroke="#F1C17E" stroke-width="3" opacity="0.8" />
+                            </svg>
+                            <svg class="absolute bottom-[0%] -left-[25%] w-[426px] h-[255px] z-10" width="380"
+                                height="400" viewBox="0 0 244 292" fill="none">
+                                <path
+                                    d="M209.634 160.955C270.952 260.059 235.731 342.29 178.497 375.669C127.478 405.423 43.2444 378.211 -11.4147 289.868C-78.9303 180.747 -109.113 49.4279 -46.0942 12.6757C22.0545 -27.0681 136.623 42.9506 209.634 160.955Z"
+                                    stroke="#F1C17E" stroke-width="3" opacity="0.6" />
+                            </svg>
+                            <svg class="absolute top-[15%] left-[9%] w-[283px] h-[301px] z-10" width="420" height="420"
+                                viewBox="0 0 257 249" fill="none">
+                                <path
+                                    d="M51.5108 5.77403C136.671 -14.7948 227.23 40.5719 251.245 134.29C272.626 217.73 202.162 279.49 126.342 297.803C62.0211 313.338 -6.46914 271.7 -24.6071 200.916C-45.7858 118.266 -23.5928 23.9139 51.5108 5.77403Z"
+                                    stroke="#F1C17E" stroke-width="3" opacity="0.4" />
+                            </svg>
+                            <img src="./assests/img/home/Download-Our-Latest.png"
+                                class="w-full h-full object-cover rounded-t-[240px] relative" alt="Bathroom" />
+                        </div>
+                    </div>
+                    <div class="text-center py-16 px-6 lg:px-8">
+                        <h1 class="text-3xl sm:text-4xl lg:text-[44px] font-normal text-white mb-4 font-forum ">
+                            Download Our Latest<br>Product Brochure
+                        </h1>
+                        <p class="font-poppins text-[#FFFFFFC7] text-md font-normal mb-8 max-w-lg mx-auto">
+                            Explore our complete collection of tiles, surfaces, finishes, and technical details — all in
+                            one beautifully crafted catalog. Perfect for homeowners, dealers, designers, and architects.
+                        </p>
+                        <button class="bg-white text-[#0C141DE5] px-8 py-3 rounded-md flex items-center justify-center mx-auto gap-2 text-sm font-bold
+                               transition-transform transition-colors duration-300 ease-in-out
+                               hover:bg-transparent hover:border hover:text-white hover:scale-105 hover:shadow-lg">
+                            <svg class="stroke-current group-hover:text-white" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M4 17V19C4 19.5304 4.21071 20.0391 4.58579 20.4142C4.96086 20.7893 5.46957 21 6 21H18C18.5304 21 19.0391 20.7893 19.4142 20.4142C19.7893 20.0391 20 19.5304 20 19V17M7 11L12 16M12 16L17 11M12 16V4"
+                                    stroke="currentColor" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            Download Brochure
+                        </button>
+                    </div>
+                    <div class="hidden lg:flex items-start relative h-full">
+                        <div class="absolute bottom-[0%] left-[45%] w-[271px] h-[281px] relative">
+                            <svg class="absolute bottom-[15%] right-[0%] w-[255px] h-[301px] z-10" width="222"
+                                height="201" viewBox="0 0 222 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.6" fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M85.2455 194.698C170.406 215.266 260.965 159.9 284.98 66.1821C306.361 -17.2578 235.897 -79.0182 160.076 -97.3313C95.7557 -112.867 27.2655 -71.2285 9.12759 -0.444675C-12.0511 82.2059 10.1419 176.558 85.2455 194.698Z"
+                                    stroke="#F1C17E" stroke-width="3" />
+                            </svg>
+                            <svg class="absolute top-[0%] right-[0%] z-10 w-[337px] h-[294px]" width="258" height="265"
+                                viewBox="0 0 258 265" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M4.31853 33.6199C-11.734 146.053 42.2695 250.174 129.406 261.9C211.87 272.998 280.723 179.267 295.915 72.8619C308.019 -11.9175 242.75 -62.9322 177.046 -71.7744C105.566 -81.3939 17.4869 -58.6122 4.31853 33.6199Z"
+                                    stroke="#F1C17E" stroke-width="3" />
+                            </svg>
+                            <svg class="absolute bottom-[10%] -right-[10%] w-[426px] h-[255px] z-10" width="270"
+                                height="244" viewBox="0 0 270 244" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M291.776 82.3515C353.094 -16.7533 317.873 -98.9842 260.638 -132.363C209.62 -162.116 125.386 -134.905 70.7272 -46.5623C3.21154 62.5594 -26.9714 193.878 36.0477 230.63C104.196 270.374 218.764 200.356 291.776 82.3515Z"
+                                    stroke="#F1C17E" stroke-width="3" />
+                            </svg>
+                            <img src="./assests/img/home/Download-Our-Latest-1.png"
+                                class="w-full h-full object-cover rounded-b-[240px] relative" alt="Kitchen" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end Download Our Latest Product Brochure -->
+
+    <!-- start Latest News & Updates Section -->
+    <section class="bg-[#F8F3EC]">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-14 py-12 lg:py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+                <div class="lg:col-span-1">
+                    <h2 class="text-4xl sm:text-5xl lg:text-[56px] font-normal font-forum text-[#0C141DE5] mb-6">
+                        Latest News &<br>Updates
+                    </h2>
+                    <p class="text-[#0F1924B8] font-normal font-poppins text-[18px] lg:text-base leading-relaxed mb-8">
+                        Stay informed with the newest launches, events, achievements, and announcements from Passero
+                        Vitrified. Discover what's shaping our journey in design, innovation, and global growth.
+                    </p>
+                    <button class="bg-gray-900 text-white px-8 py-3 rounded text-sm font-medium transition-transform transition-colors duration-300 ease-in-out
+                       hover:bg-gray-800 hover:scale-105 hover:shadow-lg">
+                        View All News
+                    </button>
+                </div>
+
+                <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&h=400&fit=crop"
+                            alt="Urban Stone Series" class="w-full h-[275px] object-cover">
+                        <div class="py-5">
+                            <h3 class="font-forum text-2xl font-normal text-[#0C141DE5] mb-2">
+                                New Tile Collection Launch: UrbanStone Series
+                            </h3>
+                            <p class="font-poppins text-[#0F1924B8] text-sm font-normal">12 Feb 2025</p>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=600&h=400&fit=crop"
+                            alt="Brand Store Opening" class="w-full h-[275px] object-cover">
+                        <div class="py-5">
+                            <h3 class="font-forum text-2xl font-normal text-[#0C141DE5] mb-2">
+                                Passero Expands Its First Exclusive Brand Store
+                            </h3>
+                            <p class="font-poppins text-[#0F1924B8] text-sm font-normal">28 Jan 2025</p>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop"
+                            alt="India Build Expo" class="w-full h-[275px] object-cover">
+                        <div class="py-5">
+                            <h3 class="font-forum text-2xl font-normal text-[#0C141DE5] mb-2">
+                                Passero Participates in India Build Expo 2025
+                            </h3>
+                            <p class="font-poppins text-[#0F1924B8] text-sm font-normal">14 Dec 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Latest News & Updates Section -->
+
+    <!-- satr CTA Section -->
+    <section class="relative overflow-hidden">
+        <div class="relative bg-cover bg-center bg-fixed bg-center bg-contain"
+            style="background-image: url('./assests/img/home/cta-bg.jpg');">
+            <div class="absolute inset-0  bg-[#0000006b] backdrop-blur-[4px]">
+            </div>
+            <div class="relative max-w-8xl mx-auto px-4 sm:px-6 lg:px-14 py-12 lg:py-[100px]"
+                style=" background-color: rgba(0,0,0,0.35); background-image: url('./assests/img/home/cta-back.png'); background-blend-mode: soft-light;">
+                <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
+                    <div class="max-w-md">
+                        <h1 class="text-4xl sm:text-5xl lg:text-[56px] font-normal text-white leading-tight font-forum">
+                            Ready to Transform Your Space With Premium Tiles?
+                        </h1>
+                    </div>
+                    <div class="lg:text-left max-w-sm">
+                        <p class="text-white text-sm sm:text-base mb-6 lg:mb-8">
+                            Connect with our experts, explore our exclusive brand stores, or get personalized
+                            recommendations for your next project.
+                        </p>
+
+                        <div class="flex flex-col sm:flex-row gap-4 lg:justify-end">
+                            <button
+                                class="bg-white text-gray-900 px-8 py-3 rounded text-sm font-medium transition-all duration-300 ease-in-out hover:outline hover:outline-2 hover:bg-transparent hover:outline-white hover:text-white hover:outline-offset-2 hover:scale-105 hover:shadow-lg">
+                                Contact Our Team
+                            </button>
+
+                            <button
+                                class="border-2 border-white text-white px-8 py-3 rounded text-sm font-medium transition-all duration-300 ease-in-out hover:bg-white hover:text-[#0c141d] hover:scale-105 hover:shadow-lg">
+                                Visit a Brand Store
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end CTA Section -->
+
+    <!-- Footer Section -->
+    <footer class="bg-[#F8F3EC]">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-14 pt-12 lg:pt-20 pb-6 lg:pb-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 mb-12">
+                <div class="lg:col-span-1">
+                    <div class="mb-6">
+                        <img src="./assests/img/logo/colo-logo.png" id="logo-img"
+                            data-light="./assests/img/logo/logo.svg" data-dark="./assests/img/logo/colo-logo.png"
+                            class="object-contain transition-all duration-300">
+                    </div>
+                    <p class="text-[#0C141DE5] text-sm font-normal font-poppins leading-relaxed">
+                        Passero Vitrified creates premium surfaces crafted for design, durability, and modern living.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-forum text-2xl font-normal text-[#935C10] mb-4">Company</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">About
+                                Us</a></li>
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Brand
+                                Stores</a>
+                        </li>
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Career</a>
+                        </li>
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Contact
+                                Us</a></li>
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Why
+                                Passero</a></li>
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Packing
+                                Details</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-forum text-2xl font-normal text-[#935C10] mb-4">Products</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Floor
+                                Tiles</a></li>
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Wall
+                                Tiles</a></li>
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Outdoor
+                                Tiles</a>
+                        </li>
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Full
+                                Body Tiles</a>
+                        </li>
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Large
+                                Slabs</a></li>
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Special
+                                Finishes</a>
+                        </li>
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">View
+                                All
+                                Products</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-forum text-2xl font-normal text-[#935C10] mb-4">Resources</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Downloads</a>
+                        </li>
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">News
+                                & Events</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-forum text-2xl font-normal text-[#935C10] mb-4">Contact</h3>
+                    <div class="space-y-4 text-sm">
+                        <div>
+                            <p class="font-semibold text-[#0C141DE5] text-base font-poppins mb-1">Address</p>
+                            <p class="text-[#0C141DE5] font-normal text-base">B-A, NATIONAL HIGHWAY Timbdi, Gujarat
+                                363642</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-[#0C141DE5] text-base font-poppins mb-1">Ketanbhai Patel</p>
+                            <a href="tel:+919723581081"
+                                class="underline text-[#0C141DE5] font-normal text-base hover:text-gray-900 block">(+91)
+                                9723581081</a>
+                            <a href="tel:+919737228030"
+                                class="underline text-[#0C141DE5] font-normal text-base hover:text-gray-900 block">(+91)
+                                9737228030</a>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-[#0C141DE5] text-base font-poppins mb-1">Dhruvbhai Patel</p>
+                            <a href="tel:+919712981081"
+                                class="underline text-[#0C141DE5] font-normal text-base hover:text-gray-900 block">(+91)
+                                9712981081</a>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-[#0C141DE5] text-base font-poppins mb-1">Write us</p>
+                            <a href="mailto:kpatel@passerovitrified.com"
+                                class="underline text-[#0C141DE5] font-normal text-base hover:text-gray-900">kpatel@passerovitrified.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-[#1F32473D] pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p class="font-poppins font-normal text-sm leading-[22px] tracking-normal text-[#0C141DE5]">© 2025
+                    Passero Vitrified. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <a href="#"
+                        class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16.5 7.5V7.51M4 8C4 6.93913 4.42143 5.92172 5.17157 5.17157C5.92172 4.42143 6.93913 4 8 4H16C17.0609 4 18.0783 4.42143 18.8284 5.17157C19.5786 5.92172 20 6.93913 20 8V16C20 17.0609 19.5786 18.0783 18.8284 18.8284C18.0783 19.5786 17.0609 20 16 20H8C6.93913 20 5.92172 19.5786 5.17157 18.8284C4.42143 18.0783 4 17.0609 4 16V8ZM9 12C9 12.7956 9.31607 13.5587 9.87868 14.1213C10.4413 14.6839 11.2044 15 12 15C12.7956 15 13.5587 14.6839 14.1213 14.1213C14.6839 13.5587 15 12.7956 15 12C15 11.2044 14.6839 10.4413 14.1213 9.87868C13.5587 9.31607 12.7956 9 12 9C11.2044 9 10.4413 9.31607 9.87868 9.87868C9.31607 10.4413 9 11.2044 9 12Z"
+                                stroke="#935C10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <a href="#"
+                        class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7 10V14H10V21H14V14H17L18 10H14V8C14 7.73478 14.1054 7.48043 14.2929 7.29289C14.4804 7.10536 14.7348 7 15 7H18V3H15C13.6739 3 12.4021 3.52678 11.4645 4.46447C10.5268 5.40215 10 6.67392 10 8V10H7Z"
+                                stroke="#935C10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="./assests/js/dev-script.js"></script>
+
+</body>
+
+</html>

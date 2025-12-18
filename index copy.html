@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Passero Tiles & Bathware</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .custom-slider>div {
+      min-width: 100%;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body class="antialiased text-slate-800 bg-white">
+
+  <!-- NAVBAR -->
+  <header id="main-nav" class="fixed inset-x-0 top-0 z-30 transition-all duration-300 bg-transparent">
+    <nav class="max-w-[1350px] mx-auto px-6 py-4 grid grid-cols-[1fr_auto_1fr] items-center gap-4">
+
+      <!-- left -->
+      <div class="flex items-center gap-3">
+        <button id="mobile-toggle" class="md:hidden text-white">
+          <i class="fa fa-bars"></i>
+        </button>
+
+        <ul id="nav-left" class="hidden md:flex gap-4 items-center">
+          <li><a href="#about" class="nav-link text-white font-semibold text-base">About Us</a></li>
+          <li><a href="#collections" class="nav-link text-white font-semibold text-base">Collections</a></li>
+          <li><a href="#why" class="nav-link text-white font-semibold text-base">Why Passero</a></li>
+          <li><a href="#stores" class="nav-link text-white font-semibold text-base">Brand Stores</a></li>
+        </ul>
+      </div>
+
+      <div class="flex justify-center">
+        <a href="#" id="logo-wrapper" class="w-[189px] h-[64px]">
+          <img  src="./assests/img/logo/logo.svg" id="logo-img" data-light="./assests/img/logo/logo.svg" data-dark="./assests/img/logo/colo-logo.png" class="object-contain transition-all duration-300"/>
+        </a>
+      </div>
+      <div class="flex justify-end items-center gap-3">
+        <div id="nav-right" class="hidden md:flex items-center gap-4">
+          <a href="#downloads" class="nav-link text-white font-semibold text-base">Downloads</a>
+          <a href="#news" class="nav-link text-white font-semibold text-base">News & Events</a>
+          <a href="#contact"
+            class="nav-link border border-white font-semibold text-base text-white px-4 py-2 rounded">Contact Us</a>
+        </div>
+        <a href="tel:+911234567890" class="md:hidden text-white"><i class="fa fa-phone"></i></a>
+      </div>
+    </nav>
+  </header>
+
+  <!--Start HERO SLIDER -->
+    <section class="relative h-screen overflow-hidden">
+      <div class="absolute inset-0 bg-[#00000052] pointer-events-none z-10"></div>
+      <div id="slider" class="relative h-screen overflow-hidden">
+        <div class="slides flex transition-transform duration-700 h-screen custom-slider">
+          <div class="w-full h-screen relative">
+            <img src="./assests/img/home/hero-1.png" class="w-full h-full object-cover" />
+          </div>
+          <div class="w-full h-screen relative">
+            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1920&fit=crop"
+              class="w-full h-full object-cover" />
+          </div>
+          <div class="w-full h-screen relative">
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1920&fit=crop"
+              class="w-full h-full object-cover" />
+          </div>
+          <div class="w-full h-screen relative">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&fit=crop"
+              class="w-full h-full object-cover" />
+          </div>
+        </div>
+        <button id="prev" class="absolute left-4 top-1/2 -translate-y-1/2 text-white p-3 rounded-full z-20 ">
+          <i class="fa fa-chevron-left text-2xl"></i>
+        </button>
+        <button id="next" class="absolute right-4 top-1/2 -translate-y-1/2 text-white p-3 rounded-full z-20 ">
+          <i class="fa fa-chevron-right text-2xl"></i>
+        </button>
+        <div class="absolute inset-0 flex items-center justify-center z-20 px-6">
+          <div class="text-center max-w-5xl text-white">
+            <h1 class="text-4xl md:text-[68px] font-regular mb-6 font-forum text-title leading-[100%]">
+              From Manufacturers to<br />Inspired Spaces.
+            </h1>
+            <p class="text-base md:text-lg text-white/90 mb-6 font-regular">
+              Discover Passero Brand Stores — where quality meets curated design.
+            </p>
+            <div class="flex justify-center gap-4 flex-wrap">
+              <a href="#stores" class="px-8 py-3 bg-white font-bold text-[#0c141d] text-sm rounded shadow">Find a Brand Store</a>
+              <a href="#collections" class="px-6 py-3 border border-white text-sm font-bold text-white rounded">Explore Collections</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- INDICATORS -->
+      <ul class="indicators absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-30">
+        <li class="w-6 h-1 rounded-full bg-[#FFFFFF99]"></li>
+        <li class="w-2 h-1 rounded-full bg-[#FFFFFF52]"></li>
+        <li class="w-2 h-1 rounded-full bg-[#FFFFFF52]"></li>
+      </ul>
+
+    </section>
+  <!--End HERO SLIDER -->
+  
+  <!--Start Discover Our Exclusive<br />Brand Stores -->
+  <!-- <section class="w-full bg-[#F8F3EC]">
+  <div class="container mx-auto ps-5 lg:ps-12 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+    
+    <div>
+      <h2 class="text-3xl lg:text-4xl font-semibold leading-snug text-gray-900 mb-6">
+        Discover Our Exclusive<br />Brand Stores
+      </h2>
+
+      <p class="font-poppins text-description text-base leading-relaxed max-w-md mb-8">
+        Explore our curated brand stores designed to showcase
+        complete tile experiences — from textures and finishes
+        to full interior applications.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+        <div class="border border-gray-200 p-5 rounded-xl shadow-sm bg-white">
+          <div class="flex items-start gap-2 mb-2">
+            <span class="text-yellow-600 text-lg">📍</span>
+            <h4 class="font-medium text-gray-800">
+              Dewas, Madhya Pradesh
+            </h4>
+          </div>
+          <p class="font-poppins text-description text-sm leading-relaxed mb-3">
+            80, Maksi Rd, Vrindavan Nagar Colony, Jamuna Nagar,<br />
+            Itawa, Dewas, 455001
+          </p>
+          <p class="text-black font-medium text-sm">097278 33336</p>
+        </div>
+
+        <div class="border border-gray-200 p-5 rounded-xl shadow-sm bg-white">
+          <div class="flex items-start gap-2 mb-2">
+            <span class="text-yellow-600 text-lg">📍</span>
+            <h4 class="font-medium text-gray-800">
+              Indore, Madhya Pradesh
+            </h4>
+          </div>
+          <p class="font-poppins text-description text-sm leading-relaxed mb-3">
+            Dewas Naka, Lasudia Mori,<br />
+            Indore, 452012
+          </p>
+          <p class="text-black font-medium text-sm">097278 33337</p>
+        </div>
+
+        <div class="border border-gray-200 p-5 rounded-xl shadow-sm bg-white">
+          <div class="flex items-start gap-2 mb-2">
+            <span class="text-yellow-600 text-lg">📍</span>
+            <h4 class="font-medium text-gray-800">
+              Ujjain, Madhya Pradesh
+            </h4>
+          </div>
+          <p class="font-poppins text-description text-sm leading-relaxed mb-3">
+            23, Shanti Vihar Colony, Mahakal Road,<br />
+            Keshav Nagar, Ujjain, 456010
+          </p>
+          <p class="text-black font-medium text-sm">097278 33338</p>
+        </div>
+
+      </div>
+
+      <a
+        href="#"
+        class="inline-flex items-center gap-2 mt-6 px-6 py-3 bg-black text-white rounded-lg text-sm font-medium hover:bg-gray-800 transition-all">
+        Learn More →
+      </a>
+    </div>
+
+    <div class="w-full">
+      <img src="./assests/img/home/OurExclusiveBrand.png"
+           alt="Brand Store"
+           class="w-full h-full object-cover shadow-lg" />
+    </div>
+
+  </div>
+</section> -->
+
+  <!--End Discover Our Exclusive<br />Brand Stores -->
+
+  <!-- JS -->
+  <script>
+    /* ------------ SLIDER ------------ */
+   /* ------------ STICKY NAV ------------ */
+const nav = document.getElementById("main-nav");
+const logo = document.getElementById("logo-img");
+
+function updateNav() {
+  const links = document.querySelectorAll(".nav-link");
+  const contactBtn = document.querySelector("#nav-right a:last-child");
+
+  if (window.scrollY > 50) {
+    // navbar background
+    nav.classList.add("bg-white", "shadow");
+    nav.classList.remove("bg-transparent");
+
+    // text black
+    links.forEach(el => el.classList.replace("text-white", "text-black"));
+
+    // contact button border black
+    contactBtn.classList.replace("border-white", "border-black");
+    contactBtn.classList.replace("text-white", "text-black");
+
+    // switch to black logo
+    logo.src = logo.dataset.dark;
+
+  } else {
+    // navbar background transparent
+    nav.classList.remove("bg-white", "shadow");
+    nav.classList.add("bg-transparent");
+
+    // text white
+    links.forEach(el => el.classList.replace("text-black", "text-white"));
+
+    // contact button border white
+    contactBtn.classList.replace("border-black", "border-white");
+    contactBtn.classList.replace("text-black", "text-white");
+
+    // switch back to white logo
+    logo.src = logo.dataset.light;
+  }
+}
+
+window.addEventListener("scroll", updateNav);
+updateNav();
+
+  </script>
+
+</body>
+
+</html>
