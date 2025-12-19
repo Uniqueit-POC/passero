@@ -32,15 +32,18 @@
                 </button>
 
                 <ul id="nav-left" class="hidden md:flex gap-4 items-center">
-                    <li><a href="#about" class="nav-link text-white font-semibold text-base">About Us</a></li>
-                    <li><a href="#collections" class="nav-link text-white font-semibold text-base">Collections</a></li>
-                    <li><a href="#why" class="nav-link text-white font-semibold text-base">Why Passero</a></li>
-                    <li><a href="#stores" class="nav-link text-white font-semibold text-base">Brand Stores</a></li>
+                    <li><a href="about-us.html" class="nav-link text-white font-semibold text-base">About Us</a></li>
+                    <li><a href="Collection-Details.html"
+                            class="nav-link text-white font-semibold text-base">Collections</a></li>
+                    <li><a href="Why-Passero.html" class="nav-link text-white font-semibold text-base">Why Passero</a>
+                    </li>
+                    <li><a href="Brand-Stores.html" class="nav-link text-white font-semibold text-base">Brand Stores</a>
+                    </li>
                 </ul>
             </div>
 
             <div class="flex justify-center">
-                <a href="#" id="logo-wrapper" class="w-[189px] h-[64px]">
+                <a href="index.html" id="logo-wrapper" class="w-[189px] h-[64px]">
                     <img src="./assests/img/logo/logo.svg" id="logo-img" data-light="./assests/img/logo/logo.svg"
                         data-dark="./assests/img/logo/colo-logo.png"
                         class="object-contain transition-all duration-300" />
@@ -48,9 +51,9 @@
             </div>
             <div class="flex justify-end items-center gap-3">
                 <div id="nav-right" class="hidden md:flex items-center gap-4">
-                    <a href="#downloads" class="nav-link text-white font-semibold text-base">Downloads</a>
-                    <a href="#news" class="nav-link text-white font-semibold text-base">News & Events</a>
-                    <a href="#contact"
+                    <a href="Downloads.html" class="nav-link text-white font-semibold text-base">Downloads</a>
+                    <a href="News-Events.html" class="nav-link text-white font-semibold text-base">News & Events</a>
+                    <a href="contact-us.html"
                         class="nav-link border border-white font-semibold text-base text-white px-4 py-2 rounded transition-all duration-300 ease-in-out hover:bg-white hover:text-[#0c141d] hover:scale-105 hover:shadow-md">
                         Contact Us
                     </a>
@@ -64,35 +67,38 @@
     <!-- Hero Section with Background Image -->
     <section class="relative h-[400px] md:h-[560px] flex items-center justify-center">
         <div class="absolute inset-0">
-            <img src="./assests/img/Collection-Details/Collection-Details-hero-bg.png" 
-                 alt="Office Space" 
-                 class="w-full h-full object-cover">
+            <img src="./assests/img/Collection-Details/Collection-Details-hero-bg.png" alt="Office Space"
+                class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-black bg-opacity-50"></div>
         </div>
-        
+
         <!-- Hero Content -->
         <div class="relative z-10 text-center px-4 max-w-3xl mx-auto">
             <h1 class="text-4xl sm:text-5xl lg:text-[68px] font-normal font-forum text-white mb-6">
                 Steel Series
             </h1>
             <p class="max-w-3xl  text-white font-normal font-poppins text-[18px] lg:text-[18px] leading-relaxed mb-8">
-                A collection inspired by concrete's inherent beauty, featuring sleek textures, subtle metallic tones, and contemporary finishes perfect for urban interiors.
+                A collection inspired by concrete's inherent beauty, featuring sleek textures, subtle metallic tones,
+                and contemporary finishes perfect for urban interiors.
             </p>
-            
+
             <!-- CTA Buttons -->
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="#stores" class="px-8 py-3 bg-white font-bold text-[#0c141d] text-sm rounded shadow transition-all duration-300 ease-in-out hover:outline hover:outline-2 hover:bg-transparent hover:outline-white hover:text-white hover:outline-offset-2 hover:scale-105 hover:shadow-lg">
+                <a href="#stores"
+                    class="px-8 py-3 bg-white font-bold text-[#0c141d] text-sm rounded shadow transition-all duration-300 ease-in-out hover:outline hover:outline-2 hover:bg-transparent hover:outline-white hover:text-white hover:outline-offset-2 hover:scale-105 hover:shadow-lg">
                     Find Stores Here
                 </a>
-                <a href="#collections" class="px-6 py-3 border border-white text-sm font-bold text-white rounded transition-all duration-300 ease-in-out hover:bg-white hover:text-[#0c141d] hover:scale-105 hover:shadow-lg">
+                <a href="#collections"
+                    class="px-6 py-3 border border-white text-sm font-bold text-white rounded transition-all duration-300 ease-in-out hover:bg-white hover:text-[#0c141d] hover:scale-105 hover:shadow-lg">
                     Download Catalogue
                 </a>
             </div>
         </div>
     </section>
 
+
     <!-- start Filter Tabs sectrion -->
-    <section class="bg-[#F8F3EC] max-w-8xl mx-auto px-4 sm:px-6 lg:px-14 py-12 lg:py-20">    
+    <section class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-14 py-12 lg:py-20 bg-[#F8F3EC]">
         <div class=" mb-8">
             <div id="filter-tabs" class="flex flex-wrap justify-center gap-1 md:gap-1 text-2xl font-forum mb-8">
                 <button class="tab px-4 py-2 text-[#935C10] border-b-2 border-b-[#935C10] transition"
@@ -113,23 +119,130 @@
 
         <!-- start Tile Collections Grid sectrion -->
         <div class="">
-            <div class="relative ps-4 sm:ps-6 lg:ps-14 ">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-4" id="tile-grid">
+                <div class="tile relative group cursor-pointer h-64 sm:h-72 lg:h-[324px]" data-category="600x1200mm">
+                    <img src="./assests/img/Collection-Details/Autumn-Steel.png" alt="Autumn Steel"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 overlay-gradient"></div>
+                    <div
+                        class="font-forum absolute bottom-0 left-0 w-full bg-[#FFFFFF52] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
+                        <h3 class="text-white text-2xl font-normal font-poppins">Autumn Steel</h3>
+                    </div>
+                </div>
+                <div class="tile relative group cursor-pointer h-64 sm:h-72 lg:h-[324px]" data-category="800x1600mm">
+                    <img src="./assests/img/Collection-Details/Camlin-Steel.png" alt="Camlin Steel"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 overlay-gradient"></div>
+                    <div
+                        class="font-forum absolute bottom-0 left-0 w-full bg-[#ffffff52] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
+                        <h3 class="text-white text-2xl font-normal font-poppins">Camlin Steel</h3>
+                    </div>
+                </div>
+                <div class="tile relative group cursor-pointer h-64 sm:h-72 lg:h-[324px]" data-category="800x2400mm">
+                    <img src="./assests/img/Collection-Details/Desert-Steel.png" alt="Desert Steel"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 overlay-gradient"></div>
+                    <div
+                        class="font-forum absolute bottom-0 left-0 w-full bg-[#ffffff52] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
+                        <h3 class="text-white text-2xl font-normal font-poppins">Desert Steel</h3>
+                    </div>
+                </div>
+                <div class="tile relative group cursor-pointer h-64 sm:h-72 lg:h-[324px]" data-category="1200x1800mm">
+                    <img src="./assests/img/Collection-Details/Lilac-Steel.png" alt="Lilac Steel"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 overlay-gradient"></div>
+                    <div
+                        class="font-forum absolute bottom-0 left-0 w-full bg-[#ffffff52] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
+                        <h3 class="text-white text-2xl font-normal font-poppins">Lilac Steel</h3>
+                    </div>
+                </div>
+                <div class="tile relative group cursor-pointer h-64 sm:h-72 lg:h-[324px]" data-category="fullbody">
+                    <img src="./assests/img/Collection-Details/Marvel-Steel.png" alt="Marvel Steel"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 overlay-gradient"></div>
+                    <div
+                        class="font-forum absolute bottom-0 left-0 w-full bg-[#ffffff52] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
+                        <h3 class="text-white text-2xl font-normal font-poppins">Marvel Steel</h3>
+                    </div>
+                </div>
+                <div class="tile relative group cursor-pointer h-64 sm:h-72 lg:h-[324px]" data-category="600x1200mm">
+                    <img src="./assests/img/Collection-Details/Mimosa-Steel.png" alt="Mimosa Steel"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 overlay-gradient"></div>
+                    <div
+                        class="font-forum absolute bottom-0 left-0 w-full bg-[#ffffff52] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
+                        <h3 class="text-white text-2xl font-normal font-poppins">Mimosa Steel</h3>
+                    </div>
+                </div>
+                <div class="tile relative group cursor-pointer h-64 sm:h-72 lg:h-[324px]" data-category="800x1600mm">
+                    <img src="./assests/img/Collection-Details/Pears-Steel.png" alt="Pears Steel"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 overlay-gradient"></div>
+                    <div
+                        class="font-forum absolute bottom-0 left-0 w-full bg-[#ffffff52] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
+                        <h3 class="text-white text-2xl font-normal font-poppins">Pears Steel</h3>
+                    </div>
+                </div>
+                <div class="tile relative group cursor-pointer h-64 sm:h-72 lg:h-[324px]" data-category="800x2400mm">
+                    <img src="./assests/img/Collection-Details/Sapodilla-Steel.png" alt="Sapodilla Steel"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 overlay-gradient"></div>
+                    <div
+                        class="font-forum absolute bottom-0 left-0 w-full bg-[#ffffff52] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
+                        <h3 class="text-white text-2xl font-normal font-poppins">Sapodilla Steel</h3>
+                    </div>
+                </div>
+                <div class="tile relative group cursor-pointer h-64 sm:h-72 lg:h-[324px]" data-category="800x2400mm">
+                    <img src="./assests/img/Collection-Details/Sky-Steel.png" alt="Sky Steel"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 overlay-gradient"></div>
+                    <div
+                        class="font-forum absolute bottom-0 left-0 w-full bg-[#ffffff52] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
+                        <h3 class="text-white text-2xl font-normal font-poppins">Sky Steel</h3>
+                    </div>
+                </div>
+                <div class="tile relative group cursor-pointer h-64 sm:h-72 lg:h-[324px]" data-category="800x2400mm">
+                    <img src="./assests/img/Collection-Details/Vista-Steel.png" alt="Vista Steel"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 overlay-gradient"></div>
+                    <div
+                        class="font-forum absolute bottom-0 left-0 w-full bg-[#ffffff52] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
+                        <h3 class="text-white text-2xl font-normal font-poppins">Vista Steel</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- start More Collections You’ll Love sectrion -->
+    <div class="max-w-8xl mx-auto">
+        <div
+            class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 px-4 sm:px-6 lg:px-14 py-12 lg:py-20">
+            <div class="max-w-lg">
+                <h1 class="text-4xl sm:text-5xl lg:text-[56px] font-light mb-2 font-forum text-title">
+                    More Collections You'll Love
+                </h1>
+            </div>
+            <div class="lg:text-right max-w-xl">
+                <p
+                    class="font-poppins font-normal text-[#0C141DE5] mb-4 max-w-md text-left text-sm lg:text-[18px] leading-relaxed">
+                    Explore our other curated collections featuring elegant textures, modern finishes, and versatile
+                    designs that suit any aesthetic.
+                </p>
+                <button class="bg-[#152231] text-white px-8 py-3 rounded-md flex items-start justify-start gap-2 text-sm font-bold
+                       transition-transform transition-colors duration-300 ease-in-out
+                       hover:bg-gray-800 hover:scale-105 hover:shadow-lg">
+                    View All Collections
+                </button>
+            </div>
+        </div>
+        <div class="relative ps-4 sm:ps-6 lg:ps-14 pb-12 lg:pb-20">
             <div class="overflow-hidden">
                 <div id="sliderGrid" class="flex flex-nowrap gap-6 mb-8 transition-transform duration-500 ease-in-out">
                     <div class="tilesgrid relative group cursor-pointer w-[360px] h-[271px] sm:w-[320px] sm:h-[240px] md:w-[340px] md:h-[255px] lg:w-[360px] lg:h-[271px] flex-shrink-0"
                         data-category="600x1200mm">
-                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=800&fit=crop"
-                            alt="Steel Series"
-                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                        <div class="absolute inset-0 overlay-gradient"></div>
-                        <div
-                            class="font-forum absolute bottom-0 left-0 w-full bg-[#00000052] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
-                            <h3 class="text-white text-2xl font-normal font-poppins">Steel Series</h3>
-                        </div>
-                    </div>
-                    <div class="tilesgrid relative group cursor-pointer w-[360px] h-[271px] sm:w-[320px] sm:h-[240px] md:w-[340px] md:h-[255px] lg:w-[360px] lg:h-[271px] flex-shrink-0"
-                        data-category="800x1600mm">
-                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=800&fit=crop"
+                        <img src="./assests/img/Collection-Details/Carving-Series.png"
                             alt="Carving Series"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                         <div class="absolute inset-0 overlay-gradient"></div>
@@ -139,8 +252,8 @@
                         </div>
                     </div>
                     <div class="tilesgrid relative group cursor-pointer w-[360px] h-[271px] sm:w-[320px] sm:h-[240px] md:w-[340px] md:h-[255px] lg:w-[360px] lg:h-[271px] flex-shrink-0"
-                        data-category="800x2400mm">
-                        <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&h=800&fit=crop"
+                        data-category="800x1600mm">
+                        <img src="./assests/img/Collection-Details/Linear-Series.png"
                             alt="Linear Series"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                         <div class="absolute inset-0 overlay-gradient"></div>
@@ -150,8 +263,8 @@
                         </div>
                     </div>
                     <div class="tilesgrid relative group cursor-pointer w-[360px] h-[271px] sm:w-[320px] sm:h-[240px] md:w-[340px] md:h-[255px] lg:w-[360px] lg:h-[271px] flex-shrink-0"
-                        data-category="1200x1800mm">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=800&fit=crop"
+                        data-category="800x2400mm">
+                        <img src="./assests/img/Collection-Details/Color-Series.png"
                             alt="Color Series"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                         <div class="absolute inset-0 overlay-gradient"></div>
@@ -161,25 +274,36 @@
                         </div>
                     </div>
                     <div class="tilesgrid relative group cursor-pointer w-[360px] h-[271px] sm:w-[320px] sm:h-[240px] md:w-[340px] md:h-[255px] lg:w-[360px] lg:h-[271px] flex-shrink-0"
-                        data-category="1200x2400mm">
-                        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=800&fit=crop"
-                            alt="Marble Series"
+                        data-category="1200x1800mm">
+                        <img src="./assests/img/Collection-Details/Glue-Gliter-Series.png"
+                            alt="Glue & Gliter Series"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                         <div class="absolute inset-0 overlay-gradient"></div>
                         <div
                             class="font-forum absolute bottom-0 left-0 w-full bg-[#00000052] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
-                            <h3 class="text-white text-2xl font-normal font-poppins">Marble Series</h3>
+                            <h3 class="text-white text-2xl font-normal font-poppins">Glue & Gliter Series</h3>
+                        </div>
+                    </div>
+                    <div class="tilesgrid relative group cursor-pointer w-[360px] h-[271px] sm:w-[320px] sm:h-[240px] md:w-[340px] md:h-[255px] lg:w-[360px] lg:h-[271px] flex-shrink-0"
+                        data-category="1200x2400mm">
+                        <img src="./assests/img/Collection-Details/Color-Series.png"
+                            alt="Color Series"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 overlay-gradient"></div>
+                        <div
+                            class="font-forum absolute bottom-0 left-0 w-full bg-[#00000052] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
+                            <h3 class="text-white text-2xl font-normal font-poppins">Color Series</h3>
                         </div>
                     </div>
                     <div class="tilesgrid relative group cursor-pointer w-[360px] h-[271px] sm:w-[320px] sm:h-[240px] md:w-[340px] md:h-[255px] lg:w-[360px] lg:h-[271px] flex-shrink-0"
                         data-category="600x600mm">
-                        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=800&fit=crop"
-                            alt="Wood Series"
+                        <img src="./assests/img/Collection-Details/Glue-Gliter-Series.png"
+                            alt="Glue & Gliter Series"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                         <div class="absolute inset-0 overlay-gradient"></div>
                         <div
                             class="font-forum absolute bottom-0 left-0 w-full bg-[#00000052] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
-                            <h3 class="text-white text-2xl font-normal font-poppins">Wood Series</h3>
+                            <h3 class="text-white text-2xl font-normal font-poppins">Glue & Gliter Series</h3>
                         </div>
                     </div>
                 </div>
@@ -200,85 +324,7 @@
                 </button>
             </div>
         </div>
-        </div>
-    </section>
-    <!-- end Tile Collections Grid sectrion -->
-
-    <!-- start More Collections You’ll Love sectrion -->
-      <div class="max-w-8xl mx-auto">
-         <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 px-4 sm:px-6 lg:px-14 py-12 lg:py-20">
-                <div class="max-w-lg">
-                    <h1 class="text-4xl sm:text-5xl lg:text-[56px] font-light mb-2 font-forum text-title">
-                        More Collections You'll Love
-                    </h1>
-                </div>
-                <div class="lg:text-right max-w-xl">
-                    <p class="font-poppins font-normal text-[#0C141DE5] mb-4 max-w-md text-left text-sm lg:text-[18px] leading-relaxed">
-                       Explore our other curated collections featuring elegant textures, modern finishes, and versatile designs that suit any aesthetic.
-                    </p>
-                    <button class="bg-[#152231] text-white px-8 py-3 rounded-md flex items-start justify-start gap-2 text-sm font-bold
-                       transition-transform transition-colors duration-300 ease-in-out
-                       hover:bg-gray-800 hover:scale-105 hover:shadow-lg">
-                        View All Collections
-                    </button>
-                </div>
-            </div>
-        <div class="relative ps-4 sm:ps-6 lg:ps-14 lg:mb-16">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                <div class="tile relative group cursor-pointer h-64 sm:h-72 lg:h-[324px]" data-category="600x1200mm">
-                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=800&fit=crop"
-                        alt="Steel Series"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 overlay-gradient"></div>
-                    <div
-                        class="font-forum absolute bottom-0 left-0 w-full bg-[#00000052] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
-                        <h3 class="text-white text-2xl font-normal font-poppins">Steel Series</h3>
-                    </div>
-                </div>
-                <div class="tile relative group cursor-pointer h-64 sm:h-72 lg:h-[324px]" data-category="800x1600mm">
-                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=800&fit=crop"
-                        alt="Carving Series"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 overlay-gradient"></div>
-                    <div
-                        class="font-forum absolute bottom-0 left-0 w-full bg-[#00000052] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
-                        <h3 class="text-white text-2xl font-normal font-poppins">Carving Series</h3>
-                    </div>
-                </div>
-                <div class="tile relative group cursor-pointer h-64 sm:h-72 lg:h-[324px]" data-category="800x2400mm">
-                    <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&h=800&fit=crop"
-                        alt="Linear Series"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 overlay-gradient"></div>
-                    <div
-                        class="font-forum absolute bottom-0 left-0 w-full bg-[#00000052] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
-                        <h3 class="text-white text-2xl font-normal font-poppins">Linear Series</h3>
-                    </div>
-                </div>
-                <div class="tile relative group cursor-pointer h-64 sm:h-72 lg:h-[324px]" data-category="1200x1800mm">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=800&fit=crop"
-                        alt="Color Series"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 overlay-gradient"></div>
-                    <div
-                        class="font-forum absolute bottom-0 left-0 w-full bg-[#00000052] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
-                        <h3 class="text-white text-2xl font-normal font-poppins">Color Series</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="flex justify-center items-center gap-4">
-                <button class="items-center justify-center transition duration-300">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 12H19M5 12L9 16M5 12L9 8" stroke="#935C10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-                <button class="flex items-center justify-center transition duration-300">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 12H19M19 12L15 16M19 12L15 8" stroke="#935C10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-            </div>
-        </div>
+    </div>
     </div>
     <!-- end More Collections You’ll Love sectrion -->
 
@@ -418,8 +464,10 @@
                            transition-transform transition-colors duration-300 ease-in-out
                            hover:bg-gray-800 hover:text-white hover:scale-105 hover:shadow-lg">
                         Visit Our Stores
-                        <svg class="stroke-current group-hover:text-white" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 12H19M19 12L15 16M19 12L15 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <svg class="stroke-current group-hover:text-white" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L15 16M19 12L15 8" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
                     </button>
                 </div>
@@ -450,20 +498,20 @@
                 <div>
                     <h3 class="font-forum text-2xl font-normal text-[#935C10] mb-4">Company</h3>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="#"
+                        <li><a href="about-us.html"
                                 class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">About
                                 Us</a></li>
-                        <li><a href="#"
+                        <li><a href="Brand-Stores.html"
                                 class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Brand
                                 Stores</a>
                         </li>
-                        <li><a href="#"
+                        <li><a href="Career.html"
                                 class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Career</a>
                         </li>
-                        <li><a href="#"
+                        <li><a href="contact-us.html"
                                 class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Contact
                                 Us</a></li>
-                        <li><a href="#"
+                        <li><a href="Why-Passero.html"
                                 class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Why
                                 Passero</a></li>
                         <li><a href="#"
@@ -496,7 +544,7 @@
                                 class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Special
                                 Finishes</a>
                         </li>
-                        <li><a href="#"
+                        <li><a href="collection.html"
                                 class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">View
                                 All
                                 Products</a></li>
@@ -573,119 +621,6 @@
     </footer>
 
     <!-- JS -->
-    <script>
-        const tabs = document.querySelectorAll('#filter-tabs .tab');
-        const tiles = document.querySelectorAll('#tile-grid .tile');
-
-        function filterTiles(category) {
-            tiles.forEach(tile => {
-                if (category === 'all' || tile.dataset.category === category) {
-                    tile.classList.remove('hidden');
-                } else {
-                    tile.classList.add('hidden');
-                }
-            });
-        }
-
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                tabs.forEach(t => {
-                    t.classList.remove('text-[#935C10]');
-                    t.classList.remove('border-b-[#935C10]');
-                    t.classList.add('text-[#0C141DE5]');
-                    t.classList.add('border-transparent');
-                });
-
-                tab.classList.add('text-[#935C10]');
-                tab.classList.add('border-b-[#935C10]');
-                tab.classList.remove('text-[#0C141DE5]');
-                tab.classList.remove('border-transparent');
-                const category = tab.dataset.filter;
-                filterTiles(category);
-            });
-        });
-
-        filterTiles('all');
-    </script>
-    <script>
-        const sliderGrid = document.getElementById('sliderGrid');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        const tilesgrids = document.querySelectorAll('.tilesgrid');
-        
-        let currentIndex = 0;
-        let itemsPerView = getItemsPerView();
-        const totalItems = tilesgrids.length;
-
-        function getItemsPerView() {
-            if (window.innerWidth >= 1024) return 4;
-            if (window.innerWidth >= 640) return 2;
-            return 1;
-        }
-
-        function getMaxIndex() {
-            return Math.max(0, totalItems - itemsPerView);
-        }
-
-        function updateSlider() {
-            const tileWidth = tilesgrids[0].offsetWidth;
-            const gap = 24; // 6 * 4px (gap-6)
-            const offset = currentIndex * (tileWidth + gap);
-            sliderGrid.style.transform = `translateX(-${offset}px)`;
-            updateButtons();
-        }
-
-        function updateButtons() {
-            const maxIndex = getMaxIndex();
-            prevBtn.disabled = currentIndex === 0;
-            nextBtn.disabled = currentIndex >= maxIndex;
-            
-            if (currentIndex === 0) {
-                prevBtn.style.opacity = '0.3';
-                prevBtn.style.cursor = 'not-allowed';
-            } else {
-                prevBtn.style.opacity = '1';
-                prevBtn.style.cursor = 'pointer';
-            }
-            
-            if (currentIndex >= maxIndex) {
-                nextBtn.style.opacity = '0.3';
-                nextBtn.style.cursor = 'not-allowed';
-            } else {
-                nextBtn.style.opacity = '1';
-                nextBtn.style.cursor = 'pointer';
-            }
-        }
-
-        prevBtn.addEventListener('click', () => {
-            if (currentIndex > 0) {
-                currentIndex--;
-                updateSlider();
-            }
-        });
-
-        nextBtn.addEventListener('click', () => {
-            const maxIndex = getMaxIndex();
-            if (currentIndex < maxIndex) {
-                currentIndex++;
-                updateSlider();
-            }
-        });
-
-        window.addEventListener('resize', () => {
-            const newItemsPerView = getItemsPerView();
-            if (newItemsPerView !== itemsPerView) {
-                itemsPerView = newItemsPerView;
-                const maxIndex = getMaxIndex();
-                currentIndex = Math.min(currentIndex, maxIndex);
-                updateSlider();
-            }
-        });
-
-        // Initialize
-        updateButtons();
-    </script>
-
     <script src="./assests/js/dev-script.js"></script>
 
 </body>
