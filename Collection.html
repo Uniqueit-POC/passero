@@ -106,7 +106,8 @@
         <!-- start Tile Collections Grid sectrion -->
         <div class="">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-4" id="tile-grid">
-                <div class="tile relative group cursor-pointer h-64 sm:h-72 lg:h-[324px]" data-category="600x1200mm">
+               <a href="Collection-Details.html">
+                 <div class="tile relative group cursor-pointer h-64 sm:h-72 lg:h-[324px]" data-category="600x1200mm">
                     <img src="./assests/img/home/Product-Series-1.png"
                         alt="Steel Series"
                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
@@ -116,6 +117,8 @@
                         <h3 class="text-white text-2xl font-normal font-poppins">Steel Series</h3>
                     </div>
                 </div>
+               </a>
+               <a href="Collection-Details.html">
                 <div class="tile relative group cursor-pointer h-64 sm:h-72 lg:h-[324px]" data-category="800x1600mm">
                     <img src="./assests/img/home/Product-Series-2.png"
                         alt="Carving Series"
@@ -126,6 +129,8 @@
                         <h3 class="text-white text-2xl font-normal font-poppins">Carving Series</h3>
                     </div>
                 </div>
+                </a>
+                <a href="Collection-Details.html">
                 <div class="tile relative group cursor-pointer h-64 sm:h-72 lg:h-[324px]" data-category="800x2400mm">
                     <img src="./assests/img/home/Product-Series-3.png"
                         alt="Linear Series"
@@ -136,6 +141,8 @@
                         <h3 class="text-white text-2xl font-normal font-poppins">Linear Series</h3>
                     </div>
                 </div>
+                </a>
+                <a href="Collection-Details.html">
                 <div class="tile relative group cursor-pointer h-64 sm:h-72 lg:h-[324px]" data-category="1200x1800mm">
                     <img src="./assests/img/home/Product-Series-4.png"
                         alt="Color Series"
@@ -146,6 +153,8 @@
                         <h3 class="text-white text-2xl font-normal font-poppins">Color Series</h3>
                     </div>
                 </div>
+                </a>
+                <a href="Collection-Details.html">
                 <div class="tile relative group cursor-pointer h-64 sm:h-72 lg:h-[324px]" data-category="fullbody">
                     <img src="./assests/img/home/Product-Series-5.png"
                         alt="Glue & Glitter Series"
@@ -156,6 +165,8 @@
                         <h3 class="text-white text-2xl font-normal font-poppins">Glue & Glitter Series</h3>
                     </div>
                 </div>
+                </a>
+                <a href="Collection-Details.html">
                 <div class="tile relative group cursor-pointer h-64 sm:h-72 lg:h-[324px]" data-category="600x1200mm">
                     <img src="./assests/img/home/Product-Series-6.png"
                         alt="Bookmatch Series"
@@ -166,6 +177,8 @@
                         <h3 class="text-white text-2xl font-normal font-poppins">Bookmatch Series</h3>
                     </div>
                 </div>
+                </a>
+                <a href="Collection-Details.html">
                 <div class="tile relative group cursor-pointer h-64 sm:h-72 lg:h-[324px]" data-category="800x1600mm">
                     <img src="./assests/img/home/Product-Series-7.png"
                         alt="Stoney Series"
@@ -176,6 +189,8 @@
                         <h3 class="text-white text-2xl font-normal font-poppins">Stoney Series</h3>
                     </div>
                 </div>
+                </a>
+                <a href="Collection-Details.html">
                 <div class="tile relative group cursor-pointer h-64 sm:h-72 lg:h-[324px]" data-category="800x2400mm">
                     <img src="./assests/img/home/Product-Series-8.png"
                         alt="Lacqure Series"
@@ -186,6 +201,7 @@
                         <h3 class="text-white text-2xl font-normal font-poppins">Lacqure Series</h3>
                     </div>
                 </div>
+                </a>
             </div>
         </div>
     </section>
@@ -229,7 +245,7 @@
                             Explore our complete collection of tiles, surfaces, finishes, and technical details — all in
                             one beautifully crafted catalog. Perfect for homeowners, dealers, designers, and architects.
                         </p>
-                        <button class="bg-white text-[#0C141DE5] px-8 py-3 rounded-md flex items-center justify-center mx-auto gap-2 text-sm font-bold
+                        <button onclick="openModal()" class="bg-white text-[#0C141DE5] px-8 py-3 rounded-md flex items-center justify-center mx-auto gap-2 text-sm font-bold
                                transition-transform transition-colors duration-300 ease-in-out
                                hover:bg-transparent hover:border hover:text-white hover:scale-105 hover:shadow-lg">
                             <svg class="stroke-current group-hover:text-white" width="24" height="24"
@@ -323,14 +339,14 @@
                     </div>
                 </div>
                 <div>
-                    <button class="bg-white text-[#0C141DE5] px-8 py-3 rounded-md flex items-start justify-start gap-2 text-sm font-bold
+                    <a href="Brand-Stores.html" class="inline-flex w-fit bg-white text-[#0C141DE5] px-8 py-3 rounded-md flex items-start justify-start gap-2 text-sm font-bold
                            transition-transform transition-colors duration-300 ease-in-out
                            hover:bg-gray-800 hover:text-white hover:scale-105 hover:shadow-lg">
                         Visit Our Stores
                         <svg class="stroke-current group-hover:text-white" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5 12H19M19 12L15 16M19 12L15 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
-                    </button>
+                    </a>
                 </div>
             </div>
             <div class="relative h-[648px]">
@@ -480,7 +496,71 @@
             </div>
         </div>
     </footer>
+   <!-- Modal -->
+    <div id="catalogModal" class="modal">
+        <div class="modal-content bg-gray-900 text-white rounded-2xl max-w-2xl w-full mx-4 p-8 md:p-14 relative" style="background-image: url(./assests/img/Downloads/Download-Dialog-bg.png);">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
 
+            <div class="text-center">
+                <h2 class="text-xl sm:text-2xl lg:text-[44px] font-normal font-forum text-white mb-6 mb-3">
+                    Get the Latest Passero Updates
+                </h2>
+                <p class="mb-12 text-[#FFFFFFC7] font-normal text-sm lg:text-base leading-relaxed">
+                    Share your mobile number to receive product details, catalog updates, and 
+                    helpful information from Passero. Our team may also assist you with 
+                    product selection or store guidance, if required.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-stretch">
+                    <div class="relative flex-1 max-w-sm">
+                        <input 
+                            type="tel" 
+                            placeholder="Enter your mobile number" 
+                            class="w-full px-4 py-3 rounded bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        <button class="absolute right-3 top-1/2 transform -translate-y-1/2">
+                            <img src="./assests/img/icon/tabler-icon-device-tablet.svg" alt="">
+                        </button>
+                    </div>
+                    <button class="flex bg-[#F1C17E] text-[#0C141DE5] px-8 py-3 rounded text-sm font-medium transition-transform transition-colors duration-300 ease-in-out hover:bg-white hover:scale-105 hover:shadow-lg">
+                         Download Now
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19M19 12L15 16M19 12L15 8" stroke="#0C141DE5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- // ------------ start download in model open ------------ -->
+<script>
+     function openModal() {
+            document.getElementById('catalogModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('catalogModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        document.getElementById('catalogModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+</script>
+<!-- // ------------ end download in model open ------------ -->
     <!-- JS -->
     <script src="./assests/js/dev-script.js"></script>
 
