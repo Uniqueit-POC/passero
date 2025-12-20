@@ -17,42 +17,45 @@
     <link href="https://fonts.googleapis.com/css2?family=Forum&family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./assests/css/dev-style.css">
-
 </head>
 
-<body class="bg-[#F8F3EC]">
+<body class="antialiased text-slate-800 bg-white">
+
     <!-- start NAVBAR -->
-    <header id="main-nav"
-        class="border-b border-[#1F32473D] fixed inset-x-0 top-0 z-30 transition-all duration-300 bg-transparent">
+    <header id="main-nav" class="fixed inset-x-0 top-0 z-30 transition-all duration-300 bg-transparent">
         <nav class="max-w-[1350px] mx-auto px-6 py-4 grid grid-cols-[1fr_auto_1fr] items-center gap-4">
+
+            <!-- left -->
             <div class="flex items-center gap-3">
                 <button id="mobile-toggle" class="md:hidden text-white">
                     <i class="fa fa-bars"></i>
                 </button>
+
                 <ul id="nav-left" class="hidden md:flex gap-4 items-center">
-                    <li><a href="about-us.html" class="nav-link text-[#0C141DE5] font-semibold text-base">About Us</a></li>
-                    <li><a href="Collection.html" class="nav-link text-[#0C141DE5] font-semibold text-base">Collections</a>
+                    <li><a href="about-us.html" class="nav-link text-white font-semibold text-base">About Us</a></li>
+                    <li><a href="Collection-Details.html"
+                            class="nav-link text-white font-semibold text-base">Collections</a></li>
+                    <li><a href="Why-Passero.html" class="nav-link text-white font-semibold text-base">Why Passero</a>
                     </li>
-                    <li><a href="Why-Passero.html" class="nav-link text-[#0C141DE5] font-semibold text-base">Why Passero</a></li>
-                    <li><a href="Brand-Stores.html" class="nav-link text-[#0C141DE5] font-semibold text-base">Brand Stores</a>
+                    <li><a href="Brand-Stores.html" class="nav-link text-white font-semibold text-base">Brand Stores</a>
                     </li>
                 </ul>
             </div>
+
             <div class="flex justify-center">
-               <a href="index.html" id="logo-wrapper" class="w-[189px] h-[64px]">
-                    <img src="./assests/img/logo/colo-logo.png" id="logo-img"
-                        data-light="./assests/img/logo/colo-logo.png" data-dark="./assests/img/logo/colo-logo.png"
+                <a href="index.html" id="logo-wrapper" class="w-[189px] h-[64px]">
+                    <img src="./assests/img/logo/logo.svg" id="logo-img" data-light="./assests/img/logo/logo.svg"
+                        data-dark="./assests/img/logo/colo-logo.png"
                         class="object-contain transition-all duration-300" />
                 </a>
             </div>
             <div class="flex justify-end items-center gap-3">
                 <div id="nav-right" class="hidden md:flex items-center gap-4">
-                    <a href="downloads.html" class="nav-link text-[#0C141DE5] font-semibold text-base">Downloads</a>
-                    <a href="News-Events.html" class="nav-link text-[#0C141DE5] font-semibold text-base">News & Events</a>
-                     <a href="contact-us.html" 
-                       id="contact-btn" 
-                       class="nav-link contact-btn border border-[#152231] font-semibold text-base text-black bg-[#152231] px-4 py-2 rounded transition-all duration-300 ease-in-out hover:bg-transparent hover:text-[#0c141d] hover:scale-105 hover:shadow-md">
-                       Contact Us
+                    <a href="Downloads.html" class="nav-link text-white font-semibold text-base">Downloads</a>
+                    <a href="News-Events.html" class="nav-link text-white font-semibold text-base">News & Events</a>
+                    <a href="contact-us.html"
+                        class="nav-link border border-white font-semibold text-base text-white px-4 py-2 rounded transition-all duration-300 ease-in-out hover:bg-white hover:text-[#0c141d] hover:scale-105 hover:shadow-md">
+                        Contact Us
                     </a>
                 </div>
                 <a href="tel:+911234567890" class="md:hidden text-white"><i class="fa fa-phone"></i></a>
@@ -61,155 +64,233 @@
     </header>
     <!-- end NAVBAR -->
 
-    <!-- Hero Section -->
-    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-14 mt-[96px] bg-no-repeat bg-cover"
-        style="background-image: url(./assests/img/Products/Products-hero-bg.png);">
-        <div class="grid md:grid-cols-2 gap-8 items-center">
-            <div class="order-2 md:order-1">
-                <h1 class="text-4xl sm:text-5xl lg:text-[68px] font-normal font-forum text-[#0C141DE5] mb-6">
-                    Explore Our Tile Collections
-                </h1>
-                <p
-                    class="max-w-lg  text-[#0F1924B8] font-normal font-poppins text-[18px] lg:text-[18px] leading-relaxed mb-8">
-                    Discover a wide range of surface tile collections crafted for every space – from homes and offices
-                    to large commercial projects. Explore textures, finishes, and designs that redefine modern living.
-                </p>
+    <!--Start HERO SLIDER -->
+    <section class="relative h-screen overflow-hidden">
+        <div class="absolute inset-0 bg-[#0000008F] pointer-events-none z-10"></div>
+        <div class="relative h-screen overflow-hidden">
+            <div class="flex transition-transform duration-700 h-screen custom-slider">
+                <div class="w-full h-screen relative">
+                    <img src="./assests/img/Packing-Details/Packing-Details-hero.jpg"
+                        class="w-full h-full object-cover" />
+                </div>
             </div>
-            <div class="order-1 md:order-2 flex justify-center md:justify-end w-[602px] h-[557px]">
-                <img src="./assests/img/Products/product-mockup.png" alt="Room illustration"
-                    class="w-full h-full drop-shadow-2xl">
-            </div>
-        </div>
-    </div>
-    <!-- Hero Section -->
-
-    <!-- start Filter Tabs sectrion -->
-    <section class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-14 py-12 lg:py-20">    
-        <div class=" mb-8">
-            <div id="filter-tabs" class="flex flex-wrap justify-center gap-1 md:gap-1 text-2xl font-forum mb-8">
-                <button class="tab px-4 py-2 text-[#935C10] border-b-2 border-b-[#935C10] transition"
-                    data-filter="all">All Collection</button>
-                <button class="tab px-4 py-2 text-[#0C141DE5] border-b-2 border-transparent transition"
-                    data-filter="600x1200mm">600x1200mm</button>
-                <button class="tab px-4 py-2 text-[#0C141DE5] border-b-2 border-transparent transition"
-                    data-filter="800x1600mm">800x1600mm</button>
-                <button class="tab px-4 py-2 text-[#0C141DE5] border-b-2 border-transparent transition"
-                    data-filter="800x2400mm">800x2400mm</button>
-                <button class="tab px-4 py-2 text-[#0C141DE5] border-b-2 border-transparent transition"
-                    data-filter="1200x1800mm">1200x1800mm</button>
-                <button class="tab px-4 py-2 text-[#0C141DE5] border-b-2 border-transparent transition"
-                    data-filter="fullbody">Full Body</button>
-            </div>
-        </div>
-        <!-- start Filter Tabs sectrion -->
-
-        <!-- start Tile Collections Grid sectrion -->
-        <div class="">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-4" id="tile-grid">
-               <a href="Collection-Details.html">
-                 <div class="tile relative group cursor-pointer h-64 sm:h-72 lg:h-[324px]" data-category="600x1200mm">
-                    <img src="./assests/img/home/Product-Series-1.png"
-                        alt="Steel Series"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 overlay-gradient"></div>
-                    <div
-                        class="font-forum absolute bottom-0 left-0 w-full bg-[#FFFFFF52] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
-                        <h3 class="text-white text-2xl font-normal font-poppins">Steel Series</h3>
-                    </div>
+            <div class="absolute inset-0 flex items-center justify-center z-20 px-6">
+                <div class="max-w-2xl text-center text-white">
+                    <h1 class="text-4xl md:text-[68px] font-regular mb-6 leading-[100%] font-forum text-[#FFFFFF]">
+                        Standardized Packing & Handling
+                    </h1>
+                    <p class="text-base md:text-lg text-white/90 mb-6 font-regular">
+                        Passero Vitrified follows standardized packing procedures to ensure tiles are protected during
+                        handling, storage, and transportation. Each package is designed to maintain product quality,
+                        minimize breakage, and support efficient logistics for both domestic and international
+                        shipments.
+                    </p>
                 </div>
-               </a>
-               <a href="Collection-Details.html">
-                <div class="tile relative group cursor-pointer h-64 sm:h-72 lg:h-[324px]" data-category="800x1600mm">
-                    <img src="./assests/img/home/Product-Series-2.png"
-                        alt="Carving Series"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 overlay-gradient"></div>
-                    <div
-                        class="font-forum absolute bottom-0 left-0 w-full bg-[#ffffff52] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
-                        <h3 class="text-white text-2xl font-normal font-poppins">Carving Series</h3>
-                    </div>
-                </div>
-                </a>
-                <a href="Collection-Details.html">
-                <div class="tile relative group cursor-pointer h-64 sm:h-72 lg:h-[324px]" data-category="800x2400mm">
-                    <img src="./assests/img/home/Product-Series-3.png"
-                        alt="Linear Series"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 overlay-gradient"></div>
-                    <div
-                        class="font-forum absolute bottom-0 left-0 w-full bg-[#ffffff52] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
-                        <h3 class="text-white text-2xl font-normal font-poppins">Linear Series</h3>
-                    </div>
-                </div>
-                </a>
-                <a href="Collection-Details.html">
-                <div class="tile relative group cursor-pointer h-64 sm:h-72 lg:h-[324px]" data-category="1200x1800mm">
-                    <img src="./assests/img/home/Product-Series-4.png"
-                        alt="Color Series"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 overlay-gradient"></div>
-                    <div
-                        class="font-forum absolute bottom-0 left-0 w-full bg-[#ffffff52] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
-                        <h3 class="text-white text-2xl font-normal font-poppins">Color Series</h3>
-                    </div>
-                </div>
-                </a>
-                <a href="Collection-Details.html">
-                <div class="tile relative group cursor-pointer h-64 sm:h-72 lg:h-[324px]" data-category="fullbody">
-                    <img src="./assests/img/home/Product-Series-5.png"
-                        alt="Glue & Glitter Series"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 overlay-gradient"></div>
-                    <div
-                        class="font-forum absolute bottom-0 left-0 w-full bg-[#ffffff52] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
-                        <h3 class="text-white text-2xl font-normal font-poppins">Glue & Glitter Series</h3>
-                    </div>
-                </div>
-                </a>
-                <a href="Collection-Details.html">
-                <div class="tile relative group cursor-pointer h-64 sm:h-72 lg:h-[324px]" data-category="600x1200mm">
-                    <img src="./assests/img/home/Product-Series-6.png"
-                        alt="Bookmatch Series"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 overlay-gradient"></div>
-                    <div
-                        class="font-forum absolute bottom-0 left-0 w-full bg-[#ffffff52] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
-                        <h3 class="text-white text-2xl font-normal font-poppins">Bookmatch Series</h3>
-                    </div>
-                </div>
-                </a>
-                <a href="Collection-Details.html">
-                <div class="tile relative group cursor-pointer h-64 sm:h-72 lg:h-[324px]" data-category="800x1600mm">
-                    <img src="./assests/img/home/Product-Series-7.png"
-                        alt="Stoney Series"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 overlay-gradient"></div>
-                    <div
-                        class="font-forum absolute bottom-0 left-0 w-full bg-[#ffffff52] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
-                        <h3 class="text-white text-2xl font-normal font-poppins">Stoney Series</h3>
-                    </div>
-                </div>
-                </a>
-                <a href="Collection-Details.html">
-                <div class="tile relative group cursor-pointer h-64 sm:h-72 lg:h-[324px]" data-category="800x2400mm">
-                    <img src="./assests/img/home/Product-Series-8.png"
-                        alt="Lacqure Series"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 overlay-gradient"></div>
-                    <div
-                        class="font-forum absolute bottom-0 left-0 w-full bg-[#ffffff52] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
-                        <h3 class="text-white text-2xl font-normal font-poppins">Lacqure Series</h3>
-                    </div>
-                </div>
-                </a>
             </div>
         </div>
     </section>
-    <!-- end Tile Collections Grid sectrion -->
+    <!--End HERO SLIDER -->
 
-    <!-- start Download Our Latest Product Brochure -->
+    <!-- start Packing Details section -->
+    <section class="bg-[#FAF5F0]">
+        <div class="mx-auto py-12 lg:py-20 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl sm:text-5xl lg:text-[56px] font-normal font-forum text-[#1C1C1C] mb-4">
+                    Packing Details
+                </h2>
+                <p class="pb-3 text-[#0F1924B8] font-normal font-poppins text-center text-base sm:text-lg">
+                    Below are the standard packing specifications for Passero vitrified tiles, including box quantity,
+                    coverage area, and weight. These details help ensure accurate planning, handling, and transportation
+                    for
+                    domestic and export shipments.
+                </p>
+            </div>
+            <div class="overflow-x-auto max-w-5xl mx-auto">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="bg-[#0C141DE5] text-white text-base font-semibold font-poppins">
+                            <th class="w-[16.67%] text-left py-3 px-4 font-semibold">Dimension (MM)</th>
+                            <th class="w-[16.67%] text-left py-3 px-4 font-semibold">Thickness (MM)</th>
+                            <th class="w-[16.67%] text-left py-3 px-4 font-semibold">Pieces / Box</th>
+                            <th class="w-[16.67%] text-left py-3 px-4 font-semibold">Coverage Area <br> (sqm.)</th>
+                            <th class="w-[16.67%] text-left py-3 px-4 font-semibold">Coverage Area <br> (sqm.)</th>
+                            <th class="w-[16.67%] text-left py-3 px-4 font-semibold">Box Weight (kg)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr class="hover:bg-gray-50">
+                            <td
+                                class="py-3 px-4 border md:border-1 border-[#1F32473D] text-[#0C141DE5] text-base font-normal font-poppins">
+                                600x1200</td>
+                            <td
+                                class="py-3 px-4 border md:border-1 border-[#1F32473D] text-[#0C141DE5] text-base font-normal font-poppins">
+                                9</td>
+                            <td
+                                class="py-3 px-4 border md:border-1 border-[#1F32473D] text-[#0C141DE5] text-base font-normal font-poppins">
+                                2</td>
+                            <td
+                                class="py-3 px-4 border md:border-1 border-[#1F32473D] text-[#0C141DE5] text-base font-normal font-poppins">
+                                1.44</td>
+                            <td
+                                class="py-3 px-4 border md:border-1 border-[#1F32473D] text-[#0C141DE5] text-base font-normal font-poppins">
+                                15.50 </td>
+                            <td
+                                class="py-3 px-4 border md:border-1 border-[#1F32473D] text-[#0C141DE5] text-base font-normal font-poppins">
+                                29 (Approx)</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td
+                                class="py-3 px-4 border md:border-1 border-[#1F32473D] text-[#0C141DE5] text-base font-normal font-poppins">
+                                800×1600</td>
+                            <td
+                                class="py-3 px-4 border md:border-1 border-[#1F32473D] text-[#0C141DE5] text-base font-normal font-poppins">
+                                9</td>
+                            <td
+                                class="py-3 px-4 border md:border-1 border-[#1F32473D] text-[#0C141DE5] text-base font-normal font-poppins">
+                                2</td>
+                            <td
+                                class="py-3 px-4 border md:border-1 border-[#1F32473D] text-[#0C141DE5] text-base font-normal font-poppins">
+                                2.56</td>
+                            <td
+                                class="py-3 px-4 border md:border-1 border-[#1F32473D] text-[#0C141DE5] text-base font-normal font-poppins">
+                                2.56</td>
+                            <td
+                                class="py-3 px-4 border md:border-1 border-[#1F32473D] text-[#0C141DE5] text-base font-normal font-poppins">
+                                45-48 (Approx)</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td
+                                class="py-3 px-4 border md:border-1 border-[#1F32473D] text-[#0C141DE5] text-base font-normal font-poppins">
+                                800×2400</td>
+                            <td
+                                class="py-3 px-4 border md:border-1 border-[#1F32473D] text-[#0C141DE5] text-base font-normal font-poppins">
+                                9</td>
+                            <td
+                                class="py-3 px-4 border md:border-1 border-[#1F32473D] text-[#0C141DE5] text-base font-normal font-poppins">
+                                1</td>
+                            <td
+                                class="py-3 px-4 border md:border-1 border-[#1F32473D] text-[#0C141DE5] text-base font-normal font-poppins">
+                                1.92</td>
+                            <td
+                                class="py-3 px-4 border md:border-1 border-[#1F32473D] text-[#0C141DE5] text-base font-normal font-poppins">
+                                1.92</td>
+                            <td
+                                class="py-3 px-4 border md:border-1 border-[#1F32473D] text-[#0C141DE5] text-base font-normal font-poppins">
+                                38-40 (Approx)</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td
+                                class="py-3 px-4 border md:border-1 border-[#1F32473D] text-[#0C141DE5] text-base font-normal font-poppins">
+                                1200x1800</td>
+                            <td
+                                class="py-3 px-4 border md:border-1 border-[#1F32473D] text-[#0C141DE5] text-base font-normal font-poppins">
+                                9</td>
+                            <td
+                                class="py-3 px-4 border md:border-1 border-[#1F32473D] text-[#0C141DE5] text-base font-normal font-poppins">
+                                1</td>
+                            <td
+                                class="py-3 px-4 border md:border-1 border-[#1F32473D] text-[#0C141DE5] text-base font-normal font-poppins">
+                                2.16</td>
+                            <td
+                                class="py-3 px-4 border md:border-1 border-[#1F32473D] text-[#0C141DE5] text-base font-normal font-poppins">
+                                2.16</td>
+                            <td
+                                class="py-3 px-4 border md:border-1 border-[#1F32473D] text-[#0C141DE5] text-base font-normal font-poppins">
+                                42-45 (Approx)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="text-start">
+                    <h2 class="text-sm sm:text-sm lg:text-sm font-bold font-poppins text-[#0C141DE5] pb-1 pt-10">
+                        Note:
+                    </h2>
+                    <ul
+                        class="list-disc pl-5 font-normal text-sm text-[#0C141DE5] font-poppins marker:text-[#0C141DE5]">
+                        <li class="pb-1">Colours in the catalogue are as accurate as printing process allows. Please
+                            check actual
+                            tile sample before making final selection.</li>
+                        <li class="pb-1">Sizes mentioned in catalogue are nominal sizes only.</li>
+                        <li class="pb-1">For better laying, please follow the instructions on packaging box.</li>
+                        <li class="pb-1">Please make sure to check the shade/finish with the sales agent/dealer making
+                            the final
+                            purchase because there might be variation in actual finish that shown in the catalogue. The
+                            company will not bear any loss in such case.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end Packing Details section -->
+
+    <!--start Export-Ready Packaging & Safety Measures Section -->
+    <section class="bg-[#ffffff] border-t border-[#1F32473D]">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-14 py-12 lg:py-20">
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 pb-16">
+                <div class="max-w-lg">
+                    <h1 class="text-4xl sm:text-5xl lg:text-[56px] font-normal mb-2 font-forum text-title max-w-sm">
+                        Export-Ready Packaging & Safety Measures
+                    </h1>
+                </div>
+                <div class="lg:text-right max-w-xl">
+                    <p
+                        class="font-poppins font-normal text-[#0C141DE5] mb-4 max-w-md text-left text-sm lg:text-[18px] leading-relaxed">
+                        Passero Vitrified follows export-ready packaging standards to ensure tiles remain safe and intact during long-distance transportation. Our packing methods are designed to withstand handling, stacking, and transit challenges across domestic and international supply chains.
+                    </p>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+                <div class="text-center lg:text-left">
+                    <div class="flex justify-center lg:justify-start mb-4">
+                        <img src="./assests/img/icon/Reinforced-Cartons.svg" alt="Reinforced Cartons">
+                    </div>
+                    <h3 class="text-xl lg:text-[32px] font-normal font-forum text-[#0C141DE5] mb-3">
+                        Reinforced Cartons
+                    </h3>
+                    <p class="font-poppins text-[#0F1924B8] text-base leading-relaxed">
+                        Heavy-duty cartons provide added strength and protection during transit and stacking.
+                    </p>
+                </div>
+                <div class="text-center lg:text-left">
+                    <div class="flex justify-center lg:justify-start mb-4">
+                        <img src="./assests/img/icon/Protective-Layering.svg" alt="Protective Layering">
+                    </div>
+                    <h3 class="text-xl lg:text-[32px] font-normal font-forum text-[#0C141DE5] mb-3">
+                        Protective Layering
+                    </h3>
+                    <p class="font-poppins text-[#0F1924B8] text-base leading-relaxed">
+                        Tiles are separated with protective sheets to prevent surface scratches and edge damage.
+                    </p>
+                </div>
+                <div class="text-center lg:text-left">
+                    <div class="flex justify-center lg:justify-start mb-4">
+                        <img src="./assests/img/icon/Secure-Palletization.svg" alt="Secure Palletization">
+                    </div>
+                    <h3 class="text-xl lg:text-[32px] font-normal font-forum text-[#0C141DE5] mb-3">
+                        Secure Palletization
+                    </h3>
+                    <p class="font-poppins text-[#0F1924B8] text-base leading-relaxed">
+                        Every role contributes to maintaining our high standards of excellence.
+                    </p>
+                </div>
+                <div class="text-center lg:text-left">
+                    <div class="flex justify-center lg:justify-start mb-4">
+                        <img src="./assests/img/icon/Clear-Export-Labeling.svg" alt="Clear Export Labeling">
+                    </div>
+                    <h3 class="text-xl lg:text-[32px] font-normal font-forum text-[#0C141DE5] mb-3">
+                        Clear Export Labeling
+                    </h3>
+                    <p class="font-poppins text-[#0F1924B8] text-base leading-relaxed">
+                        Each package includes clear labeling for handling instructions, product details, and shipment identification.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--end Export-Ready Packaging & Safety Measures Section -->
+
+        <!-- start Download Our Latest Product Brochure -->
     <section class="bg-[#F8F3EC]">
-        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-14">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-14 py-12 lg:py-20">
             <div class="relative bg-[#152231] overflow-hidden"
                 style="background-image: url(./assests/img/home/cta-back.png); background-blend-mode: soft-light;">
                 <div class="grid grid-cols-[2fr_3fr_2fr] items-center w-full">
@@ -233,17 +314,16 @@
                                     d="M51.5108 5.77403C136.671 -14.7948 227.23 40.5719 251.245 134.29C272.626 217.73 202.162 279.49 126.342 297.803C62.0211 313.338 -6.46914 271.7 -24.6071 200.916C-45.7858 118.266 -23.5928 23.9139 51.5108 5.77403Z"
                                     stroke="#F1C17E" stroke-width="3" opacity="0.4" />
                             </svg>
-                            <img src="./assests/img/home/Download-Our-Latest.png"
+                            <img src="./assests/img/Packing-Details/Download-Packing-Details-1.png"
                                 class="w-full h-full object-cover rounded-t-[240px] relative" alt="Bathroom" />
                         </div>
                     </div>
                     <div class="text-center py-16 px-6 lg:px-8">
                         <h1 class="text-3xl sm:text-4xl lg:text-[44px] font-normal text-white mb-4 font-forum ">
-                            Download Our Latest<br>Product Brochure
+                            Download Packing Details
                         </h1>
                         <p class="font-poppins text-[#FFFFFFC7] text-md font-normal mb-8 max-w-lg mx-auto">
-                            Explore our complete collection of tiles, surfaces, finishes, and technical details — all in
-                            one beautifully crafted catalog. Perfect for homeowners, dealers, designers, and architects.
+                            Access the complete packing specifications, including box details, weights, and export-ready packaging information in a downloadable PDF format.
                         </p>
                         <button onclick="openModal()" class="bg-white text-[#0C141DE5] px-8 py-3 rounded-md flex items-center justify-center mx-auto gap-2 text-sm font-bold
                                transition-transform transition-colors duration-300 ease-in-out
@@ -278,7 +358,7 @@
                                     d="M291.776 82.3515C353.094 -16.7533 317.873 -98.9842 260.638 -132.363C209.62 -162.116 125.386 -134.905 70.7272 -46.5623C3.21154 62.5594 -26.9714 193.878 36.0477 230.63C104.196 270.374 218.764 200.356 291.776 82.3515Z"
                                     stroke="#F1C17E" stroke-width="3" />
                             </svg>
-                            <img src="./assests/img/home/Download-Our-Latest-1.png"
+                            <img src="./assests/img/Packing-Details/Download-Packing-Details-2.png"
                                 class="w-full h-full object-cover rounded-b-[240px] relative" alt="Kitchen" />
                         </div>
                     </div>
@@ -288,11 +368,10 @@
     </section>
     <!-- end Download Our Latest Product Brochure -->
 
-    <!--start Experience Passero in Person -->
+        <!--start Experience Passero in Person -->
     <section class="pt-12 lg:pt-20">
         <div class="grid grid-cols-1 lg:grid-cols-2">
-            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-14 py-12 lg:py-20 flex flex-col justify-center bg-no-repeat bg-center bg-cover"
-                style="background-image: url(./assests/img/about/Experience-Passero-Person.png);">
+            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-14 py-12 lg:py-20 flex flex-col justify-center bg-no-repeat bg-center bg-cover" style="background-image: url(./assests/img/about/Experience-Passero-Person.png);">
                 <h2 class="text-4xl sm:text-5xl lg:text-[56px] font-formal font-forum text-white mb-6">
                     Experience Passero in Person
                 </h2>
@@ -303,38 +382,35 @@
                 </p>
                 <div class="space-y-4 mb-8">
                     <div class="flex items-start gap-3">
-                        <div class="">
+                        <div
+                            class="">
                             <img src="./assests/img/icon/tabler-icon-circle-check-filled.svg" alt="">
                         </div>
                         <div class="flex">
-                            <p class="text-white text-sm lg:text-base font-Poppins font-bold leading-relaxed">Curated
-                                Displays&nbsp;&nbsp;- </p>
-                            <p class="text-white text-sm lg:text-base font-Poppins font-normal leading-relaxed">
-                                &nbsp;&nbsp;See tiles in real-life interior setups</p>
+                            <p class="text-white text-sm lg:text-base font-Poppins font-bold leading-relaxed">Curated Displays&nbsp;&nbsp;- </p>
+                            <p class="text-white text-sm lg:text-base font-Poppins font-normal leading-relaxed">&nbsp;&nbsp;See tiles in real-life interior setups</p>
                         </div>
                     </div>
 
                     <div class="flex items-start gap-3">
-                        <div class="">
+                        <div
+                            class="">
                             <img src="./assests/img/icon/tabler-icon-circle-check-filled.svg" alt="">
                         </div>
                         <div class="flex">
-                            <p class="text-white text-sm lg:text-base font-Poppins font-bold leading-relaxed">Expert
-                                Assistance&nbsp;&nbsp;- </p>
-                            <p class="text-white text-sm lg:text-base font-Poppins font-normal leading-relaxed">
-                                &nbsp;&nbsp;Guidance from trained design consultants</p>
+                            <p class="text-white text-sm lg:text-base font-Poppins font-bold leading-relaxed">Expert Assistance&nbsp;&nbsp;- </p>
+                            <p class="text-white text-sm lg:text-base font-Poppins font-normal leading-relaxed">&nbsp;&nbsp;Guidance from trained design consultants</p>
                         </div>
                     </div>
 
                     <div class="flex items-start gap-3">
-                        <div class="">
+                        <div
+                            class="">
                             <img src="./assests/img/icon/tabler-icon-circle-check-filled.svg" alt="">
                         </div>
                         <div class="flex">
-                            <p class="text-white text-sm lg:text-base font-Poppins font-bold leading-relaxed">Latest
-                                Collections&nbsp;&nbsp;- </p>
-                            <p class="text-white text-sm lg:text-base font-Poppins font-normal leading-relaxed">
-                                &nbsp;&nbsp;Access to our newest and premium ranges</p>
+                            <p class="text-white text-sm lg:text-base font-Poppins font-bold leading-relaxed">Latest Collections&nbsp;&nbsp;- </p>
+                            <p class="text-white text-sm lg:text-base font-Poppins font-normal leading-relaxed">&nbsp;&nbsp;Access to our newest and premium ranges</p>
                         </div>
                     </div>
                 </div>
@@ -350,8 +426,8 @@
                 </div>
             </div>
             <div class="relative h-[648px]">
-                <img src="./assests/img/about/Experience-Passero-Person-right.jpg" alt="Tile Selection Experience"
-                    class="w-full h-full object-cover">
+                <img src="./assests/img/about/Experience-Passero-Person-right.jpg"
+                    alt="Tile Selection Experience" class="w-full h-full object-cover">
             </div>
         </div>
     </section>
@@ -368,8 +444,7 @@
                             class="object-contain transition-all duration-300">
                     </div>
                     <p class="text-[#0C141DE5] text-sm font-normal font-poppins leading-relaxed">
-                        Passero Vitrified creates premium surfaces crafted for design, durability, and modern
-                        living.
+                        Passero Vitrified creates premium surfaces crafted for design, durability, and modern living.
                     </p>
                 </div>
                 <div>
@@ -448,8 +523,7 @@
                                 363642</p>
                         </div>
                         <div>
-                            <p class="font-semibold text-[#0C141DE5] text-base font-poppins mb-1">Ketanbhai Patel
-                            </p>
+                            <p class="font-semibold text-[#0C141DE5] text-base font-poppins mb-1">Ketanbhai Patel</p>
                             <a href="tel:+919723581081"
                                 class="underline text-[#0C141DE5] font-normal text-base hover:text-gray-900 block">(+91)
                                 9723581081</a>
@@ -458,8 +532,7 @@
                                 9737228030</a>
                         </div>
                         <div>
-                            <p class="font-semibold text-[#0C141DE5] text-base font-poppins mb-1">Dhruvbhai Patel
-                            </p>
+                            <p class="font-semibold text-[#0C141DE5] text-base font-poppins mb-1">Dhruvbhai Patel</p>
                             <a href="tel:+919712981081"
                                 class="underline text-[#0C141DE5] font-normal text-base hover:text-gray-900 block">(+91)
                                 9712981081</a>
@@ -496,71 +569,7 @@
             </div>
         </div>
     </footer>
-   <!-- Modal -->
-    <div id="catalogModal" class="modal">
-        <div class="modal-content bg-gray-900 text-white rounded-2xl max-w-2xl w-full mx-4 p-8 md:p-14 relative" style="background-image: url(./assests/img/Downloads/Download-Dialog-bg.png);">
-            <button onclick="closeModal()" class="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                </svg>
-            </button>
 
-            <div class="text-center">
-                <h2 class="text-xl sm:text-2xl lg:text-[44px] font-normal font-forum text-white mb-6 mb-3">
-                    Get the Latest Passero Updates
-                </h2>
-                <p class="mb-12 text-[#FFFFFFC7] font-normal text-sm lg:text-base leading-relaxed">
-                    Share your mobile number to receive product details, catalog updates, and 
-                    helpful information from Passero. Our team may also assist you with 
-                    product selection or store guidance, if required.
-                </p>
-
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-stretch">
-                    <div class="relative flex-1 max-w-sm">
-                        <input 
-                            type="tel" 
-                            placeholder="Enter your mobile number" 
-                            class="w-full px-4 py-3 rounded bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-amber-500">
-                        <button class="absolute right-3 top-1/2 transform -translate-y-1/2">
-                            <img src="./assests/img/icon/tabler-icon-device-tablet.svg" alt="">
-                        </button>
-                    </div>
-                    <button class="flex bg-[#F1C17E] text-[#0C141DE5] px-8 py-3 rounded text-sm font-medium transition-transform transition-colors duration-300 ease-in-out hover:bg-white hover:scale-105 hover:shadow-lg">
-                         Download Now
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5 12H19M19 12L15 16M19 12L15 8" stroke="#0C141DE5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- // ------------ start download in model open ------------ -->
-<script>
-     function openModal() {
-            document.getElementById('catalogModal').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal() {
-            document.getElementById('catalogModal').classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-
-        document.getElementById('catalogModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeModal();
-            }
-        });
-
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeModal();
-            }
-        });
-</script>
-<!-- // ------------ end download in model open ------------ -->
     <!-- JS -->
     <script src="./assests/js/dev-script.js"></script>
 
