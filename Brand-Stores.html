@@ -28,19 +28,25 @@
             <!-- left -->
             <div class="flex items-center gap-3">
                 <button id="mobile-toggle" class="md:hidden text-white">
-                    <i class="fa fa-bars"></i>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 8H20M4 16H20" stroke="currentColor" stroke-opacity="0.9" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
                 </button>
 
                 <ul id="nav-left" class="hidden md:flex gap-4 items-center">
                     <li><a href="about-us.html" class="nav-link text-white font-semibold text-base">About Us</a></li>
-                    <li><a href="Collection-Details.html" class="nav-link text-white font-semibold text-base">Collections</a></li>
-                    <li><a href="Why-Passero.html" class="nav-link text-white font-semibold text-base">Why Passero</a></li>
-                    <li><a href="Brand-Stores.html" class="nav-link text-white font-semibold text-base">Brand Stores</a></li>
+                    <li><a href="Collection-Details.html"
+                            class="nav-link text-white font-semibold text-base">Collections</a></li>
+                    <li><a href="Why-Passero.html" class="nav-link text-white font-semibold text-base">Why Passero</a>
+                    </li>
+                    <li><a href="Brand-Stores.html" class="nav-link text-white font-semibold text-base">Brand Stores</a>
+                    </li>
                 </ul>
             </div>
 
             <div class="flex justify-center">
-               <a href="index.html" id="logo-wrapper" class="w-[189px] h-[64px]">
+                <a href="index.html" id="logo-wrapper" class="sm:w-[189px] sm:h-[64px] w-[142px] h-[48px]">
                     <img src="./assests/img/logo/logo.svg" id="logo-img" data-light="./assests/img/logo/logo.svg"
                         data-dark="./assests/img/logo/colo-logo.png"
                         class="object-contain transition-all duration-300" />
@@ -55,32 +61,105 @@
                         Contact Us
                     </a>
                 </div>
-                <a href="tel:+911234567890" class="md:hidden text-white"><i class="fa fa-phone"></i></a>
+                <a href="tel:+911234567890" class="md:hidden text-white"><i class="fa fa-phone"
+                        style="color: white;"></i></a>
             </div>
         </nav>
     </header>
+    <!-- Mobile Sidebar Backdrop -->
+    <div id="sidebar-backdrop" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity duration-300">
+    </div>
+
+    <!-- Mobile Sidebar -->
+    <aside id="mobile-sidebar"
+        class="fixed top-0 left-0 h-full w-[280px] bg-[#F8F3EC]  z-50 transform -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto">
+        <div class="flex flex-col h-full">
+            <div class="flex items-center justify-between p-6 border-b border-gray-300">
+                <img src="./assests/img/logo/colo-logo.png" alt="Passero Logo" class="h-10" />
+                <button id="sidebar-close" class="text-gray-700 text-2xl hover:text-gray-900">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <nav class="flex-1 py-6">
+                <ul class="space-y-1">
+                    <li>
+                        <a href="about-us.html"
+                            class="block px-6 py-2 text-[#0C141DE5] font-forum text-2xl font-normal hover:bg-gray-200 transition-colors">
+                            About Us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Collection.html"
+                            class="block px-6 py-2 text-[#0C141DE5] font-forum text-2xl font-normal hover:bg-gray-200 transition-colors">
+                            Collections
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Why-Passero.html"
+                            class="block px-6 py-2 text-[#0C141DE5] font-forum text-2xl font-normal hover:bg-gray-200 transition-colors">
+                            Why Passero
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Brand-Stores.html"
+                            class="block px-6 py-2 text-[#0C141DE5] font-forum text-2xl font-normal hover:bg-gray-200 transition-colors">
+                            Brand Stores
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Downloads.html"
+                            class="block px-6 py-2 text-[#0C141DE5] font-forum text-2xl font-normal hover:bg-gray-200 transition-colors">
+                            Downloads
+                        </a>
+                    </li>
+                    <li>
+                        <a href="News-Events.html"
+                            class="block px-6 py-2 text-[#0C141DE5] font-forum text-2xl font-normal hover:bg-gray-200 transition-colors">
+                            News & Events
+                        </a>
+                    </li>
+                </ul>
+                <div class="px-6 mt-6">
+                    <a href="contact-us.html"
+                        class="flex items-center justify-center gap-2 w-full bg-[#0c141d] text-white py-3 rounded hover:bg-[#1a2532] transition-colors">
+                        <i class="fa fa-phone"></i>
+                        <span class="font-bold font-sm font-poppins">Contact Us</span>
+                    </a>
+                </div>
+            </nav>
+            <div class="flex border-t border-gray-300 p-5">
+                <p class="text-[#0C141DE5] text-base font-normal mb-3">Follow us on social media</p>
+                <div class="flex gap-2">
+                    <a href="#" class="transition-colors">
+                        <img src="./assests/img/icon/tabler-icon-brand-facebook.svg" alt="facebook">
+                    </a>
+                    <a href="#" class="transition-colors">
+                        <img src="./assests/img/icon/tabler-icon-brand-instagram.svg" alt="instagram">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </aside>
     <!-- end NAVBAR -->
 
-    <!--Start HERO SLIDER -->
-    <section class="relative h-screen overflow-hidden">
+    <section class="relative overflow-hidden h-[448px] md:h-screen">
+
         <div class="absolute inset-0 bg-[#00000052] pointer-events-none z-10"></div>
-        <div  class="relative h-screen overflow-hidden">
-            <div class="flex transition-transform duration-700 h-screen custom-slider">
-                <div class="w-full h-screen relative">
-                    <img src="./assests/img/home/hero-1.png" class="w-full h-full object-cover" />
-                </div>
-                <div class="w-full h-screen relative">
-                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1920&fit=crop"
-                        class="w-full h-full object-cover" />
+        <div class="relative h-full overflow-hidden">
+            <div class="flex transition-transform duration-700 h-full custom-slider">
+                <div class="w-full h-full relative">
+                    <img src="./assests/img/Brand-Stores/hero-banner.png" class="w-full h-full object-cover" />
                 </div>
             </div>
             <div class="absolute inset-0 flex items-center justify-center z-20 px-6">
                 <div class="max-w-2xl text-center text-white">
-                    <h1 class="text-4xl md:text-[68px] font-regular mb-6 leading-[100%] font-forum text-[#FFFFFF]">
-                       Where Design Meets Experience
+                    <h1
+                        class="text-[40px] md:text-[68px] font-regular mb-4 md:mb-6 leading-[100%] font-forum text-white">
+                        Where Design Meets Experience
                     </h1>
-                    <p class="text-base md:text-lg text-white/90 mb-6 font-regular">
-                       Step into thoughtfully designed brand stores where premium collections, full-space mockups, and personalized assistance come together.
+                    <p class="text-sm md:text-lg text-white/90 mb-4 md:mb-6 font-regular">
+                        Step into thoughtfully designed brand stores where premium collections, full-space mockups, and
+                        personalized assistance come together.
                     </p>
                     <div class="flex justify-center gap-4 flex-wrap">
                         <a href="#stores"
@@ -88,106 +167,130 @@
                             Partner With Us
                         </a>
                     </div>
-
                 </div>
             </div>
         </div>
     </section>
+
     <!--End HERO SLIDER -->
 
     <!-- start The Passero Brand Store Experience section -->
     <section class="bg-[#F8F3EC]">
-        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-14 py-12 lg:py-20">
-            <div class="grid lg:grid-cols-3 gap-6">
+        <div class="max-w-8xl mx-auto px-6 sm:px-6 lg:px-14 py-16 lg:py-20">
+            <div class="grid lg:grid-cols-3 gap-4 sm:gap-6">
                 <div class="lg:col-span-1">
-                    <h1 class="text-4xl sm:text-5xl lg:text-[56px] font-normal mb-2 font-forum text-title">
+                    <h1
+                        class="text-[32px] sm:text-5xl leading-[100%] lg:text-[56px] font-normal mb-2 font-forum text-title">
                         The Passero Brand Store Experience
                     </h1>
-                    <p class="font-poppins font-normal text-[#0C141DE5] mb-4 max-w-md text-left text-sm lg:text-[18px] leading-relaxed">
-                        Passero Brand Stores are designed to offer a complete, transparent, and design-led tile selection experience. Unlike traditional dealership formats, our stores focus on inspiration, guidance, and real-life visualization — helping customers and designers make confident choices.
+                    <p
+                        class="font-poppins font-normal text-[#0F1924B8] mb-4 max-w-md text-left text-base lg:text-[18px] leading-relaxed">
+                        Passero Brand Stores are designed to offer a complete, transparent, and design-led tile
+                        selection experience. Unlike traditional dealership formats, our stores focus on inspiration,
+                        guidance, and real-life visualization — helping customers and designers make confident choices.
                     </p>
                 </div>
 
                 <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <h2 class="text-xl sm:text-3xl lg:text-[32px] font-normal mb-2 font-forum text-title ">Brand Store Experience</h2>
+                    <h2 class="text-xl sm:text-3xl lg:text-[32px] font-normal mb-2 font-forum text-title ">Brand Store
+                        Experience</h2>
                     <div class="border-b border-[#1F32473D]  mb-4"></div>
                     <div class="space-y-4">
                         <div class="flex gap-3">
                             <div class="flex-shrink-0">
                                 <img src="./assests/img/icon/tabler-icon-circle-check.svg" alt="">
                             </div>
-                            <p class="font-poppins text-[#000000] text-base font-normal lg:text-sm leading-relaxed max-w-xl">
-                                Passero Brand Stores feature curated product displays that allow customers to explore tiles in a relaxed, organized environment.
+                            <p
+                                class="font-poppins text-[#000000] text-sm sm:text-base font-normal lg:text-sm leading-relaxed max-w-xl">
+                                Passero Brand Stores feature curated product displays that allow customers to explore
+                                tiles in a relaxed, organized environment.
                             </p>
                         </div>
                         <div class="flex gap-3">
                             <div class="flex-shrink-0">
                                 <img src="./assests/img/icon/tabler-icon-circle-check.svg" alt="">
                             </div>
-                            <p class="font-poppins text-[#000000] text-base font-normal lg:text-sm leading-relaxed max-w-xl">
-                                Customers receive full-space mockups and room settings that help visualize how tiles look in real-life contexts.
+                            <p
+                                class="font-poppins text-[#000000] text-sm sm:text-base font-normal lg:text-sm leading-relaxed max-w-xl">
+                                Customers receive full-space mockups and room settings that help visualize how tiles
+                                look in real-life contexts.
                             </p>
                         </div>
                         <div class="flex gap-3">
                             <div class="flex-shrink-0">
                                 <img src="./assests/img/icon/tabler-icon-circle-check.svg" alt="">
                             </div>
-                            <p class="font-poppins text-[#000000] text-base font-normal lg:text-sm leading-relaxed max-w-xl">
-                                Expert in-store design guidance ensures informed decisions, mixing based on space, style and functional requirements.
+                            <p
+                                class="font-poppins text-[#000000] text-sm sm:text-base font-normal lg:text-sm leading-relaxed max-w-xl">
+                                Expert in-store design guidance ensures informed decisions, mixing based on space, style
+                                and functional requirements.
                             </p>
                         </div>
                         <div class="flex gap-3">
                             <div class="flex-shrink-0">
                                 <img src="./assests/img/icon/tabler-icon-circle-check.svg" alt="">
                             </div>
-                            <p class="font-poppins text-[#000000] text-base font-normal lg:text-sm leading-relaxed max-w-xl">
-                                Each store showcases the complete Passero product range, offering access to all collections under one roof.
+                            <p
+                                class="font-poppins text-[#000000] text-sm sm:text-base font-normal lg:text-sm leading-relaxed max-w-xl">
+                                Each store showcases the complete Passero product range, offering access to all
+                                collections under one roof.
                             </p>
                         </div>
                         <div class="flex gap-3">
                             <div class="flex-shrink-0">
                                 <img src="./assests/img/icon/tabler-icon-circle-check.svg" alt="">
                             </div>
-                            <p class="font-poppins text-[#000000] text-base font-normal lg:text-sm leading-relaxed max-w-xl">
-                                Transparent pricing and clear product availability create a seamless and trustworthy buying experience.
+                            <p
+                                class="font-poppins text-[#000000] text-sm sm:text-base font-normal lg:text-sm leading-relaxed max-w-xl">
+                                Transparent pricing and clear product availability create a seamless and trustworthy
+                                buying experience.
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <h2 class="text-xl sm:text-3xl lg:text-[32px] font-normal mb-2 font-forum text-title">Traditional Dealership Model</h2>
+                    <h2 class="text-xl sm:text-3xl lg:text-[32px] font-normal mb-2 font-forum text-title">Traditional
+                        Dealership Model</h2>
                     <div class="border-b border-[#1F32473D]  mb-4"></div>
                     <div class="space-y-4">
                         <div class="flex gap-3">
                             <div class="flex-shrink-0">
                                 <img src="./assests/img/icon/tabler-icon-circle-dashed-x.svg" alt="">
                             </div>
-                            <p class="font-poppins text-[#000000] text-base font-normal lg:text-sm leading-relaxed max-w-xl">
-                                Traditional dealership formats often offer limited product visibility, restricting the ability to explore design options fully.
+                            <p
+                                class="font-poppins text-[#000000] text-sm sm:text-base font-normal lg:text-sm leading-relaxed max-w-xl">
+                                Traditional dealership formats often offer limited product visibility, restricting the
+                                ability to explore design options fully.
                             </p>
                         </div>
                         <div class="flex gap-3">
                             <div class="flex-shrink-0">
                                 <img src="./assests/img/icon/tabler-icon-circle-dashed-x.svg" alt="">
                             </div>
-                            <p class="font-poppins text-[#000000] text-base font-normal lg:text-sm leading-relaxed max-w-xl">
-                                Tile selection is typically sample-based, making it difficult to visualize real-life applications.
+                            <p
+                                class="font-poppins text-[#000000] text-sm sm:text-base font-normal lg:text-sm leading-relaxed max-w-xl">
+                                Tile selection is typically sample-based, making it difficult to visualize real-life
+                                applications.
                             </p>
                         </div>
                         <div class="flex gap-3">
                             <div class="flex-shrink-0">
                                 <img src="./assests/img/icon/tabler-icon-circle-dashed-x.svg" alt="">
                             </div>
-                            <p class="font-poppins text-[#000000] text-base font-normal lg:text-sm leading-relaxed max-w-xl">
-                                Design advice is largely user-driven, with limited focus on design consultation or guidance.
+                            <p
+                                class="font-poppins text-[#000000] text-sm sm:text-base font-normal lg:text-sm leading-relaxed max-w-xl">
+                                Design advice is largely user-driven, with limited focus on design consultation or
+                                guidance.
                             </p>
                         </div>
                         <div class="flex gap-3">
                             <div class="flex-shrink-0">
                                 <img src="./assests/img/icon/tabler-icon-circle-dashed-x.svg" alt="">
                             </div>
-                            <p class="font-poppins text-[#000000] text-base font-normal lg:text-sm leading-relaxed max-w-xl">
-                                Only a partial product range is usually available, resulting in inconsistent choices and experiences.
+                            <p
+                                class="font-poppins text-[#000000] text-sm sm:text-base font-normal lg:text-sm leading-relaxed max-w-xl">
+                                Only a partial product range is usually available, resulting in inconsistent choices and
+                                experiences.
                             </p>
                         </div>
                     </div>
@@ -198,25 +301,25 @@
     <!-- End The Passero Brand Store Experience section -->
 
     <!--StartDiscover Our Exclusive Brand Stores Stores -->
-    <section class="bg-[#0F1924] py-16 px-14">
+    <section class=" bg-[#0F1924] px-6 sm:px-14 py-16">
         <div class="max-w-8xl mx-auto">
             <div class="text-center mb-16">
-                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-normal font-forum text-white mb-4">
+                <h1 class="text-[32px] text-[#FFFFFF] sm:text-4xl md:text-5xl lg:text-[56px] font-normal leading-[100%] font-forum  mb-4">
                     Discover Our Exclusive Brand Stores
                 </h1>
                 <p
-                    class="font-poppins text-[#FFFFFFC7] max-w-3xl mx-auto text-sm sm:text-base md:text-[18px] font-normal">
+                    class="font-poppins text-[#FFFFFFC7] max-w-3xl mx-auto text-base sm:text-base md:text-[18px] font-normal">
                     Explore our curated brand stores designed to showcase complete tile experiences — from textures and
                     finishes to full interior applications.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 sm:gap-8 gap-4 mb-12">
                 <div
                     class="group bg-white rounded-md shadow-[0_4px_12px_#00000024] overflow-hidden transition-transform duration-500 ease-in-out hover:shadow-xl hover:-translate-y-2 hover:scale-105">
                     <div class="relative m-4">
-                        <img src="./assests/img/home/OurExclusiveBrand.png" alt="Passero Store Front"
-                            class="w-full h-[300px] object-cover rounded-[4px]">
+                        <img src="./assests/img/home/DEWAS-OUTLET.JPG" alt="Passero Store Front"
+                            class="w-full sm:h-[300px] h-[229px] object-fill rounded-[4px]">
                     </div>
                     <div class="p-4 pt-0">
                         <div class="flex items-start">
@@ -247,8 +350,8 @@
                 <div
                     class="group bg-white rounded-md shadow-[0_4px_12px_#00000024] overflow-hidden transition-transform duration-500 ease-in-out hover:shadow-xl hover:-translate-y-2 hover:scale-105">
                     <div class="relative m-4">
-                        <img src="./assests/img/home/OurExclusiveBrand.png" alt="Passero Store Front"
-                            class="w-full h-[300px] object-cover rounded-[4px]">
+                        <img src="./assests/img/home/INDORE-OUTLET.jpg" alt="Passero Store Front"
+                            class="w-full sm:h-[300px] h-[229px] object-fill rounded-[4px]">
                     </div>
                     <div class="p-4 pt-0">
                         <div class="flex items-start">
@@ -279,8 +382,8 @@
                 <div
                     class="group bg-white rounded-md shadow-[0_4px_12px_#00000024] overflow-hidden transition-transform duration-500 ease-in-out hover:shadow-xl hover:-translate-y-2 hover:scale-105">
                     <div class="relative m-4">
-                        <img src="./assests/img/home/OurExclusiveBrand.png" alt="Passero Store Front"
-                            class="w-full h-[300px] object-cover rounded-[4px]">
+                        <img src="./assests/img/home/UJJAIN-OUTLET.jpg" alt="Passero Store Front"
+                            class="w-full sm:h-[300px] h-[229px] object-fill rounded-[4px]">
                     </div>
                     <div class="p-4 pt-0">
                         <div class="flex items-start">
@@ -315,22 +418,26 @@
 
     <!-- start Partner With Passero Section -->
     <section class="bg-[#F8F3EC]">
-        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-14 py-12 lg:py-20 border-b border-[#1F32473D]">
+        <div class="max-w-8xl mx-auto px-6 sm:px-6 lg:px-14 py-16 lg:py-20 border-b border-[#1F32473D]">
             <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                 <div class="order-2 md:order-1  max-w-lg">
-                    <h2 class="text-4xl sm:text-5xl lg:text-[56px] font-normal mb-2 font-forum text-title">
+                    <h2
+                        class="text-[32px] sm:text-5xl leading-[100%] lg:text-[56px] font-normal mb-2 font-forum text-title">
                         Partner With Passero
                     </h2>
-                    <p class="font-poppins text-[#0F1924B8] text-base font-normal lg:text-lg leading-relaxed">
-                        Passero invites like-minded partners to be part of its growing brand store network. Backed by quality manufacturing, strong brand identity, and complete operational support, we offer a transparent and growth-driven partnership model.
+                    <p class="font-poppins text-[#0F1924B8] text-base font-normal lg:text-lg leading-relaxed mb-9">
+                        Passero invites like-minded partners to be part of its growing brand store network. Backed by
+                        quality manufacturing, strong brand identity, and complete operational support, we offer a
+                        transparent and growth-driven partnership model.
                     </p>
-                    <a href="contact-us.html" class="mt-9 bg-gray-900 text-white px-8 py-3 rounded text-sm font-medium transition-transform transition-colors duration-300 ease-in-out
+                    <a href="contact-us.html" class="mt-9 bg-gray-900 text-white px-8 py-3 rounded text-sm font-bold transition-transform transition-colors duration-300 ease-in-out
                        hover:bg-gray-800 hover:scale-105 hover:shadow-lg">
-                         Enquire for Franchise
+                        Enquire for Franchise
                     </a>
                 </div>
                 <div class="order-1 md:order-2">
-                    <img src="./assests/img/Brand-Stores/Partner-With-Passero.jpg" alt="Business professionals handshake" class="w-full h-auto rounded-lg shadow-lg">
+                    <img src="./assests/img/Brand-Stores/Partner-With-Passero.jpg"
+                        alt="Business professionals handshake" class="w-full h-auto rounded-lg shadow-lg">
                 </div>
             </div>
         </div>
@@ -423,8 +530,14 @@
                     <div class="space-y-4 text-sm">
                         <div>
                             <p class="font-semibold text-[#0C141DE5] text-base font-poppins mb-1">Address</p>
-                            <p class="text-[#0C141DE5] font-normal text-base">B-A, NATIONAL HIGHWAY Timbdi, Gujarat
-                                363642</p>
+                            <p class="text-[#0C141DE5] font-normal text-base">
+                                <a href="https://www.google.com/maps/place/SURVEY+NO.+72/P1/P2,+KANDLA+ROAD,+8-A+NATIONAL+HIGHWAY+TIMDI,+MORBI-363642+(GUJ)+INDIA"
+                                    target="_blank" class="underline hover:text-[#935C10] transition">
+                                    SURVEY NO. 72/P1/P2, KANDLA ROAD, 8-A NATIONAL HIGHWAY TIMDI, MORBI-363642 (GUJ)
+                                    INDIA
+                                </a>
+                            </p>
+
                         </div>
                         <div>
                             <p class="font-semibold text-[#0C141DE5] text-base font-poppins mb-1">Ketanbhai Patel</p>
@@ -443,17 +556,20 @@
                         </div>
                         <div>
                             <p class="font-semibold text-[#0C141DE5] text-base font-poppins mb-1">Write us</p>
-                            <a href="mailto:kpatel@passerovitrified.com"
-                                class="underline text-[#0C141DE5] font-normal text-base hover:text-gray-900">kpatel@passerovitrified.com</a>
+                            <a href="mailto:info@passerovitrified.com"
+                                class="underline text-[#0C141DE5] font-normal text-base hover:text-[#935C10] ">info@passerovitrified.com</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="border-t border-[#1F32473D] pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
-                <p class="font-poppins font-normal text-sm leading-[22px] tracking-normal text-[#0C141DE5]">© 2025
-                    Passero Vitrified. All rights reserved.</p>
+                <p class="font-poppins font-normal text-sm leading-[22px] tracking-normal text-[#0C141DE5]"> © 2025 All
+                    Rights Reserved by <span class="font-forum text-lg font-normal text-[#935C10] mb-4"><a
+                            href="">Passero Vitrified</a></span> Developed by <span
+                        class="font-forum text-lg font-normal text-[#935C10] mb-4"><a
+                            href="https://theuniqueitsolution.com/">Unique IT Solution</a></span>.</p>
                 <div class="flex gap-4">
-                    <a href="#"
+                    <a href="https://www.instagram.com/passero_tiles_and_bathware/?igsh=Y2dvcmFxcGpudndk#"
                         class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path

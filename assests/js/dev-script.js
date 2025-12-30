@@ -18,50 +18,131 @@ tailwind.config = {
 /* ------------ start STICKY NAV ------------ */
 const nav = document.getElementById("main-nav");
 const logo = document.getElementById("logo-img");
+const menuIcon = document.querySelector('#mobile-toggle svg');
+const phoneIcon = document.querySelector('a[href^="tel"] i');
+
+// FIRST Contact Button (new unique for sticky text/border)
+const contactBtnFirst = document.getElementById("contact-btn-first"); 
+
+// SECOND Contact Button (already exists)
+const contactBtn = document.getElementById("contact-btn"); 
+
+// Detect dark-logo navbar (second nav)
+const isDarkNav = logo && logo.src.includes('colo-logo.png');
 
 function updateNav() {
   const links = document.querySelectorAll(".nav-link");
-  const contactBtn = document.querySelector("#nav-right a:last-child");
 
   if (window.scrollY > 50) {
+    // Sticky navbar
     nav.classList.add("bg-white", "shadow");
     nav.classList.remove("bg-transparent");
 
+    // Nav links color
     links.forEach(el => el.classList.replace("text-white", "text-black"));
 
-    contactBtn.classList.replace("border-white", "border-black");
-    contactBtn.classList.replace("text-white", "text-black");
+    // FIRST Contact button → sticky border black, text black
+    if (contactBtnFirst) {
+      contactBtnFirst.classList.remove("border-white", "text-white");
+      contactBtnFirst.classList.add("border-black", "text-black");
+    }
 
-    logo.src = logo.dataset.dark;
+    // SECOND Contact button → sticky bg black, text white, border black
+    if (contactBtn) {
+      contactBtn.classList.add("bg-[#152231]", "text-white", "border-black");
+      contactBtn.classList.remove("text-black", "bg-transparent");
+    }
+
+    // Logo swap
+    if (logo && logo.dataset.dark) logo.src = logo.dataset.dark;
+
+    // Mobile icons → black
+    if (menuIcon) menuIcon.style.color = "#0C141DE5";
+    if (phoneIcon) phoneIcon.style.color = "#0C141DE5";
 
   } else {
+    // Transparent / top navbar
     nav.classList.remove("bg-white", "shadow");
     nav.classList.add("bg-transparent");
 
-    links.forEach(el => el.classList.replace("text-black", "text-white"));
+    // Nav links
+    if (!isDarkNav) {
+      links.forEach(el => el.classList.replace("text-black", "text-white"));
+    }
 
-    contactBtn.classList.replace("border-black", "border-white");
-    contactBtn.classList.replace("text-black", "text-white");
+    // FIRST Contact button → normal border white, text black
+    if (contactBtnFirst) {
+      contactBtnFirst.classList.remove("border-black", "text-[#152231");
+      contactBtnFirst.classList.add("border-white", "text-[#152231");
+    }
 
-    logo.src = logo.dataset.light;
+    // SECOND Contact button → normal transparent bg, text black, border black
+    if (contactBtn) {
+      contactBtn.classList.remove("bg-[#152231]", "text-white");
+      contactBtn.classList.add("bg-transparent", "text-black", "border-[#152231");
+    }
+
+    // Logo swap
+    if (logo && logo.dataset.light) logo.src = logo.dataset.light;
+
+    // Mobile icons color
+    if (isDarkNav) {
+      if (menuIcon) menuIcon.style.color = "#0C141DE5";
+      if (phoneIcon) phoneIcon.style.color = "#0C141DE5";
+    } else {
+      if (menuIcon) menuIcon.style.color = "white";
+      if (phoneIcon) phoneIcon.style.color = "white";
+    }
   }
 }
 
 window.addEventListener("scroll", updateNav);
 updateNav();
 
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('header');
-    const contactBtn = document.getElementById('contact-btn');
+// ===== MOBILE SIDEBAR JS =====
+const mobileToggle = document.getElementById('mobile-toggle');
+const mobileSidebar = document.getElementById('mobile-sidebar');
+const sidebarBackdrop = document.getElementById('sidebar-backdrop');
+const sidebarClose = document.getElementById('sidebar-close');
 
-    if(window.scrollY > 50){ 
-        header.classList.add('bg-white');
-        contactBtn.classList.add('header-white');
-    } else {
-        header.classList.remove('bg-white');
-        contactBtn.classList.remove('header-white');
-    }
-});
+if (mobileToggle && mobileSidebar && sidebarBackdrop) {
+
+  function openSidebar() {
+    mobileSidebar.classList.remove('-translate-x-full');
+    sidebarBackdrop.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+
+    requestAnimationFrame(() => {
+      sidebarBackdrop.classList.add('opacity-100');
+    });
+  }
+
+  function closeSidebar() {
+    mobileSidebar.classList.add('-translate-x-full');
+    sidebarBackdrop.classList.remove('opacity-100');
+    document.body.style.overflow = '';
+
+    setTimeout(() => {
+      sidebarBackdrop.classList.add('hidden');
+    }, 300);
+  }
+
+  mobileToggle.addEventListener('click', openSidebar);
+  sidebarBackdrop.addEventListener('click', closeSidebar);
+
+  if (sidebarClose) {
+    sidebarClose.addEventListener('click', closeSidebar);
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeSidebar();
+  });
+
+  mobileSidebar.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeSidebar);
+  });
+}
+
 /* ------------ start STICKY NAV ------------ */
 
 /* ------------ start hero side bar ------------ */
@@ -137,7 +218,6 @@ document.addEventListener("DOMContentLoaded", () => {
   updateSlider();
   startAuto();
 });
-
 /* ------------ start hero side bar ------------ */
 
 // ------------ start The Passero Story about us page ------------
@@ -250,6 +330,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const nextBtn = document.getElementById('nextBtn');
     const tilesgrids = document.querySelectorAll('.tilesgrid');
 
+    /* ✅ ERROR FIX — IF ELEMENTS NOT FOUND, STOP SCRIPT */
+    if (!sliderGrid || !prevBtn || !nextBtn || tilesgrids.length === 0) {
+        return;
+    }
+
     let currentIndex = 0;
     let itemsPerView = getItemsPerView();
     const totalItems = tilesgrids.length;
@@ -311,6 +396,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateButtons();
 })();
+
 
 // ------------ end section More Collections You'll Love slider ------------
 

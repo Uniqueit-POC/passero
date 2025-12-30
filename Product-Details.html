@@ -27,19 +27,26 @@
         <nav class="max-w-[1350px] mx-auto px-6 py-4 grid grid-cols-[1fr_auto_1fr] items-center gap-4">
             <div class="flex items-center gap-3">
                 <button id="mobile-toggle" class="md:hidden text-white">
-                    <i class="fa fa-bars"></i>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 8H20M4 16H20" stroke="currentColor" stroke-opacity="0.9" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
                 </button>
                 <ul id="nav-left" class="hidden md:flex gap-4 items-center">
-                    <li><a href="about-us.html" class="nav-link text-[#0C141DE5] font-semibold text-base">About Us</a></li>
-                    <li><a href="Collection.html" class="nav-link text-[#0C141DE5] font-semibold text-base">Collections</a>
+                    <li><a href="about-us.html" class="nav-link text-[#0C141DE5] font-semibold text-base">About Us</a>
                     </li>
-                    <li><a href="Why-Passero.html" class="nav-link text-[#0C141DE5] font-semibold text-base">Why Passero</a></li>
-                    <li><a href="Brand-Stores.html" class="nav-link text-[#0C141DE5] font-semibold text-base">Brand Stores</a>
+                    <li><a href="Collection.html"
+                            class="nav-link text-[#0C141DE5] font-semibold text-base">Collections</a>
+                    </li>
+                    <li><a href="Why-Passero.html" class="nav-link text-[#0C141DE5] font-semibold text-base">Why
+                            Passero</a></li>
+                    <li><a href="Brand-Stores.html" class="nav-link text-[#0C141DE5] font-semibold text-base">Brand
+                            Stores</a>
                     </li>
                 </ul>
             </div>
             <div class="flex justify-center">
-               <a href="index.html" id="logo-wrapper" class="w-[189px] h-[64px]">
+                <a href="index.html" id="logo-wrapper" class="sm:w-[189px] sm:h-[64px] w-[142px] h-[48px]">
                     <img src="./assests/img/logo/colo-logo.png" id="logo-img"
                         data-light="./assests/img/logo/colo-logo.png" data-dark="./assests/img/logo/colo-logo.png"
                         class="object-contain transition-all duration-300" />
@@ -48,124 +55,207 @@
             <div class="flex justify-end items-center gap-3">
                 <div id="nav-right" class="hidden md:flex items-center gap-4">
                     <a href="downloads.html" class="nav-link text-[#0C141DE5] font-semibold text-base">Downloads</a>
-                    <a href="News-Events.html" class="nav-link text-[#0C141DE5] font-semibold text-base">News & Events</a>
-                     <a href="contact-us.html" 
-                       id="contact-btn" 
-                       class="nav-link contact-btn border border-[#152231] font-semibold text-base text-black bg-[#152231] px-4 py-2 rounded transition-all duration-300 ease-in-out hover:bg-transparent hover:text-[#0c141d] hover:scale-105 hover:shadow-md">
-                       Contact Us
+                    <a href="News-Events.html" class="nav-link text-[#0C141DE5] font-semibold text-base">News &
+                        Events</a>
+                    <a href="contact-us.html" id="contact-btn"
+                        class="nav-link contact-btn border border-[#152231] font-semibold text-base text-black bg-[#152231] px-4 py-2 rounded transition-all duration-300 ease-in-out hover:bg-transparent hover:text-[#0c141d] hover:scale-105 hover:shadow-md">
+                        Contact Us
                     </a>
                 </div>
-                <a href="tel:+911234567890" class="md:hidden text-white"><i class="fa fa-phone"></i></a>
+                <a href="tel:+911234567890" class="md:hidden text-white"><i class="fa fa-phone"
+                        style="color: rgba(12, 20, 29, 0.898);"></i></a>
             </div>
         </nav>
     </header>
+    <!-- Mobile Sidebar Backdrop -->
+    <div id="sidebar-backdrop" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity duration-300">
+    </div>
+
+    <!-- Mobile Sidebar -->
+    <aside id="mobile-sidebar"
+        class="fixed top-0 left-0 h-full w-[280px] bg-[#F8F3EC]  z-50 transform -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto">
+        <div class="flex flex-col h-full">
+            <div class="flex items-center justify-between p-6 border-b border-gray-300">
+                <img src="./assests/img/logo/colo-logo.png" alt="Passero Logo" class="h-10" />
+                <button id="sidebar-close" class="text-gray-700 text-2xl hover:text-gray-900">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <nav class="flex-1 py-6">
+                <ul class="space-y-1">
+                    <li>
+                        <a href="about-us.html"
+                            class="block px-6 py-2 text-[#0C141DE5] font-forum text-2xl font-normal hover:bg-gray-200 transition-colors">
+                            About Us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Collection.html"
+                            class="block px-6 py-2 text-[#0C141DE5] font-forum text-2xl font-normal hover:bg-gray-200 transition-colors">
+                            Collections
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Why-Passero.html"
+                            class="block px-6 py-2 text-[#0C141DE5] font-forum text-2xl font-normal hover:bg-gray-200 transition-colors">
+                            Why Passero
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Brand-Stores.html"
+                            class="block px-6 py-2 text-[#0C141DE5] font-forum text-2xl font-normal hover:bg-gray-200 transition-colors">
+                            Brand Stores
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Downloads.html"
+                            class="block px-6 py-2 text-[#0C141DE5] font-forum text-2xl font-normal hover:bg-gray-200 transition-colors">
+                            Downloads
+                        </a>
+                    </li>
+                    <li>
+                        <a href="News-Events.html"
+                            class="block px-6 py-2 text-[#0C141DE5] font-forum text-2xl font-normal hover:bg-gray-200 transition-colors">
+                            News & Events
+                        </a>
+                    </li>
+                </ul>
+                <div class="px-6 mt-6">
+                    <a href="contact-us.html"
+                        class="flex items-center justify-center gap-2 w-full bg-[#0c141d] text-white py-3 rounded hover:bg-[#1a2532] transition-colors">
+                        <i class="fa fa-phone"></i>
+                        <span class="font-bold font-sm font-poppins">Contact Us</span>
+                    </a>
+                </div>
+            </nav>
+            <div class="flex border-t border-gray-300 p-5">
+                <p class="text-[#0C141DE5] text-base font-normal mb-3">Follow us on social media</p>
+                <div class="flex gap-2">
+                    <a href="#" class="transition-colors">
+                        <img src="./assests/img/icon/tabler-icon-brand-facebook.svg" alt="facebook">
+                    </a>
+                    <a href="#" class="transition-colors">
+                        <img src="./assests/img/icon/tabler-icon-brand-instagram.svg" alt="instagram">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </aside>
     <!-- end NAVBAR -->
 
     <!-- start Camlin Steel section -->
     <section>
-        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-14 py-12 lg:py-20 mt-12 lg:mt-20">
-            <div class="grid lg:grid-cols-[67%_33%] overflow-hidden">
-                <div class="">
-                    <div class="grid grid-cols-2 gap-4 mb-6">
-                        <div class="w-full h-[429px] overflow-hidden shadow-lg border-[10px] border-[#dbc6b3]">
-                            <img id="mainImage1" src="./assests/img/Product-Details/Product-Details.png"
-                                alt="Camlin Steel Catalog" class="w-full h-full object-cover main-image">
-                        </div>
-                        <div class="w-[429px] h-[429px] overflow-hidden shadow-lg border-[10px] border-[#dbc6b3]">
-                            <img id="mainImage2" src="./assests/img/Product-Details/Product-Details-1.png"
-                                alt="Camlin Steel Room" class="w-full h-full object-cover main-image">
+        <div class="max-w-8xl mx-auto px-6 sm:px-6 lg:px-14 py-16 lg:py-20 mt-12 lg:mt-20">
+            <div class="grid sm:grid-cols-[67%_33%] gap-8 overflow-hidden">
+                <div class="flex flex-col sm:grid sm:grid-cols-2 gap-4">
+
+                    <div class="order-1 sm:order-1 w-full aspect-[4/4] sm:h-[429px] overflow-hidden">
+                        <img id="mainImage1" src="./assests/img/Product-Details/Product-Details.png"
+                            alt="Camlin Steel Catalog"
+                            class="w-full h-full object-cover shadow-lg border-[10px] border-[#dbc6b3]">
+                    </div>
+
+                    <div class="order-2 sm:order-3 mt-4 sm:mt-0 sm:col-span-2">
+                        <div class="flex flex-wrap gap-3">
+                            <div
+                                class="thumbnail w-[56px] sm:w-[80px] h-[56px] sm:h-[80px] active overflow-hidden border-2 border-gray-900 aspect-square">
+                                <img src="./assests/img/Product-Details/Product-Details.png"
+                                    class="w-full h-full object-cover">
+                            </div>
+
+                            <div
+                                class="thumbnail w-[56px] sm:w-[80px] h-[56px] sm:h-[80px] overflow-hidden border-2 border-[#1F32473D] aspect-square">
+                                <img src="./assests/img/Product-Details/Product-Details-2.png"
+                                    class="w-full h-full object-cover">
+                            </div>
+
+                            <div
+                                class="thumbnail w-[56px] sm:w-[80px] h-[56px] sm:h-[80px] overflow-hidden border-2 border-[#1F32473D] aspect-square">
+                                <img src="./assests/img/Product-Details/Product-Details-3.png"
+                                    class="w-full h-full object-cover">
+                            </div>
+
+                            <div
+                                class="thumbnail w-[56px] sm:w-[80px] h-[56px] sm:h-[80px] overflow-hidden border-2 border-[#1F32473D] aspect-square">
+                                <img src="./assests/img/Product-Details/Product-Details-3.png"
+                                    class="w-full h-full object-cover">
+                            </div>
                         </div>
                     </div>
-                    <div class="flex gap-3">
-                        <div
-                            class="thumbnail w-[80px] h-[80px] active overflow-hidden border-2 border-gray-900 aspect-square">
-                            <img src="./assests/img/Product-Details/Product-Details.png" alt="Thumbnail 1"
-                                class="w-full h-full object-cover">
-                        </div>
-                        <div
-                            class="w-[80px] h-[80px] thumbnail overflow-hidden border-2 border-[#1F32473D] aspect-square">
-                            <img src="./assests/img/Product-Details/Product-Details-2.png" alt="Thumbnail 2"
-                                class="w-full h-full object-cover">
-                        </div>
-                        <div
-                            class="w-[80px] h-[80px] thumbnail overflow-hidden border-2 border-[#1F32473D] aspect-square">
-                            <img src="./assests/img/Product-Details/Product-Details-3.png" alt="Thumbnail 3"
-                                class="w-full h-full object-cover">
-                        </div>
-                        <div
-                            class="w-[80px] h-[80px] thumbnail overflow-hidden border-2 border-[#1F32473D] aspect-square">
-                            <img src="./assests/img/Product-Details/Product-Details-3.png" alt="Thumbnail 4"
-                                class="w-full h-full object-cover">
-                        </div>
+                    <div class="order-3 sm:order-2 w-full aspect-[4/4] sm:h-[429px] overflow-hidden">
+                        <img id="mainImage2" src="./assests/img/Product-Details/Product-Details-1.png"
+                            alt="Camlin Steel Room"
+                            class="w-full h-full object-cover shadow-lg border-[10px] border-[#dbc6b3]">
                     </div>
                 </div>
+
                 <div class="flex flex-col justify-center">
-                    <div class="border-b border-[#1F32473D]">
-                        <div class="mb-1">
-                            <span class="text-base text-[#935C10] font-poppins font-medium">Steel Series</span>
-                        </div>
-                        <h1
-                            class="mb-4 text-4xl font-poppins sm:text-5xl lg:text-6xl xl:text-[56px] font-normal font-forum text-title leading-tight">
+                    <div class="border-b border-[#1F32473D] pb-4">
+                        <span class="text-base text-[#935C10] font-poppins font-medium">
+                            Steel Series
+                        </span>
+
+                        <h1 class="mt-2 mb-4 text-4xl sm:text-5xl xl:text-[56px] font-forum text-title leading-tight">
                             Camlin Steel
                         </h1>
                     </div>
-                    <div class="mb-6 mt-4">
+
+                    <div class="mt-6 mb-6">
                         <h3 class="text-base font-poppins font-semibold text-[#0C141DE5]">Brand</h3>
                         <p class="text-base font-poppins text-description">Passero Ceramic</p>
                     </div>
+
                     <div class="mb-6">
                         <h3 class="text-base font-poppins font-semibold text-[#0C141DE5]">Sizes</h3>
-                        <div class="flex flex-wrap gap-2 ">
-                            <button
-                                class="px-4 py-2 border-2 border-[#935C10] rounded-md text-sm font-normal text-[#935C10] hover:border-gray-900 hover:bg-gray-50 transition duration-300">
+                        <div class="flex flex-wrap gap-2 mt-2">
+                            <button class="px-4 py-2 border-2 border-[#935C10] rounded-md text-sm text-[#935C10]">
                                 600x1200mm
                             </button>
-                            <button
-                                class="px-4 py-2 border-2 border-[#1F32473D] rounded-md text-sm font-normal text-[#0C141DE5] hover:border-gray-900 hover:bg-gray-50 transition duration-300">
+                            <button class="px-4 py-2 border-2 border-[#1F32473D] rounded-md text-sm text-[#0C141DE5]">
                                 800x1600mm
                             </button>
-                            <button
-                                class="px-4 py-2 border-2 border-[#1F32473D] rounded-md text-sm font-normal text-[#0C141DE5] hover:border-gray-900 hover:bg-gray-50 transition duration-300">
+                            <button class="px-4 py-2 border-2 border-[#1F32473D] rounded-md text-sm text-[#0C141DE5]">
                                 800x2400mm
                             </button>
                         </div>
                     </div>
+
                     <div class="mb-8">
                         <h3 class="text-base font-poppins font-semibold text-[#0C141DE5]">Description</h3>
-                        <p class="text-base font-poppins font-normal text-[#0C141DE5]">
+                        <p class="text-base font-poppins text-[#0C141DE5]">
                             Camlin Steel offers sleek industrial tones and durable vitrified surfaces designed for
                             modern residential and commercial spaces.
                         </p>
                     </div>
-                    <div>
-                        <button class="bg-gray-900 text-white px-8 py-3 rounded text-sm font-medium transition-transform transition-colors duration-300 ease-in-out
-                       hover:bg-gray-800 hover:scale-105 hover:shadow-lg">
-                            Get a Quote
-                        </button>
-                    </div>
+
+                    <button
+                        class="bg-gray-900 text-white px-8 py-3 rounded text-sm font-bold transition-all duration-300 hover:bg-gray-800 hover:scale-105 hover:shadow-lg">
+                        Get a Quote
+                    </button>
                 </div>
             </div>
         </div>
     </section>
+
     <!-- End Camlin Steel section -->
 
     <!-- start Description Technical Specification Additional Information section -->
     <section class="bg-white">
-        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-14 py-12 lg:py-20">
+        <div class="max-w-8xl mx-auto px-6 sm:px-6 lg:px-14 py-16 lg:py-20">
             <div class="bg-white">
-                <div class="flex flex-wrap justify-center">
+                <div class="flex flex-nowrap md:flex-wrap overflow-x-auto md:overflow-visible justify-start md:justify-center gap-0 sm:gap-2 text-2xl font-forum mb-0 sm:mb-8 px-2 scrollbar-hide">
                     <button
-                        class="tab-button px-6 py-2 text-[#935C10] font-normal font-forum text-2xl border-b-2 border-[#935C10] hover:text-gray-900 transition"
+                        class="tab flex-shrink-0 px-4 py-2 text-[#935C10] text-[18px] sm:text-2xl border-b-2 border-b-[#935C10] transition whitespace-nowrap"
                         data-tab="description">
                         Description
                     </button>
                     <button
-                        class="tab-button px-6 py-2 text-[#0C141DE5] font-normal font-forum text-2xl border-b-2 border-transparent hover:text-gray-900 transition"
+                        class="tab flex-shrink-0 px-4 py-2 text-[#0C141DE5] text-[18px] sm:text-2xl border-b-2 border-transparent transition whitespace-nowrap"
                         data-tab="technical">
                         Technical Specification
                     </button>
                     <button
-                        class="tab-button px-6 py-2 text-[#0C141DE5] font-normal font-forum text-2xl border-b-2 border-transparent hover:text-gray-900 transition"
+                        class="tab flex-shrink-0 px-4 py-2 text-[#0C141DE5] text-[18px] sm:text-2xl border-b-2 border-transparent transition whitespace-nowrap"
                         data-tab="additional">
                         Additional Information
                     </button>
@@ -175,44 +265,44 @@
                 <!-- Description -->
                 <div id="description" class="tab-content active max-w-5xl mx-auto py-8 lg:py-16">
                     <div class="grid grid-cols-1 md:grid-cols-3 border-b md:border-b-1 border-[#1F32473D]">
-                        <div class="border-b md:border-b-0 md:border-r border-[#1F32473D] p-4 lg:p-6">
+                        <div class="border-b md:border-b-0 md:border-r border-[#1F32473D] py-4 lg:p-6">
                             <h4 class="text-base font-semibold font-poppins text-[#0C141DE5]">Size</h4>
                             <p class="text-3xl font-forum font-normal text-[#0C141DE5]">600×1200</p>
                         </div>
-                        <div class="border-b md:border-b-0 md:border-r border-[#1F32473D] p-4 lg:p-6">
+                        <div class="border-b md:border-b-0 md:border-r border-[#1F32473D] py-4 lg:p-6">
                             <h4 class="text-base font-semibold font-poppins text-[#0C141DE5]">Coverage Area Per Box</h4>
                             <p class="text-3xl font-forum font-normal text-[#0C141DE5]">1.44</p>
                         </div>
-                        <div class="p-4 lg:p-6">
+                        <div class="py-4 lg:p-6">
                             <h4 class="text-base font-semibold font-poppins text-[#0C141DE5]">Pcs per Box</h4>
                             <p class="text-3xl font-forum font-normal text-[#0C141DE5]">2</p>
                         </div>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-3 border-b md:border-b-1 border-[#1F32473D]">
-                        <div class="border-b md:border-b-0 md:border-r border-[#1F32473D] p-4 lg:p-6">
+                        <div class="border-b md:border-b-0 md:border-r border-[#1F32473D] py-4 lg:p-6">
                             <h4 class="text-base font-semibold font-poppins text-[#0C141DE5]">Boxes Each Pallets</h4>
                             <p class="text-3xl font-forum font-normal text-[#0C141DE5]">68 and 30</p>
                         </div>
-                        <div class="border-b md:border-b-0 md:border-r border-[#1F32473D] p-4 lg:p-6">
+                        <div class="border-b md:border-b-0 md:border-r border-[#1F32473D] py-4 lg:p-6">
                             <h4 class="text-base font-semibold font-poppins text-[#0C141DE5]">Total pallets Each
                                 Container</h4>
                             <p class="text-3xl font-forum font-normal text-[#0C141DE5]">17 Pallet</p>
                         </div>
-                        <div class="p-4 lg:p-6">
+                        <div class="py-4 lg:p-6">
                             <h4 class="text-base font-semibold font-poppins text-[#0C141DE5]">Total Boxes</h4>
                             <p class="text-3xl font-forum font-normal text-[#0C141DE5]">890</p>
                         </div>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-3">
-                        <div class="border-b md:border-b-0 md:border-r border-[#1F32473D] p-4 lg:p-6">
+                        <div class="border-b md:border-b-0 md:border-r border-[#1F32473D] py-4 lg:p-6">
                             <h4 class="text-base font-semibold font-poppins text-[#0C141DE5]">Total Square Meter</h4>
                             <p class="text-3xl font-forum font-normal text-[#0C141DE5]">1281.6</p>
                         </div>
-                        <div class="border-b md:border-b-0 md:border-r border-[#1F32473D] p-4 lg:p-6">
+                        <div class="border-b md:border-b-0 md:border-r border-[#1F32473D] py-4 lg:p-6">
                             <h4 class="text-base font-semibold font-poppins text-[#0C141DE5]">Weight per Box</h4>
                             <p class="text-3xl font-forum font-normal text-[#0C141DE5]">31 KG</p>
                         </div>
-                        <div class="p-4 lg:p-6">
+                        <div class="py-4 lg:p-6">
                             <h4 class="text-base font-semibold font-poppins text-[#0C141DE5]">Thickness</h4>
                             <p class="text-3xl font-forum font-normal text-[#0C141DE5]">9 to 9.5 mm</p>
                         </div>
@@ -743,74 +833,98 @@
     <!-- End Description Technical Specification Additional Information section -->
 
     <!-- start Applications Section -->
-    <section class="bg-gradient-to-br from-gray-800 via-gray-700 to-gray-900 py-16 px-4 bg-no-repet bg-cover" style="background-image: url(./assests/img/Product-Details/Applications-bg.png);">
+    <section class="bg-gradient-to-br from-gray-800 via-gray-700 to-gray-900 py-16 px-4 bg-no-repet bg-cover"
+        style="background-image: url(./assests/img/Product-Details/Applications-bg.png);">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-20">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-normal font-forum text-white mb-4">Applications</h2>
-                <p class="font-poppins text-[#FFFFFFC7] max-w-3xl mx-auto text-sm sm:text-base md:text-[18px] font-normal max-w-2xl mx-auto">
+                <h2 class="text-[32px] sm:text-4xl md:text-5xl lg:text-[56px] font-normal font-forum text-white mb-4">
+                    Applications</h2>
+                <p
+                    class="font-poppins text-[#FFFFFFC7] max-w-3xl mx-auto text-base sm:text-base md:text-[18px] font-normal max-w-2xl mx-auto">
                     This tile is suitable for a wide range of residential and commercial spaces, offering durability,
                     style, and versatile performance.
                 </p>
             </div>
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 md:gap-8 mb-8">
-                <div class="icon-box text-center mb-14">
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-6 md:gap-8 mb-8">
+                <div class="icon-box text-center mb-8 sm:mb-14">
                     <div class="">
                         <img src="./assests/img/icon/Living-Room.svg" class="mx-auto mb-3" alt="Living Room">
-                        <p class="font-forum text-white mx-auto text-sm sm:text-base md:text-2xl font-normal max-w-2xl mx-auto">Living Room</p>
+                        <p
+                            class="font-forum text-white mx-auto text-sm sm:text-base md:text-2xl font-normal max-w-2xl mx-auto">
+                            Living Room</p>
                     </div>
                 </div>
-                <div class="icon-box text-center mb-14">
+                <div class="icon-box text-center mb-8 sm:mb-14">
                     <div class="">
                         <img src="./assests/img/icon/Kitchen.svg" class="mx-auto mb-3" alt="Kitchen">
-                        <p class="font-forum text-white mx-auto text-sm sm:text-base md:text-2xl font-normal max-w-2xl mx-auto">Kitchen</p>
+                        <p
+                            class="font-forum text-white mx-auto text-sm sm:text-base md:text-2xl font-normal max-w-2xl mx-auto">
+                            Kitchen</p>
                     </div>
                 </div>
-                <div class="icon-box text-center mb-14">
+                <div class="icon-box text-center mb-8 sm:mb-14">
                     <div class="">
                         <img src="./assests/img/icon/Bedroom.svg" class="mx-auto mb-3" alt="Bedroom">
-                        <p class="font-forum text-white mx-auto text-sm sm:text-base md:text-2xl font-normal max-w-2xl mx-auto">Bedroom</p>
+                        <p
+                            class="font-forum text-white mx-auto text-sm sm:text-base md:text-2xl font-normal max-w-2xl mx-auto">
+                            Bedroom</p>
                     </div>
                 </div>
-                <div class="icon-box text-center mb-14">
+                <div class="icon-box text-center mb-8 sm:mb-14">
                     <div class="">
                         <img src="./assests/img/icon/Bathroom.svg" class="mx-auto mb-3" alt="Bedroom">
-                        <p class="font-forum text-white mx-auto text-sm sm:text-base md:text-2xl font-normal max-w-2xl mx-auto">Bathroom</p>
+                        <p
+                            class="font-forum text-white mx-auto text-sm sm:text-base md:text-2xl font-normal max-w-2xl mx-auto">
+                            Bathroom</p>
                     </div>
                 </div>
-                <div class="icon-box text-center">
+                <div class="icon-box text-center  mb-8 sm:mb-0">
                     <div class="">
                         <img src="./assests/img/icon/Dining-Area.svg" class="mx-auto mb-3" alt="Dining">
-                        <p class="font-forum text-white mx-auto text-sm sm:text-base md:text-2xl font-normal max-w-2xl mx-auto">Dining Area</p>
+                        <p
+                            class="font-forum text-white mx-auto text-sm sm:text-base md:text-2xl font-normal max-w-2xl mx-auto">
+                            Dining Area</p>
                     </div>
                 </div>
-                <div class="icon-box text-center">
+                <div class="icon-box text-center  mb-8 sm:mb-0">
                     <div class="">
                         <img src="./assests/img/icon/Offices.svg" class="mx-auto mb-3" alt="Offices">
-                        <p class="font-forum text-white mx-auto text-sm sm:text-base md:text-2xl font-normal max-w-2xl mx-auto">Offices</p>
+                        <p
+                            class="font-forum text-white mx-auto text-sm sm:text-base md:text-2xl font-normal max-w-2xl mx-auto">
+                            Offices</p>
                     </div>
                 </div>
-                <div class="icon-box text-center">
+                <div class="icon-box text-center  mb-8 sm:mb-0">
                     <div class="">
                         <img src="./assests/img/icon/Retail-Stores.svg" class="mx-auto mb-3" alt="Retail-Stores">
-                        <p class="font-forum text-white mx-auto text-sm sm:text-base md:text-2xl font-normal max-w-2xl mx-auto">Retail Stores</p>
+                        <p
+                            class="font-forum text-white mx-auto text-sm sm:text-base md:text-2xl font-normal max-w-2xl mx-auto">
+                            Retail Stores</p>
                     </div>
                 </div>
-                <div class="icon-box text-center">
+                <div class="icon-box text-center  mb-8 sm:mb-0">
                     <div class="">
                         <img src="./assests/img/icon/Restaurants.svg" class="mx-auto mb-3" alt="Restaurants">
-                        <p class="font-forum text-white mx-auto text-sm sm:text-base md:text-2xl font-normal max-w-2xl mx-auto">Restaurants</p>
+                        <p
+                            class="font-forum text-white mx-auto text-sm sm:text-base md:text-2xl font-normal max-w-2xl mx-auto">
+                            Restaurants</p>
                     </div>
                 </div>
-                <div class="icon-box text-center">
+                <div class="icon-box text-center  mb-8 sm:mb-0">
                     <div class="">
                         <img src="./assests/img/icon/Showrooms.svg" class="mx-auto mb-3" alt="Showrooms">
-                        <p class="font-forum text-white mx-auto text-sm sm:text-base md:text-2xl font-normal max-w-2xl mx-auto">Showrooms</p>
+                        <p
+                            class="font-forum text-white mx-auto text-sm sm:text-base md:text-2xl font-normal max-w-2xl mx-auto">
+                            Showrooms</p>
                     </div>
                 </div>
-                <div class="icon-box text-center">
+                <div class="icon-box text-center  mb-8 sm:mb-0">
                     <div class="">
-                        <img src="./assests/img/icon/Lobbies-Corridors.svg" class="mx-auto mb-3" alt="Lobbies-Corridors">
-                        <p class="font-forum text-white mx-auto text-sm sm:text-base md:text-2xl font-normal max-w-2xl mx-auto">Lobbies & Corridors</p>
+                        <img src="./assests/img/icon/Lobbies-Corridors.svg" class="mx-auto mb-3"
+                            alt="Lobbies-Corridors">
+                        <p
+                            class="font-forum text-white mx-auto text-sm sm:text-base md:text-2xl font-normal max-w-2xl mx-auto">
+                            Lobbies & Corridors</p>
                     </div>
                 </div>
             </div>
@@ -822,70 +936,66 @@
     <section>
         <div class="max-w-8xl mx-auto py-12 lg:py-20">
             <div>
-                <h1 class="text-center text-4xl sm:text-5xl lg:text-[56px] font-normal mb-10 font-forum text-title">
+                <h1
+                    class="px-4 md:ps-0 text-center text-[32px] sm:text-5xl leading-[100%] lg:text-[56px] font-normal mb-10 font-forum text-title">
                     Checkout
                     Related Products</h1>
             </div>
             <div class="relative ps-4 sm:ps-6 lg:ps-14 ">
                 <div class="overflow-hidden">
                     <div id="sliderGrid"
-                        class="flex flex-nowrap gap-6 mb-8 transition-transform duration-500 ease-in-out">
+                        class="flex flex-nowrap gap-2 sm:gap-6 mb-8 transition-transform duration-500 ease-in-out">
                         <a href="Product-Details.html">
-                            <div class="tilesgrid relative group cursor-pointer w-[360px] h-[271px] sm:w-[320px] sm:h-[240px] md:w-[340px] md:h-[255px] lg:w-[360px] lg:h-[271px] flex-shrink-0"
-                            data-category="600x1200mm">
-                            <img src="./assests/img/Product-Details/Autumn-Steel.png"
-                                alt="Autumn Steel"
-                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                            <div class="absolute inset-0 overlay-gradient"></div>
-                            <div
-                                class="font-forum absolute bottom-0 left-0 w-full bg-[#ffffff52] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
-                                <h3 class="text-white text-2xl font-normal font-poppins">Autumn Steel</h3>
+                            <div class="tilesgrid relative group cursor-pointer w-[280px] sm:w-[360px] h-[211px] sm:h-[271px] md:w-[340px] md:h-[255px] lg:w-[360px] lg:h-[271px] flex-shrink-0"
+                                data-category="600x1200mm">
+                                <img src="./assests/img/Product-Details/Autumn-Steel.png" alt="Autumn Steel"
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                                <div class="absolute inset-0 overlay-gradient"></div>
+                                <div
+                                    class="font-forum absolute bottom-0 left-0 w-full bg-[#ffffff52] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
+                                    <h3 class="text-white text-2xl font-normal font-poppins">Autumn Steel</h3>
+                                </div>
                             </div>
-                        </div>
                         </a>
                         <a href="Product-Details.html">
-                            <div class="tilesgrid relative group cursor-pointer w-[360px] h-[271px] sm:w-[320px] sm:h-[240px] md:w-[340px] md:h-[255px] lg:w-[360px] lg:h-[271px] flex-shrink-0"
-                            data-category="800x1600mm">
-                            <img src="./assests/img/Product-Details/Desert-Steel.png"
-                                alt="Desert Steel"
-                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                            <div class="absolute inset-0 overlay-gradient"></div>
-                            <div
-                                class="font-forum absolute bottom-0 left-0 w-full bg-[#ffffff52] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
-                                <h3 class="text-white text-2xl font-normal font-poppins">Desert Steel</h3>
+                            <div class="tilesgrid relative group cursor-pointer w-[280px] sm:w-[360px] h-[211px] sm:h-[271px] md:w-[340px] md:h-[255px] lg:w-[360px] lg:h-[271px] flex-shrink-0"
+                                data-category="800x1600mm">
+                                <img src="./assests/img/Product-Details/Desert-Steel.png" alt="Desert Steel"
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                                <div class="absolute inset-0 overlay-gradient"></div>
+                                <div
+                                    class="font-forum absolute bottom-0 left-0 w-full bg-[#ffffff52] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
+                                    <h3 class="text-white text-2xl font-normal font-poppins">Desert Steel</h3>
+                                </div>
                             </div>
-                        </div>
                         </a>
                         <a href="Product-Details.html">
-                            <div class="tilesgrid relative group cursor-pointer w-[360px] h-[271px] sm:w-[320px] sm:h-[240px] md:w-[340px] md:h-[255px] lg:w-[360px] lg:h-[271px] flex-shrink-0"
-                            data-category="800x2400mm">
-                            <img src="./assests/img/Product-Details/Lilac-Steel.png"
-                                alt="Lilac Steel"
-                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                            <div class="absolute inset-0 overlay-gradient"></div>
-                            <div
-                                class="font-forum absolute bottom-0 left-0 w-full bg-[#ffffff52] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
-                                <h3 class="text-white text-2xl font-normal font-poppins">Lilac Steel</h3>
+                            <div class="tilesgrid relative group cursor-pointer w-[280px] sm:w-[360px] h-[211px] sm:h-[271px] md:w-[340px] md:h-[255px] lg:w-[360px] lg:h-[271px] flex-shrink-0"
+                                data-category="800x2400mm">
+                                <img src="./assests/img/Product-Details/Lilac-Steel.png" alt="Lilac Steel"
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                                <div class="absolute inset-0 overlay-gradient"></div>
+                                <div
+                                    class="font-forum absolute bottom-0 left-0 w-full bg-[#ffffff52] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
+                                    <h3 class="text-white text-2xl font-normal font-poppins">Lilac Steel</h3>
+                                </div>
                             </div>
-                        </div>
                         </a>
                         <a href="Product-Details.html">
-                            <div class="tilesgrid relative group cursor-pointer w-[360px] h-[271px] sm:w-[320px] sm:h-[240px] md:w-[340px] md:h-[255px] lg:w-[360px] lg:h-[271px] flex-shrink-0"
-                            data-category="1200x1800mm">
-                            <img src="./assests/img/Product-Details/Marvel-Steel.png"
-                                alt="Marvel Steel"
-                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                            <div class="absolute inset-0 overlay-gradient"></div>
-                            <div
-                                class="font-forum absolute bottom-0 left-0 w-full bg-[#ffffff52] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
-                                <h3 class="text-white text-2xl font-normal font-poppins">Marvel Steel</h3>
+                            <div class="tilesgrid relative group cursor-pointer w-[280px] sm:w-[360px] h-[211px] sm:h-[271px] md:w-[340px] md:h-[255px] lg:w-[360px] lg:h-[271px] flex-shrink-0"
+                                data-category="1200x1800mm">
+                                <img src="./assests/img/Product-Details/Marvel-Steel.png" alt="Marvel Steel"
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                                <div class="absolute inset-0 overlay-gradient"></div>
+                                <div
+                                    class="font-forum absolute bottom-0 left-0 w-full bg-[#ffffff52] text-start py-4 px-5 border-t border-[#00000052] backdrop-blur-[38px]">
+                                    <h3 class="text-white text-2xl font-normal font-poppins">Marvel Steel</h3>
+                                </div>
                             </div>
-                        </div>
                         </a>
-                        <div class="tilesgrid relative group cursor-pointer w-[360px] h-[271px] sm:w-[320px] sm:h-[240px] md:w-[340px] md:h-[255px] lg:w-[360px] lg:h-[271px] flex-shrink-0"
+                        <div class="tilesgrid relative group cursor-pointer w-[280px] sm:w-[360px] h-[211px] sm:h-[271px] md:w-[340px] md:h-[255px] lg:w-[360px] lg:h-[271px] flex-shrink-0"
                             data-category="1200x2400mm">
-                            <img src="./assests/img/Product-Details/Mimosa-Steel.png"
-                                alt="Marble Series"
+                            <img src="./assests/img/Product-Details/Mimosa-Steel.png" alt="Marble Series"
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                             <div class="absolute inset-0 overlay-gradient"></div>
                             <div
@@ -893,10 +1003,9 @@
                                 <h3 class="text-white text-2xl font-normal font-poppins">Marble Series</h3>
                             </div>
                         </div>
-                        <div class="tilesgrid relative group cursor-pointer w-[360px] h-[271px] sm:w-[320px] sm:h-[240px] md:w-[340px] md:h-[255px] lg:w-[360px] lg:h-[271px] flex-shrink-0"
+                        <div class="tilesgrid relative group cursor-pointer w-[280px] sm:w-[360px] h-[211px] sm:h-[271px] md:w-[340px] md:h-[255px] lg:w-[360px] lg:h-[271px] flex-shrink-0"
                             data-category="600x600mm">
-                            <img src="./assests/img/Product-Details/Applications-bg.png"
-                                alt="Wood Series"
+                            <img src="./assests/img/Product-Details/Applications-bg.png" alt="Wood Series"
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                             <div class="absolute inset-0 overlay-gradient"></div>
                             <div
@@ -929,10 +1038,10 @@
 
     <!-- start Download Our Latest Product Brochure -->
     <section class="bg-[#F8F3EC]">
-        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-14 pb-12 lg:pb-20">
+        <div class="max-w-8xl mx-auto px-0 sm:px-6 lg:px-14 pt-0 lg:py-20 ">
             <div class="relative bg-[#152231] overflow-hidden"
                 style="background-image: url(./assests/img/home/cta-back.png); background-blend-mode: soft-light;">
-                <div class="grid grid-cols-[2fr_3fr_2fr] items-center w-full">
+                <div class="grid sm:grid-cols-[2fr_3fr_2fr] sgrid-cols-full items-center w-full">
                     <div class="hidden lg:flex items-end relative h-full">
                         <div class="absolute bottom-0 -left-[6%] w-[271px] h-[281px] relative">
                             <svg class="absolute bottom-[0%] -left-[1%] w-[337px] h-[294px] z-10" width="360"
@@ -957,7 +1066,7 @@
                                 class="w-full h-full object-cover rounded-t-[240px] relative" alt="Bathroom" />
                         </div>
                     </div>
-                    <div class="text-center py-16 px-6 lg:px-8">
+                    <div class="order-2 lg:order-none text-center py-16 px-6 lg:px-8">
                         <h1 class="text-3xl sm:text-4xl lg:text-[44px] font-normal text-white mb-4 font-forum ">
                             Download Our Latest<br>Product Brochure
                         </h1>
@@ -965,7 +1074,7 @@
                             Explore our complete collection of tiles, surfaces, finishes, and technical details — all in
                             one beautifully crafted catalog. Perfect for homeowners, dealers, designers, and architects.
                         </p>
-                        <button onclick="openModal()" class="bg-white text-[#0C141DE5] px-8 py-3 rounded-md flex items-center justify-center mx-auto gap-2 text-sm font-bold
+                        <button onclick="openModal()" class="sm:w-fit w-full  bg-white text-[#0C141DE5] px-8 py-3 rounded-md flex items-center justify-center mx-auto gap-2 text-sm font-bold
                                transition-transform transition-colors duration-300 ease-in-out
                                hover:bg-transparent hover:border hover:text-white hover:scale-105 hover:shadow-lg">
                             <svg class="stroke-current group-hover:text-white" width="24" height="24"
@@ -978,22 +1087,26 @@
                             Download Brochure
                         </button>
                     </div>
-                    <div class="hidden lg:flex items-start relative h-full">
-                        <div class="absolute bottom-[0%] left-[45%] w-[271px] h-[281px] relative">
-                            <svg class="absolute bottom-[15%] right-[0%] w-[255px] h-[301px] z-10" width="222"
-                                height="201" viewBox="0 0 222 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div class="show sm:hidden lg:flex items-start relative h-full">
+                        <div
+                            class="absolute bottom-[0%] left-[21%] sm:left-[45%] sm:w-[238px] sm:h-[253px] w-[228px] h-[235px] relative">
+                            <svg class="absolute bottom-[15%] right-[0%] w-[255px] h-[301px] sm:w-[271px] sm:h-[281px] z-10"
+                                width="222" height="201" viewBox="0 0 222 201" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path opacity="0.6" fill-rule="evenodd" clip-rule="evenodd"
                                     d="M85.2455 194.698C170.406 215.266 260.965 159.9 284.98 66.1821C306.361 -17.2578 235.897 -79.0182 160.076 -97.3313C95.7557 -112.867 27.2655 -71.2285 9.12759 -0.444675C-12.0511 82.2059 10.1419 176.558 85.2455 194.698Z"
                                     stroke="#F1C17E" stroke-width="3" />
                             </svg>
-                            <svg class="absolute top-[0%] right-[0%] z-10 w-[337px] h-[294px]" width="258" height="265"
-                                viewBox="0 0 258 265" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="absolute top-[0%] right-[0%] z-10 w-[283px] h-[247px] sm:w-[271px] sm:h-[281px] "
+                                width="258" height="265" viewBox="0 0 258 265" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd"
                                     d="M4.31853 33.6199C-11.734 146.053 42.2695 250.174 129.406 261.9C211.87 272.998 280.723 179.267 295.915 72.8619C308.019 -11.9175 242.75 -62.9322 177.046 -71.7744C105.566 -81.3939 17.4869 -58.6122 4.31853 33.6199Z"
                                     stroke="#F1C17E" stroke-width="3" />
                             </svg>
-                            <svg class="absolute bottom-[10%] -right-[10%] w-[426px] h-[255px] z-10" width="270"
-                                height="244" viewBox="0 0 270 244" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="absolute bottom-[10%] -right-[10%] w-[358px] h-[215px] sm:w-[426px] sm:h-[255px] z-10"
+                                width="270" height="244" viewBox="0 0 270 244" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd"
                                     d="M291.776 82.3515C353.094 -16.7533 317.873 -98.9842 260.638 -132.363C209.62 -162.116 125.386 -134.905 70.7272 -46.5623C3.21154 62.5594 -26.9714 193.878 36.0477 230.63C104.196 270.374 218.764 200.356 291.776 82.3515Z"
                                     stroke="#F1C17E" stroke-width="3" />
@@ -1009,11 +1122,12 @@
     <!-- end Download Our Latest Product Brochure -->
 
     <!--start Experience Passero in Person -->
-    <section class="">
+    <section class="pt-12 lg:pt-20">
         <div class="grid grid-cols-1 lg:grid-cols-2">
-            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-14 py-12 lg:py-20 flex flex-col justify-center bg-no-repeat bg-center bg-cover"
+            <div class="max-w-8xl mx-auto px-6 sm:px-6 lg:px-14 py-16 lg:py-20 flex flex-col justify-center bg-no-repeat bg-center bg-cover"
                 style="background-image: url(./assests/img/about/Experience-Passero-Person.png);">
-                <h2 class="text-4xl sm:text-5xl lg:text-[56px] font-formal font-forum text-white mb-6">
+                <h2
+                    class="text-[32px] sm:text-5xl leading-[100%] lg:text-[56px] font-formal font-forum text-white mb-6">
                     Experience Passero in Person
                 </h2>
                 <p class="text-[#FFFFFFC7] text-sm lg:text-[18px] font-Poppins font-normal leading-relaxed mb-8">
@@ -1027,10 +1141,10 @@
                             <img src="./assests/img/icon/tabler-icon-circle-check-filled.svg" alt="">
                         </div>
                         <div class="flex">
-                            <p class="text-white text-sm lg:text-base font-Poppins font-bold leading-relaxed">Curated
-                                Displays&nbsp;&nbsp;- </p>
-                            <p class="text-white text-sm lg:text-base font-Poppins font-normal leading-relaxed">
-                                &nbsp;&nbsp;See tiles in real-life interior setups</p>
+                            <p class="text-white text-base lg:text-base  font-Poppins font-bold leading-relaxed">Curated
+                                Displays&nbsp;&nbsp;- <span
+                                    class="text-white text-base lg:text-base  font-Poppins font-normal leading-relaxed">&nbsp;&nbsp;See
+                                    tiles in real-life interior setups</span></p>
                         </div>
                     </div>
 
@@ -1039,10 +1153,10 @@
                             <img src="./assests/img/icon/tabler-icon-circle-check-filled.svg" alt="">
                         </div>
                         <div class="flex">
-                            <p class="text-white text-sm lg:text-base font-Poppins font-bold leading-relaxed">Expert
-                                Assistance&nbsp;&nbsp;- </p>
-                            <p class="text-white text-sm lg:text-base font-Poppins font-normal leading-relaxed">
-                                &nbsp;&nbsp;Guidance from trained design consultants</p>
+                            <p class="text-white text-base lg:text-base  font-Poppins font-bold leading-relaxed">Expert
+                                Assistance&nbsp;&nbsp;- <span
+                                    class="text-white text-base lg:text-base  font-Poppins font-normal leading-relaxed">Guidance
+                                    from trained design consultants</span></p>
                         </div>
                     </div>
 
@@ -1051,20 +1165,22 @@
                             <img src="./assests/img/icon/tabler-icon-circle-check-filled.svg" alt="">
                         </div>
                         <div class="flex">
-                            <p class="text-white text-sm lg:text-base font-Poppins font-bold leading-relaxed">Latest
-                                Collections&nbsp;&nbsp;- </p>
-                            <p class="text-white text-sm lg:text-base font-Poppins font-normal leading-relaxed">
-                                &nbsp;&nbsp;Access to our newest and premium ranges</p>
+                            <p class="text-white text-base lg:text-base  font-Poppins font-bold leading-relaxed">Latest
+                                Collections&nbsp;&nbsp;- <span
+                                    class="text-white text-base lg:text-base  font-Poppins font-normal leading-relaxed">Access
+                                    to our newest and premium ranges</span></p>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <a href="Brand-Stores.html" class="inline-flex w-fit bg-white text-[#0C141DE5] px-8 py-3 rounded-md flex items-start justify-start gap-2 text-sm font-bold
+                    <a href="Brand-Stores.html" class="inline-flex w-full sm:w-fit bg-white text-[#0C141DE5] px-8 py-3 rounded-md flex items-center justify-center sm:items-start sm:justify-start gap-2 text-sm font-bold
                            transition-transform transition-colors duration-300 ease-in-out
                            hover:bg-gray-800 hover:text-white hover:scale-105 hover:shadow-lg">
                         Visit Our Stores
-                        <svg class="stroke-current group-hover:text-white" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 12H19M19 12L15 16M19 12L15 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <svg class="stroke-current group-hover:text-white" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L15 16M19 12L15 8" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
                     </a>
                 </div>
@@ -1164,39 +1280,38 @@
                     <div class="space-y-4 text-sm">
                         <div>
                             <p class="font-semibold text-[#0C141DE5] text-base font-poppins mb-1">Address</p>
-                            <p class="text-[#0C141DE5] font-normal text-base">B-A, NATIONAL HIGHWAY Timbdi, Gujarat
-                                363642</p>
+                            <p class="text-[#0C141DE5] font-normal text-base">
+                                <a href="https://www.google.com/maps/place/SURVEY+NO.+72/P1/P2,+KANDLA+ROAD,+8-A+NATIONAL+HIGHWAY+TIMDI,+MORBI-363642+(GUJ)+INDIA"
+                                    target="_blank" class="underline hover:text-[#935C10] transition">
+                                    SURVEY NO. 72/P1/P2, KANDLA ROAD, 8-A NATIONAL HIGHWAY TIMDI, MORBI-363642 (GUJ)
+                                    INDIA
+                                </a>
+                            </p>
+
                         </div>
                         <div>
-                            <p class="font-semibold text-[#0C141DE5] text-base font-poppins mb-1">Ketanbhai Patel
+                            <p class="font-semibold text-[#0C141DE5] text-base font-poppins mb-1">Contact Us
                             </p>
-                            <a href="tel:+919723581081"
-                                class="underline text-[#0C141DE5] font-normal text-base hover:text-gray-900 block">(+91)
-                                9723581081</a>
-                            <a href="tel:+919737228030"
-                                class="underline text-[#0C141DE5] font-normal text-base hover:text-gray-900 block">(+91)
-                                9737228030</a>
-                        </div>
-                        <div>
-                            <p class="font-semibold text-[#0C141DE5] text-base font-poppins mb-1">Dhruvbhai Patel
-                            </p>
-                            <a href="tel:+919712981081"
-                                class="underline text-[#0C141DE5] font-normal text-base hover:text-gray-900 block">(+91)
-                                9712981081</a>
+                            <a href="tel:+917807881081"
+                                class="underline text-[#0C141DE5] font-normal text-base hover:text-[#935C10] block">+91
+                                78078 81081</a>
                         </div>
                         <div>
                             <p class="font-semibold text-[#0C141DE5] text-base font-poppins mb-1">Write us</p>
-                            <a href="mailto:kpatel@passerovitrified.com"
-                                class="underline text-[#0C141DE5] font-normal text-base hover:text-gray-900">kpatel@passerovitrified.com</a>
+                            <a href="mailto:info@passerovitrified.com"
+                                class="underline text-[#0C141DE5] font-normal text-base hover:text-[#935C10] ">info@passerovitrified.com</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="border-t border-[#1F32473D] pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
-                <p class="font-poppins font-normal text-sm leading-[22px] tracking-normal text-[#0C141DE5]">© 2025
-                    Passero Vitrified. All rights reserved.</p>
+                <p class="font-poppins font-normal text-sm leading-[22px] tracking-normal text-[#0C141DE5]"> © 2025 All
+                    Rights Reserved by <span class="font-forum text-lg font-normal text-[#935C10] mb-4"><a
+                            href="">Passero Vitrified</a></span> Developed by <span
+                        class="font-forum text-lg font-normal text-[#935C10] mb-4"><a
+                            href="https://theuniqueitsolution.com/">Unique IT Solution</a></span>.</p>
                 <div class="flex gap-4">
-                    <a href="#"
+                    <a href="https://www.instagram.com/passero_tiles_and_bathware/?igsh=Y2dvcmFxcGpudndk#"
                         class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -1217,12 +1332,14 @@
         </div>
     </footer>
 
-       <!-- Modal -->
+    <!-- Modal -->
     <div id="catalogModal" class="modal">
-        <div class="modal-content bg-gray-900 text-white rounded-2xl max-w-2xl w-full mx-4 p-8 md:p-14 relative" style="background-image: url(./assests/img/Downloads/Download-Dialog-bg.png);">
-            <button onclick="closeModal()" class="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors">
+        <div class="modal-content bg-gray-900 text-white rounded-2xl max-w-2xl w-full mx-4 p-8 md:p-14 relative"
+            style="background-image: url(./assests/img/Downloads/Download-Dialog-bg.png);">
+            <button onclick="closeModal()"
+                class="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
 
@@ -1230,26 +1347,26 @@
                 <h2 class="text-xl sm:text-2xl lg:text-[44px] font-normal font-forum text-white mb-6 mb-3">
                     Get the Latest Passero Updates
                 </h2>
-                <p class="mb-12 text-[#FFFFFFC7] font-normal text-sm lg:text-base leading-relaxed">
-                    Share your mobile number to receive product details, catalog updates, and 
-                    helpful information from Passero. Our team may also assist you with 
+                <p class="mb-12 text-[#FFFFFFC7] font-normal text-base lg:text-base  leading-relaxed">
+                    Share your mobile number to receive product details, catalog updates, and
+                    helpful information from Passero. Our team may also assist you with
                     product selection or store guidance, if required.
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-stretch">
                     <div class="relative flex-1 max-w-sm">
-                        <input 
-                            type="tel" 
-                            placeholder="Enter your mobile number" 
+                        <input type="tel" placeholder="Enter your mobile number"
                             class="w-full px-4 py-3 rounded bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-amber-500">
                         <button class="absolute right-3 top-1/2 transform -translate-y-1/2">
                             <img src="./assests/img/icon/tabler-icon-device-tablet.svg" alt="">
                         </button>
                     </div>
-                    <button class="flex bg-[#F1C17E] text-[#0C141DE5] px-8 py-3 rounded text-sm font-medium transition-transform transition-colors duration-300 ease-in-out hover:bg-white hover:scale-105 hover:shadow-lg">
-                         Download Now
+                    <button
+                        class="flex bg-[#F1C17E] text-[#0C141DE5] px-8 py-3 rounded text-sm font-bold transition-transform transition-colors duration-300 ease-in-out hover:bg-white hover:scale-105 hover:shadow-lg">
+                        Download Now
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5 12H19M19 12L15 16M19 12L15 8" stroke="#0C141DE5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M5 12H19M19 12L15 16M19 12L15 8" stroke="#0C141DE5" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
                     </button>
                 </div>
@@ -1258,8 +1375,8 @@
     </div>
 
     <!-- // ------------ start download in model open ------------ -->
-<script>
-     function openModal() {
+    <script>
+        function openModal() {
             document.getElementById('catalogModal').classList.add('active');
             document.body.style.overflow = 'hidden';
         }
@@ -1269,20 +1386,20 @@
             document.body.style.overflow = 'auto';
         }
 
-        document.getElementById('catalogModal').addEventListener('click', function(e) {
+        document.getElementById('catalogModal').addEventListener('click', function (e) {
             if (e.target === this) {
                 closeModal();
             }
         });
 
-        document.addEventListener('keydown', function(e) {
+        document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape') {
                 closeModal();
             }
         });
-</script>
-<!-- // ------------ end download in model open ------------ -->
- 
+    </script>
+    <!-- // ------------ end download in model open ------------ -->
+
     <!-- JS -->
     <script src="./assests/js/dev-script.js"></script>
 </body>

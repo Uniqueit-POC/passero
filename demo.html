@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passero Timeline</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .font-forum { font-family: 'Forum', serif; }
+        .font-poppins { font-family: 'Poppins', sans-serif; }
+        .active-year { color: #C19A6B !important; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="container mx-auto px-4 py-12">
+        <!-- Header Section -->
+        <div class="text-center mb-12 lg:mb-16">
+            <h1 class="text-[32px] sm:text-5xl leading-[100%] lg:text-[56px] font-forum text-[#0C141DE5] mb-6">
+                The Passero Story
+            </h1>
+            <p class="text-[#0F1924B8] text-base lg:text-xl font-poppins font-normal max-w-3xl mx-auto leading-relaxed">
+                From a small manufacturing setup to a design-driven vitrified tile brand, Passero's journey is
+                defined by innovation, craftsmanship, and an unwavering commitment to quality. Over the years,
+                we have expanded our capabilities, product range, and global presence — shaping spaces across
+                India and beyond.
+            </p>
+        </div>
+
+        <!-- Desktop Timeline (hidden on mobile) -->
+        <div class="hidden lg:grid grid-cols-12 gap-0">
+            <!-- Timeline Years -->
+            <div class="col-span-3">
+                <div class="space-y-8">
+                    <div class="timeline-year">
+                        <h2 class="text-5xl font-normal active-year cursor-pointer font-forum">2015</h2>
+                    </div>
+                    <div class="timeline-year">
+                        <h2 class="text-[44px] font-normal text-[#0F1924B8] font-forum cursor-pointer">2017</h2>
+                    </div>
+                    <div class="timeline-year">
+                        <h2 class="text-[44px] font-normal text-[#0F1924B8] font-forum cursor-pointer">2019</h2>
+                    </div>
+                    <div class="timeline-year">
+                        <h2 class="text-[44px] font-normal text-[#0F1924B8] font-forum cursor-pointer">2022</h2>
+                    </div>
+                    <div class="timeline-year">
+                        <h2 class="text-[44px] font-normal text-[#0F1924B8] font-forum cursor-pointer">2024</h2>
+                    </div>
+                    <div class="timeline-year">
+                        <h2 class="text-[44px] font-normal text-[#0F1924B8] font-forum cursor-pointer">2025</h2>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Image -->
+            <div class="col-span-4">
+                <div class="w-[536px] h-[500px]">
+                    <img src="https://via.placeholder.com/536x500/8B7355/ffffff?text=The+Beginning" 
+                         alt="Passero Team Consultation"
+                         class="timeline-image w-full h-full shadow-md object-cover">
+                </div>
+            </div>
+
+            <!-- Timeline Content -->
+            <div class="col-span-5 flex flex-col justify-start bg-white">
+                <div class="p-[48px]">
+                    <h3 class="timeline-title text-[44px] font-normal text-[#0C141DE5] font-forum mb-5">
+                        The Beginning
+                    </h3>
+                    <p class="timeline-text text-[#0F1924B8] text-[18px] font-normal font-poppins leading-relaxed">
+                        Passero Vitrified was established with a vision to create high-quality vitrified tiles using
+                        modern technology and a design-first mindset.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Timeline (visible on mobile only) -->
+        <div class="lg:hidden">
+            <!-- Mobile Timeline Item -->
+            <div class="mobile-timeline-item mb-8">
+                <div class="flex items-start gap-4 mb-4">
+                    <h2 class="mobile-year text-[44px] font-normal text-[#C19A6B] font-forum leading-none">2015</h2>
+                    <div class="flex-1 pt-3">
+                        <h3 class="mobile-title text-2xl font-normal text-[#0C141DE5] font-forum mb-2">
+                            The Beginning
+                        </h3>
+                    </div>
+                </div>
+                <div class="w-full h-[250px] mb-4">
+                    <img src="https://via.placeholder.com/400x250/8B7355/ffffff?text=The+Beginning" 
+                         alt="The Beginning"
+                         class="mobile-image w-full h-full object-cover rounded">
+                </div>
+                <p class="mobile-text text-[#0F1924B8] text-base font-normal font-poppins leading-relaxed">
+                    Passero Vitrified was established with a vision to create high-quality vitrified tiles using
+                    modern technology and a design-first mindset.
+                </p>
+            </div>
+
+            <div class="mobile-timeline-item mb-8">
+                <div class="flex items-start gap-4 mb-4">
+                    <h2 class="mobile-year text-[44px] font-normal text-[#0F1924B8] font-forum leading-none">2017</h2>
+                    <div class="flex-1 pt-3">
+                        <h3 class="mobile-title text-2xl font-normal text-[#0C141DE5] font-forum mb-2">
+                            Manufacturing Expansion
+                        </h3>
+                    </div>
+                </div>
+                <div class="w-full h-[250px] mb-4">
+                    <img src="https://via.placeholder.com/400x250/6B8E9E/ffffff?text=Manufacturing" 
+                         alt="Manufacturing Expansion"
+                         class="mobile-image w-full h-full object-cover rounded">
+                </div>
+                <p class="mobile-text text-[#0F1924B8] text-base font-normal font-poppins leading-relaxed">
+                    Installed advanced machinery and expanded production capacity to meet growing domestic and export demand.
+                </p>
+            </div>
+
+            <div class="mobile-timeline-item mb-8">
+                <div class="flex items-start gap-4 mb-4">
+                    <h2 class="mobile-year text-[44px] font-normal text-[#0F1924B8] font-forum leading-none">2019</h2>
+                    <div class="flex-1 pt-3">
+                        <h3 class="mobile-title text-2xl font-normal text-[#0C141DE5] font-forum mb-2">
+                            National Presence
+                        </h3>
+                    </div>
+                </div>
+                <div class="w-full h-[250px] mb-4">
+                    <img src="https://via.placeholder.com/400x250/7B9E6B/ffffff?text=National+Presence" 
+                         alt="National Presence"
+                         class="mobile-image w-full h-full object-cover rounded">
+                </div>
+                <p class="mobile-text text-[#0F1924B8] text-base font-normal font-poppins leading-relaxed">
+                    Introduced multiple new collections and built a strong dealer network across major Indian cities.
+                </p>
+            </div>
+
+            <div class="mobile-timeline-item mb-8">
+                <div class="flex items-start gap-4 mb-4">
+                    <h2 class="mobile-year text-[44px] font-normal text-[#0F1924B8] font-forum leading-none">2022</h2>
+                    <div class="flex-1 pt-3">
+                        <h3 class="mobile-title text-2xl font-normal text-[#0C141DE5] font-forum mb-2">
+                            Global Reach
+                        </h3>
+                    </div>
+                </div>
+                <div class="w-full h-[250px] mb-4">
+                    <img src="https://via.placeholder.com/400x250/9E6B8E/ffffff?text=Global+Reach" 
+                         alt="Global Reach"
+                         class="mobile-image w-full h-full object-cover rounded">
+                </div>
+                <p class="mobile-text text-[#0F1924B8] text-base font-normal font-poppins leading-relaxed">
+                    Strengthened export operations, supplying to over 15+ countries with internationally certified quality standards.
+                </p>
+            </div>
+
+            <div class="mobile-timeline-item mb-8">
+                <div class="flex items-start gap-4 mb-4">
+                    <h2 class="mobile-year text-[44px] font-normal text-[#0F1924B8] font-forum leading-none">2024</h2>
+                    <div class="flex-1 pt-3">
+                        <h3 class="mobile-title text-2xl font-normal text-[#0C141DE5] font-forum mb-2">
+                            Innovation & Technology Upgrade
+                        </h3>
+                    </div>
+                </div>
+                <div class="w-full h-[250px] mb-4">
+                    <img src="https://via.placeholder.com/400x250/6B7B9E/ffffff?text=Innovation" 
+                         alt="Innovation & Technology"
+                         class="mobile-image w-full h-full object-cover rounded">
+                </div>
+                <p class="mobile-text text-[#0F1924B8] text-base font-normal font-poppins leading-relaxed">
+                    Upgraded manufacturing lines with latest digital printing, polishing, and automated quality control systems.
+                </p>
+            </div>
+
+            <div class="mobile-timeline-item mb-8">
+                <div class="flex items-start gap-4 mb-4">
+                    <h2 class="mobile-year text-[44px] font-normal text-[#0F1924B8] font-forum leading-none">2025</h2>
+                    <div class="flex-1 pt-3">
+                        <h3 class="mobile-title text-2xl font-normal text-[#0C141DE5] font-forum mb-2">
+                            Brand Store Launch
+                        </h3>
+                    </div>
+                </div>
+                <div class="w-full h-[250px] mb-4">
+                    <img src="https://via.placeholder.com/400x250/9E8B6B/ffffff?text=Brand+Store" 
+                         alt="Brand Store Launch"
+                         class="mobile-image w-full h-full object-cover rounded">
+                </div>
+                <p class="mobile-text text-[#0F1924B8] text-base font-normal font-poppins leading-relaxed">
+                    Transitioned from traditional distribution to exclusive Passero Brand Stores, offering premium customer experience and designer collaborations.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const timelineYears = document.querySelectorAll('.timeline-year h2');
+            const contentTitle = document.querySelector('.timeline-title');
+            const contentText = document.querySelector('.timeline-text');
+            const contentImage = document.querySelector('.timeline-image');
+
+            const timelineData = {
+                '2015': {
+                    title: 'The Beginning',
+                    text: 'Passero Vitrified was established with a vision to create high-quality vitrified tiles using modern technology and a design-first mindset.',
+                    img: 'https://via.placeholder.com/536x500/8B7355/ffffff?text=The+Beginning'
+                },
+                '2017': {
+                    title: 'Manufacturing Expansion',
+                    text: 'Installed advanced machinery and expanded production capacity to meet growing domestic and export demand.',
+                    img: 'https://via.placeholder.com/536x500/6B8E9E/ffffff?text=Manufacturing'
+                },
+                '2019': {
+                    title: 'National Presence',
+                    text: 'Introduced multiple new collections and built a strong dealer network across major Indian cities.',
+                    img: 'https://via.placeholder.com/536x500/7B9E6B/ffffff?text=National+Presence'
+                },
+                '2022': {
+                    title: 'Global Reach',
+                    text: 'Strengthened export operations, supplying to over 15+ countries with internationally certified quality standards.',
+                    img: 'https://via.placeholder.com/536x500/9E6B8E/ffffff?text=Global+Reach'
+                },
+                '2024': {
+                    title: 'Innovation & Technology Upgrade',
+                    text: 'Upgraded manufacturing lines with latest digital printing, polishing, and automated quality control systems.',
+                    img: 'https://via.placeholder.com/536x500/6B7B9E/ffffff?text=Innovation'
+                },
+                '2025': {
+                    title: 'Brand Store Launch',
+                    text: 'Transitioned from traditional distribution to exclusive Passero Brand Stores, offering premium customer experience and designer collaborations.',
+                    img: 'https://via.placeholder.com/536x500/9E8B6B/ffffff?text=Brand+Store'
+                }
+            };
+
+            function updateContent(year) {
+                const data = timelineData[year];
+                if (!data) return;
+
+                contentTitle.textContent = data.title;
+                contentText.textContent = data.text;
+                contentImage.src = data.img;
+                contentImage.alt = data.title;
+            }
+
+            timelineYears.forEach(yearEl => {
+                yearEl.addEventListener('click', () => {
+                    const year = yearEl.textContent.trim();
+                    timelineYears.forEach(y => {
+                        y.classList.remove('active-year');
+                        y.classList.add('text-[#0F1924B8]');
+                    });
+                    yearEl.classList.add('active-year');
+                    yearEl.classList.remove('text-[#0F1924B8]');
+                    updateContent(year);
+                });
+            });
+
+            const firstActive = document.querySelector('.timeline-year h2.active-year');
+            if (firstActive) {
+                updateContent(firstActive.textContent.trim());
+            }
+        });
+    </script>
+</body>
+</html>

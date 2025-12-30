@@ -28,7 +28,9 @@
             <!-- left -->
             <div class="flex items-center gap-3">
                 <button id="mobile-toggle" class="md:hidden text-white">
-                    <i class="fa fa-bars"></i>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 8H20M4 16H20" stroke="currentColor" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                 </button>
 
                 <ul id="nav-left" class="hidden md:flex gap-4 items-center">
@@ -43,7 +45,7 @@
             </div>
 
             <div class="flex justify-center">
-                <a href="index.html" id="logo-wrapper" class="w-[189px] h-[64px]">
+                <a href="index.html" id="logo-wrapper" class="sm:w-[189px] sm:h-[64px] w-[142px] h-[48px]">
                     <img src="./assests/img/logo/logo.svg" id="logo-img" data-light="./assests/img/logo/logo.svg"
                         data-dark="./assests/img/logo/colo-logo.png"
                         class="object-contain transition-all duration-300" />
@@ -58,35 +60,98 @@
                         Contact Us
                     </a>
                 </div>
-                <a href="tel:+911234567890" class="md:hidden text-white"><i class="fa fa-phone"></i></a>
+                <a href="tel:+911234567890" class="md:hidden text-white"><i class="fa fa-phone" style="color: rgba(12, 20, 29, 0.898);"></i></a>
             </div>
         </nav>
     </header>
+         <!-- Mobile Sidebar Backdrop -->
+    <div id="sidebar-backdrop" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity duration-300"></div>
+
+    <!-- Mobile Sidebar -->
+    <aside id="mobile-sidebar" class="fixed top-0 left-0 h-full w-[280px] bg-[#F8F3EC]  z-50 transform -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto">
+        <div class="flex flex-col h-full">
+            <div class="flex items-center justify-between p-6 border-b border-gray-300">
+               <img src="./assests/img/logo/colo-logo.png" 
+                     alt="Passero Logo" 
+                     class="h-10" />
+                <button id="sidebar-close" class="text-gray-700 text-2xl hover:text-gray-900">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <nav class="flex-1 py-6">
+                <ul class="space-y-1">
+                    <li>
+                        <a href="about-us.html" class="block px-6 py-2 text-[#0C141DE5] font-forum text-2xl font-normal hover:bg-gray-200 transition-colors">
+                            About Us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Collection.html" class="block px-6 py-2 text-[#0C141DE5] font-forum text-2xl font-normal hover:bg-gray-200 transition-colors">
+                            Collections
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Why-Passero.html" class="block px-6 py-2 text-[#0C141DE5] font-forum text-2xl font-normal hover:bg-gray-200 transition-colors">
+                            Why Passero
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Brand-Stores.html" class="block px-6 py-2 text-[#0C141DE5] font-forum text-2xl font-normal hover:bg-gray-200 transition-colors">
+                            Brand Stores
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Downloads.html" class="block px-6 py-2 text-[#0C141DE5] font-forum text-2xl font-normal hover:bg-gray-200 transition-colors">
+                            Downloads
+                        </a>
+                    </li>
+                    <li>
+                        <a href="News-Events.html" class="block px-6 py-2 text-[#0C141DE5] font-forum text-2xl font-normal hover:bg-gray-200 transition-colors">
+                            News & Events
+                        </a>
+                    </li>
+                </ul>
+                <div class="px-6 mt-6">
+                    <a href="contact-us.html" class="flex items-center justify-center gap-2 w-full bg-[#0c141d] text-white py-3 rounded hover:bg-[#1a2532] transition-colors">
+                        <i class="fa fa-phone"></i>
+                        <span class="font-bold font-sm font-poppins">Contact Us</span>
+                    </a>
+                </div>
+            </nav>
+            <div class="flex border-t border-gray-300 p-5">
+                <p class="text-[#0C141DE5] text-base font-normal mb-3">Follow us on social media</p>
+               <div class="flex gap-2">
+                    <a href="#" class="transition-colors">
+                        <img src="./assests/img/icon/tabler-icon-brand-facebook.svg" alt="facebook">
+                    </a>
+                    <a href="#" class="transition-colors">
+                        <img src="./assests/img/icon/tabler-icon-brand-instagram.svg" alt="instagram">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </aside>
     <!-- end NAVBAR -->
 
     <!--Start HERO SLIDER -->
-    <section class="relative h-screen overflow-hidden">
-        <div class="absolute inset-0 bg-[#0000008F] pointer-events-none z-10"></div>
-        <div class="relative h-screen overflow-hidden">
-            <div class="flex transition-transform duration-700 h-screen custom-slider">
-                <div class="w-full h-screen relative">
-                    <img src="./assests/img/Packing-Details/Packing-Details-hero.jpg"
-                        class="w-full h-full object-cover" />
-                </div>
-            </div>
-            <div class="absolute inset-0 flex items-center justify-center z-20 px-6">
-                <div class="max-w-2xl text-center text-white">
-                    <h1 class="text-4xl md:text-[68px] font-regular mb-6 leading-[100%] font-forum text-[#FFFFFF]">
-                        Standardized Packing & Handling
-                    </h1>
-                    <p class="text-base md:text-lg text-white/90 mb-6 font-regular">
-                        Passero Vitrified follows standardized packing procedures to ensure tiles are protected during
+    <section class="relative h-[472px] md:h-[560px] flex items-center justify-center">
+        <div class="absolute inset-0">
+            <img src="./assests/img/Packing-Details/Packing-Details-hero.jpg" alt="Office Space" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center px-4 max-w-3xl mx-auto pt-12">
+            <h1 class="text-[40px] sm:text-5xl leading-[100%] lg:text-[68px] font-normal font-forum text-white mb-2 sm:mb-6">
+                Standardized Packing & Handling
+            </h1>
+            <p class="max-w-3xl  text-white font-normal font-poppins text-sm sm:text-[18px] leading-relaxed mb-5 sm:mb-8">
+                Passero Vitrified follows standardized packing procedures to ensure tiles are protected during
                         handling, storage, and transportation. Each package is designed to maintain product quality,
                         minimize breakage, and support efficient logistics for both domestic and international
                         shipments.
-                    </p>
-                </div>
-            </div>
+            </p>
+
         </div>
     </section>
     <!--End HERO SLIDER -->
@@ -95,27 +160,28 @@
     <section class="bg-[#FAF5F0]">
         <div class="mx-auto py-12 lg:py-20 text-center">
             <div class="max-w-4xl mx-auto">
-                <h2 class="text-4xl sm:text-5xl lg:text-[56px] font-normal font-forum text-[#1C1C1C] mb-4">
+                <h2 class="text-[32px] sm:text-5xl leading-[100%] lg:text-[56px] font-normal font-forum text-[#1C1C1C] mb-4">
                     Packing Details
                 </h2>
-                <p class="pb-12 text-[#0F1924B8] font-normal font-poppins text-center text-base sm:text-lg">
+                <p class="px-6 sm:px-0 pb-12 text-[#0F1924B8] font-normal font-poppins text-center text-base sm:text-lg">
                     Below are the standard packing specifications for Passero vitrified tiles, including box quantity,
                     coverage area, and weight. These details help ensure accurate planning, handling, and transportation
                     for
                     domestic and export shipments.
                 </p>
             </div>
-            <div class="overflow-x-auto max-w-5xl mx-auto">
-                <table class="w-full text-sm">
+            <div class="overflow-x-auto sm:overflow-x-visible max-w-5xl mx-auto px-6">
+                <table class="">
                     <thead>
                         <tr class="bg-[#0C141DE5] text-white text-base font-semibold font-poppins">
-                            <th class="w-[16.67%] text-left py-3 px-4 font-semibold">Dimension (MM)</th>
-                            <th class="w-[16.67%] text-left py-3 px-4 font-semibold">Thickness (MM)</th>
-                            <th class="w-[16.67%] text-left py-3 px-4 font-semibold">Pieces / Box</th>
-                            <th class="w-[16.67%] text-left py-3 px-4 font-semibold">Coverage Area <br> (sqm.)</th>
-                            <th class="w-[16.67%] text-left py-3 px-4 font-semibold">Coverage Area <br> (sqm.)</th>
-                            <th class="w-[16.67%] text-left py-3 px-4 font-semibold">Box Weight (kg)</th>
+                            <th class="min-w-[182px] w-[540px] sm:w-[16.67%] text-left py-3 px-4 font-semibold">Dimension (MM)</th>
+                            <th class="min-w-[182px] w-[540px] sm:w-[16.67%] text-left py-3 px-4 font-semibold">Thickness (MM)</th>
+                            <th class="min-w-[182px] w-[540px] sm:w-[16.67%] text-left py-3 px-4 font-semibold">Pieces / Box</th>
+                            <th class="min-w-[182px] w-[540px] sm:w-[16.67%] text-left py-3 px-4 font-semibold">Coverage Area <br> (sqm.)</th>
+                            <th class="min-w-[182px] w-[540px] sm:w-[16.67%] text-left py-3 px-4 font-semibold">Coverage Area <br> (sqm.)</th>
+                            <th class="min-w-[182px] w-[540px] sm:w-[16.67%] text-left py-3 px-4 font-semibold">Box Weight (kg)</th>
                         </tr>
+                        
                     </thead>
                     <tbody class="divide-y divide-gray-200">
                         <tr class="hover:bg-gray-50">
@@ -200,6 +266,8 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div class="max-w-6xl mx-auto px-6">
                 <div class="text-start">
                     <h2 class="text-sm sm:text-sm lg:text-sm font-bold font-poppins text-[#0C141DE5] pb-1 pt-10">
                         Note:
@@ -224,63 +292,66 @@
 
     <!--start Export-Ready Packaging & Safety Measures Section -->
     <section class="bg-[#ffffff] border-t border-[#1F32473D]">
-        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-14 py-12 lg:py-20">
-            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 pb-16">
+        <div class="max-w-8xl mx-auto px-6 sm:px-6 lg:px-14 py-16 lg:py-20">
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-2 sm:gap-6 pb-16">
                 <div class="max-w-lg">
-                    <h1 class="text-4xl sm:text-5xl lg:text-[56px] font-normal mb-2 font-forum text-title max-w-sm">
+                    <h1 class="text-[32px] sm:text-5xl leading-[100%] lg:text-[56px] font-normal mb-2 font-forum text-title max-w-sm">
                         Export-Ready Packaging & Safety Measures
                     </h1>
                 </div>
                 <div class="lg:text-right max-w-xl">
                     <p
-                        class="font-poppins font-normal text-[#0C141DE5] mb-4 max-w-md text-left text-sm lg:text-[18px] leading-relaxed">
-                        Passero Vitrified follows export-ready packaging standards to ensure tiles remain safe and intact during long-distance transportation. Our packing methods are designed to withstand handling, stacking, and transit challenges across domestic and international supply chains.
+                        class="font-poppins font-normal text-[#0C141DE5] mb-4 max-w-md text-left text-base lg:text-[18px] leading-relaxed">
+                        Passero Vitrified follows export-ready packaging standards to ensure tiles remain safe and
+                        intact during long-distance transportation. Our packing methods are designed to withstand
+                        handling, stacking, and transit challenges across domestic and international supply chains.
                     </p>
                 </div>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-                <div class="text-center lg:text-left">
-                    <div class="flex justify-center lg:justify-start mb-4">
+                <div class="text-left">
+                    <div class="flex justify-start mb-4">
                         <img src="./assests/img/icon/Reinforced-Cartons.svg" alt="Reinforced Cartons">
                     </div>
-                    <h3 class="text-xl lg:text-[32px] font-normal font-forum text-[#0C141DE5] mb-3">
+                    <h3 class="text-[22px] lg:text-[32px] font-normal font-forum text-[#0C141DE5] mb-1 sm:mb-3">
                         Reinforced Cartons
                     </h3>
-                    <p class="font-poppins text-[#0F1924B8] text-base leading-relaxed">
+                    <p class="font-poppins text-[#0F1924B8] text-sm text-base leading-relaxed">
                         Heavy-duty cartons provide added strength and protection during transit and stacking.
                     </p>
                 </div>
-                <div class="text-center lg:text-left">
-                    <div class="flex justify-center lg:justify-start mb-4">
+                <div class="text-left">
+                    <div class="flex justify-start mb-4">
                         <img src="./assests/img/icon/Protective-Layering.svg" alt="Protective Layering">
                     </div>
-                    <h3 class="text-xl lg:text-[32px] font-normal font-forum text-[#0C141DE5] mb-3">
+                    <h3 class="text-[22px] lg:text-[32px] font-normal font-forum text-[#0C141DE5] mb-1 sm:mb-3">
                         Protective Layering
                     </h3>
-                    <p class="font-poppins text-[#0F1924B8] text-base leading-relaxed">
+                    <p class="font-poppins text-[#0F1924B8] text-sm text-base leading-relaxed">
                         Tiles are separated with protective sheets to prevent surface scratches and edge damage.
                     </p>
                 </div>
-                <div class="text-center lg:text-left">
-                    <div class="flex justify-center lg:justify-start mb-4">
+                <div class="text-left">
+                    <div class="flex justify-start mb-4">
                         <img src="./assests/img/icon/Secure-Palletization.svg" alt="Secure Palletization">
                     </div>
-                    <h3 class="text-xl lg:text-[32px] font-normal font-forum text-[#0C141DE5] mb-3">
+                    <h3 class="text-[22px] lg:text-[32px] font-normal font-forum text-[#0C141DE5] mb-1 sm:mb-3">
                         Secure Palletization
                     </h3>
-                    <p class="font-poppins text-[#0F1924B8] text-base leading-relaxed">
+                    <p class="font-poppins text-[#0F1924B8] text-sm text-base leading-relaxed">
                         Every role contributes to maintaining our high standards of excellence.
                     </p>
                 </div>
-                <div class="text-center lg:text-left">
-                    <div class="flex justify-center lg:justify-start mb-4">
+                <div class="text-left">
+                    <div class="flex justify-start mb-4">
                         <img src="./assests/img/icon/Clear-Export-Labeling.svg" alt="Clear Export Labeling">
                     </div>
-                    <h3 class="text-xl lg:text-[32px] font-normal font-forum text-[#0C141DE5] mb-3">
+                    <h3 class="text-[22px] lg:text-[32px] font-normal font-forum text-[#0C141DE5] mb-1 sm:mb-3">
                         Clear Export Labeling
                     </h3>
-                    <p class="font-poppins text-[#0F1924B8] text-base leading-relaxed">
-                        Each package includes clear labeling for handling instructions, product details, and shipment identification.
+                    <p class="font-poppins text-[#0F1924B8] text-sm text-base leading-relaxed">
+                        Each package includes clear labeling for handling instructions, product details, and shipment
+                        identification.
                     </p>
                 </div>
             </div>
@@ -288,12 +359,12 @@
     </section>
     <!--end Export-Ready Packaging & Safety Measures Section -->
 
-        <!-- start Download Our Latest Product Brochure -->
+    <!-- start Download Our Latest Product Brochure -->
     <section class="bg-[#F8F3EC]">
-        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-14 py-12 lg:py-20">
+        <div class="max-w-8xl mx-auto px-0 sm:px-6 lg:px-14 pt-16 lg:py-20 ">
             <div class="relative bg-[#152231] overflow-hidden"
                 style="background-image: url(./assests/img/home/cta-back.png); background-blend-mode: soft-light;">
-                <div class="grid grid-cols-[2fr_3fr_2fr] items-center w-full">
+                <div class="grid sm:grid-cols-[2fr_3fr_2fr] sgrid-cols-full items-center w-full">
                     <div class="hidden lg:flex items-end relative h-full">
                         <div class="absolute bottom-0 -left-[6%] w-[271px] h-[281px] relative">
                             <svg class="absolute bottom-[0%] -left-[1%] w-[337px] h-[294px] z-10" width="360"
@@ -318,14 +389,15 @@
                                 class="w-full h-full object-cover rounded-t-[240px] relative" alt="Bathroom" />
                         </div>
                     </div>
-                    <div class="text-center py-16 px-6 lg:px-8">
+                    <div class="order-2 lg:order-none text-center py-16 px-6 lg:px-8">
                         <h1 class="text-3xl sm:text-4xl lg:text-[44px] font-normal text-white mb-4 font-forum ">
                             Download Packing Details
                         </h1>
                         <p class="font-poppins text-[#FFFFFFC7] text-md font-normal mb-8 max-w-lg mx-auto">
-                            Access the complete packing specifications, including box details, weights, and export-ready packaging information in a downloadable PDF format.
+                            Access the complete packing specifications, including box details, weights, and export-ready
+                            packaging information in a downloadable PDF format.
                         </p>
-                        <button onclick="openModal()" class="bg-white text-[#0C141DE5] px-8 py-3 rounded-md flex items-center justify-center mx-auto gap-2 text-sm font-bold
+                        <button onclick="openModal()" class="sm:w-fit w-full  bg-white text-[#0C141DE5] px-8 py-3 rounded-md flex items-center justify-center mx-auto gap-2 text-sm font-bold
                                transition-transform transition-colors duration-300 ease-in-out
                                hover:bg-transparent hover:border hover:text-white hover:scale-105 hover:shadow-lg">
                             <svg class="stroke-current group-hover:text-white" width="24" height="24"
@@ -338,22 +410,26 @@
                             Download Brochure
                         </button>
                     </div>
-                    <div class="hidden lg:flex items-start relative h-full">
-                        <div class="absolute bottom-[0%] left-[45%] w-[271px] h-[281px] relative">
-                            <svg class="absolute bottom-[15%] right-[0%] w-[255px] h-[301px] z-10" width="222"
-                                height="201" viewBox="0 0 222 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div class="show sm:hidden lg:flex items-start relative h-full">
+                        <div
+                            class="absolute bottom-[0%] left-[21%] sm:left-[45%] sm:w-[238px] sm:h-[253px] w-[228px] h-[235px] relative">
+                            <svg class="absolute bottom-[15%] right-[0%] w-[255px] h-[301px] sm:w-[271px] sm:h-[281px] z-10"
+                                width="222" height="201" viewBox="0 0 222 201" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path opacity="0.6" fill-rule="evenodd" clip-rule="evenodd"
                                     d="M85.2455 194.698C170.406 215.266 260.965 159.9 284.98 66.1821C306.361 -17.2578 235.897 -79.0182 160.076 -97.3313C95.7557 -112.867 27.2655 -71.2285 9.12759 -0.444675C-12.0511 82.2059 10.1419 176.558 85.2455 194.698Z"
                                     stroke="#F1C17E" stroke-width="3" />
                             </svg>
-                            <svg class="absolute top-[0%] right-[0%] z-10 w-[337px] h-[294px]" width="258" height="265"
-                                viewBox="0 0 258 265" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="absolute top-[0%] right-[0%] z-10 w-[283px] h-[247px] sm:w-[271px] sm:h-[281px] "
+                                width="258" height="265" viewBox="0 0 258 265" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd"
                                     d="M4.31853 33.6199C-11.734 146.053 42.2695 250.174 129.406 261.9C211.87 272.998 280.723 179.267 295.915 72.8619C308.019 -11.9175 242.75 -62.9322 177.046 -71.7744C105.566 -81.3939 17.4869 -58.6122 4.31853 33.6199Z"
                                     stroke="#F1C17E" stroke-width="3" />
                             </svg>
-                            <svg class="absolute bottom-[10%] -right-[10%] w-[426px] h-[255px] z-10" width="270"
-                                height="244" viewBox="0 0 270 244" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="absolute bottom-[10%] -right-[10%] w-[358px] h-[215px] sm:w-[426px] sm:h-[255px] z-10"
+                                width="270" height="244" viewBox="0 0 270 244" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd"
                                     d="M291.776 82.3515C353.094 -16.7533 317.873 -98.9842 260.638 -132.363C209.62 -162.116 125.386 -134.905 70.7272 -46.5623C3.21154 62.5594 -26.9714 193.878 36.0477 230.63C104.196 270.374 218.764 200.356 291.776 82.3515Z"
                                     stroke="#F1C17E" stroke-width="3" />
@@ -368,11 +444,12 @@
     </section>
     <!-- end Download Our Latest Product Brochure -->
 
-        <!--start Experience Passero in Person -->
+    <!--start Experience Passero in Person -->
     <section class="pt-12 lg:pt-20">
         <div class="grid grid-cols-1 lg:grid-cols-2">
-            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-14 py-12 lg:py-20 flex flex-col justify-center bg-no-repeat bg-center bg-cover" style="background-image: url(./assests/img/about/Experience-Passero-Person.png);">
-                <h2 class="text-4xl sm:text-5xl lg:text-[56px] font-formal font-forum text-white mb-6">
+            <div class="max-w-8xl mx-auto px-6 sm:px-6 lg:px-14 py-16 lg:py-20 flex flex-col justify-center bg-no-repeat bg-center bg-cover"
+                style="background-image: url(./assests/img/about/Experience-Passero-Person.png);">
+                <h2 class="text-[32px] sm:text-5xl leading-[100%] lg:text-[56px] font-formal font-forum text-white mb-6">
                     Experience Passero in Person
                 </h2>
                 <p class="text-[#FFFFFFC7] text-sm lg:text-[18px] font-Poppins font-normal leading-relaxed mb-8">
@@ -382,52 +459,51 @@
                 </p>
                 <div class="space-y-4 mb-8">
                     <div class="flex items-start gap-3">
-                        <div
-                            class="">
+                        <div class="">
                             <img src="./assests/img/icon/tabler-icon-circle-check-filled.svg" alt="">
                         </div>
                         <div class="flex">
-                            <p class="text-white text-sm lg:text-base font-Poppins font-bold leading-relaxed">Curated Displays&nbsp;&nbsp;- </p>
-                            <p class="text-white text-sm lg:text-base font-Poppins font-normal leading-relaxed">&nbsp;&nbsp;See tiles in real-life interior setups</p>
+                            <p class="text-white text-base lg:text-base  font-Poppins font-bold leading-relaxed">Curated
+                                Displays&nbsp;&nbsp;- <span class="text-white text-base lg:text-base  font-Poppins font-normal leading-relaxed">&nbsp;&nbsp;See tiles in real-life interior setups</span></p>
                         </div>
                     </div>
 
                     <div class="flex items-start gap-3">
-                        <div
-                            class="">
+                        <div class="">
                             <img src="./assests/img/icon/tabler-icon-circle-check-filled.svg" alt="">
                         </div>
                         <div class="flex">
-                            <p class="text-white text-sm lg:text-base font-Poppins font-bold leading-relaxed">Expert Assistance&nbsp;&nbsp;- </p>
-                            <p class="text-white text-sm lg:text-base font-Poppins font-normal leading-relaxed">&nbsp;&nbsp;Guidance from trained design consultants</p>
+                            <p class="text-white text-base lg:text-base  font-Poppins font-bold leading-relaxed">Expert
+                                Assistance&nbsp;&nbsp;- <span class="text-white text-base lg:text-base  font-Poppins font-normal leading-relaxed">Guidance from trained design consultants</span></p>
                         </div>
                     </div>
 
                     <div class="flex items-start gap-3">
-                        <div
-                            class="">
+                        <div class="">
                             <img src="./assests/img/icon/tabler-icon-circle-check-filled.svg" alt="">
                         </div>
                         <div class="flex">
-                            <p class="text-white text-sm lg:text-base font-Poppins font-bold leading-relaxed">Latest Collections&nbsp;&nbsp;- </p>
-                            <p class="text-white text-sm lg:text-base font-Poppins font-normal leading-relaxed">&nbsp;&nbsp;Access to our newest and premium ranges</p>
+                            <p class="text-white text-base lg:text-base  font-Poppins font-bold leading-relaxed">Latest
+                                Collections&nbsp;&nbsp;- <span class="text-white text-base lg:text-base  font-Poppins font-normal leading-relaxed">Access to our newest and premium ranges</span></p>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <a href="Brand-Stores.html" class="inline-flex w-fit bg-white text-[#0C141DE5] px-8 py-3 rounded-md flex items-start justify-start gap-2 text-sm font-bold
+                    <a href="Brand-Stores.html" class="inline-flex w-full sm:w-fit bg-white text-[#0C141DE5] px-8 py-3 rounded-md flex items-center justify-center sm:items-start sm:justify-start gap-2 text-sm font-bold
                            transition-transform transition-colors duration-300 ease-in-out
                            hover:bg-gray-800 hover:text-white hover:scale-105 hover:shadow-lg">
                         Visit Our Stores
-                        <svg class="stroke-current group-hover:text-white" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 12H19M19 12L15 16M19 12L15 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <svg class="stroke-current group-hover:text-white" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L15 16M19 12L15 8" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
                     </a>
                 </div>
             </div>
             <div class="relative h-[648px]">
-                <img src="./assests/img/about/Experience-Passero-Person-right.jpg"
-                    alt="Tile Selection Experience" class="w-full h-full object-cover">
+                <img src="./assests/img/about/Experience-Passero-Person-right.jpg" alt="Tile Selection Experience"
+                    class="w-full h-full object-cover">
             </div>
         </div>
     </section>
@@ -519,8 +595,14 @@
                     <div class="space-y-4 text-sm">
                         <div>
                             <p class="font-semibold text-[#0C141DE5] text-base font-poppins mb-1">Address</p>
-                            <p class="text-[#0C141DE5] font-normal text-base">B-A, NATIONAL HIGHWAY Timbdi, Gujarat
-                                363642</p>
+                            <p class="text-[#0C141DE5] font-normal text-base">
+                                <a href="https://www.google.com/maps/place/SURVEY+NO.+72/P1/P2,+KANDLA+ROAD,+8-A+NATIONAL+HIGHWAY+TIMDI,+MORBI-363642+(GUJ)+INDIA" 
+                                   target="_blank" 
+                                   class="underline hover:text-[#935C10] transition">
+                                   SURVEY NO. 72/P1/P2, KANDLA ROAD, 8-A NATIONAL HIGHWAY TIMDI, MORBI-363642 (GUJ) INDIA
+                                </a>
+                            </p>
+
                         </div>
                         <div>
                             <p class="font-semibold text-[#0C141DE5] text-base font-poppins mb-1">Ketanbhai Patel</p>
@@ -539,29 +621,28 @@
                         </div>
                         <div>
                             <p class="font-semibold text-[#0C141DE5] text-base font-poppins mb-1">Write us</p>
-                            <a href="mailto:kpatel@passerovitrified.com"
-                                class="underline text-[#0C141DE5] font-normal text-base hover:text-gray-900">kpatel@passerovitrified.com</a>
+                            <a href="mailto:info@passerovitrified.com"
+                                class="underline text-[#0C141DE5] font-normal text-base hover:text-[#935C10] ">info@passerovitrified.com</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="border-t border-[#1F32473D] pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
-                <p class="font-poppins font-normal text-sm leading-[22px] tracking-normal text-[#0C141DE5]">© 2025
-                    Passero Vitrified. All rights reserved.</p>
+                 <p class="font-poppins font-normal text-sm leading-[22px] tracking-normal text-[#0C141DE5]"> © 2025 All Rights Reserved by <span class="font-forum text-lg font-normal text-[#935C10] mb-4"><a href="">Passero Vitrified</a></span> Developed by <span class="font-forum text-lg font-normal text-[#935C10] mb-4"><a href="https://theuniqueitsolution.com/">Unique IT Solution</a></span>.</p>
                 <div class="flex gap-4">
-                    <a href="#"
-                        class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M16.5 7.5V7.51M4 8C4 6.93913 4.42143 5.92172 5.17157 5.17157C5.92172 4.42143 6.93913 4 8 4H16C17.0609 4 18.0783 4.42143 18.8284 5.17157C19.5786 5.92172 20 6.93913 20 8V16C20 17.0609 19.5786 18.0783 18.8284 18.8284C18.0783 19.5786 17.0609 20 16 20H8C6.93913 20 5.92172 19.5786 5.17157 18.8284C4.42143 18.0783 4 17.0609 4 16V8ZM9 12C9 12.7956 9.31607 13.5587 9.87868 14.1213C10.4413 14.6839 11.2044 15 12 15C12.7956 15 13.5587 14.6839 14.1213 14.1213C14.6839 13.5587 15 12.7956 15 12C15 11.2044 14.6839 10.4413 14.1213 9.87868C13.5587 9.31607 12.7956 9 12 9C11.2044 9 10.4413 9.31607 9.87868 9.87868C9.31607 10.4413 9 11.2044 9 12Z"
-                                stroke="#935C10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </a>
-                    <a href="#"
+                     <a href="#"
                         class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M7 10V14H10V21H14V14H17L18 10H14V8C14 7.73478 14.1054 7.48043 14.2929 7.29289C14.4804 7.10536 14.7348 7 15 7H18V3H15C13.6739 3 12.4021 3.52678 11.4645 4.46447C10.5268 5.40215 10 6.67392 10 8V10H7Z"
+                                stroke="#935C10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                   <a href="https://www.instagram.com/passero_tiles_and_bathware/?igsh=Y2dvcmFxcGpudndk#"
+                        class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16.5 7.5V7.51M4 8C4 6.93913 4.42143 5.92172 5.17157 5.17157C5.92172 4.42143 6.93913 4 8 4H16C17.0609 4 18.0783 4.42143 18.8284 5.17157C19.5786 5.92172 20 6.93913 20 8V16C20 17.0609 19.5786 18.0783 18.8284 18.8284C18.0783 19.5786 17.0609 20 16 20H8C6.93913 20 5.92172 19.5786 5.17157 18.8284C4.42143 18.0783 4 17.0609 4 16V8ZM9 12C9 12.7956 9.31607 13.5587 9.87868 14.1213C10.4413 14.6839 11.2044 15 12 15C12.7956 15 13.5587 14.6839 14.1213 14.1213C14.6839 13.5587 15 12.7956 15 12C15 11.2044 14.6839 10.4413 14.1213 9.87868C13.5587 9.31607 12.7956 9 12 9C11.2044 9 10.4413 9.31607 9.87868 9.87868C9.31607 10.4413 9 11.2044 9 12Z"
                                 stroke="#935C10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </a>
