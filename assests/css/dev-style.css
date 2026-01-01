@@ -134,10 +134,6 @@
   transition: opacity 0.3s ease;
 }
 
-.tab-content {
-  display: none;
-}
-
 .tab-content.active {
   display: block;
 }

@@ -54,7 +54,7 @@
             </div>
             <div class="flex justify-end items-center gap-3">
                 <div id="nav-right" class="hidden md:flex items-center gap-4">
-                    <a href="downloads.html" class="nav-link text-[#0C141DE5] font-semibold text-base">Downloads</a>
+                    <a href="Downloads.html" class="nav-link text-[#0C141DE5] font-semibold text-base">Downloads</a>
                     <a href="News-Events.html" class="nav-link text-[#0C141DE5] font-semibold text-base">News &
                         Events</a>
                     <a href="contact-us.html" id="contact-btn"
@@ -145,11 +145,13 @@
 
     <!-- Hero Section -->
     <div class="bg-[#F8EDDE] relative overflow-hidden max-w-8xl mx-auto mt-20 sm:mt-12 lg:mt-[97px]">
-        <div class="grid md:grid-cols-2 gap-10 items-center px-0 sm:px-6 lg:px-14 py-14 lg:py-20 relative z-10">
+        <div
+            class="grid grid-cols-1 md:grid-cols-[536px_auto] gap-[87px] md:items-center  px-0 sm:px-6 lg:px-14 py-14 lg:py-20 relative z-10">
 
             <!-- CONTENT -->
             <div class="order-1 md:order-1 max-w-xl text-left px-6 sm:px-0">
-                <h1 class="text-[40px] leading-[100%] sm:text-4xl lg:text-[68px] font-normal font-forum text-[#0C141DE5] mb-3">
+                <h1
+                    class="text-[32px] sm:text-5xl leading-[100%] lg:text-[68px] font-normal font-forum text-[#0C141DE5] mb-3">
                     Why Choose Passero
                 </h1>
 
@@ -164,19 +166,20 @@
                 </a>
             </div>
 
-                <!-- IMAGE + SVG -->
-                <div class="order-2 md:order-2 flex justify-center relative overflow-visible">
+            <!-- IMAGE + SVG -->
+            <div class="order-2 md:order-2 flex justify-center relative overflow-visible">
 
-                    <!-- IMAGE WRAPPER -->
-                    <div class="relative w-full sm:h-[482px] h-[294px] max-w-[327px] sm:max-w-[480px] md:max-w-[563px] z-10">
-                        <img src="./assests/img/Why-Passero/Why-Passero-hero.jpg" alt="Why Passero"
-                            class="w-full h-full rounded-lg shadow-2xl relative z-10">
-                    </div>
-
-                    <!-- FULL WIDTH BOTTOM SVG -->
-                    <img src="./assests/img/Why-Passero/Why-Passero-bg-sec.svg" alt="" class="block sm:hidden object-cover absolute left-0 right-0 -bottom-20
-                h-[128px] w-full z-0 pointer-events-none">
+                <!-- IMAGE WRAPPER -->
+                <div
+                    class="relative w-full sm:h-[482px] h-[294px] max-w-[327px] sm:max-w-[480px] md:max-w-[563px] z-10">
+                    <img src="./assests/img/Why-Passero/Why-Passero-hero.jpg" alt="Why Passero"
+                        class="w-full h-full rounded-lg shadow-2xl relative z-10">
                 </div>
+
+                <!-- FULL WIDTH BOTTOM SVG -->
+                <img src="./assests/img/Why-Passero/Why-Passero-bg-sec.svg" alt="" class="block sm:hidden object-cover absolute left-0 right-0 -bottom-20
+                h-[128px] w-full z-0 pointer-events-none">
+            </div>
 
 
         </div>
@@ -189,7 +192,7 @@
     <!-- Hero Section -->
 
     <!-- start State-of-the-Art Manufacturing Facility Section -->
-         <section>
+    <section>
         <div class="grid grid-cols-1 lg:grid-cols-[35%_65%]">
             <div class="relative bg-[#152231] overflow-hidden bg-no-repeat bg-center bg-cover lg:min-h-screen order-2 lg:order-1"
                 style="background-image: url('./assests/img/about/Legacy-Design-bg.png');">
@@ -200,7 +203,8 @@
                 <div
                     class="relative z-10 max-w-8xl mx-auto px-4 sm:px-6 lg:px-14 py-12 flex flex-col items-start justify-center">
                     <img src="./assests/img/icon/Frame.svg" class="mb-4" alt="">
-                    <h1 class="text-[32px] sm:text-5xl leading-[100%] lg:text-[56px] font-formal font-forum text-white mb-8">
+                    <h1
+                        class="text-[32px] sm:text-5xl leading-[100%] lg:text-[56px] font-formal font-forum text-white mb-8">
                         State-of-the-Art Manufacturing Facility
                     </h1>
                     <p class="text-white text-sm lg:text-xl font-Poppins font-normal leading-relaxed">
@@ -212,17 +216,34 @@
                     </p>
                 </div>
             </div>
+            <!-- Video Section -->
             <div class="relative video-overlay bg-gray-800 h-[300px] sm:h-[400px] lg:h-auto order-1 lg:order-2">
                 <img src="./assests/img/about/State-Art-Manufacturing-Facility.jpg" alt="Manufacturing Facility"
                     class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-[#00000069]"></div>
-                <button
+
+                <!-- Play Button -->
+                <button id="openVideoModal"
                     class="play-button absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 lg:w-24 lg:h-24 flex items-center justify-center">
                     <svg class="w-full h-full text-white" viewBox="0 0 100 100" fill="none">
                         <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="2" fill="none" />
                         <path d="M40 30 L70 50 L40 70 Z" fill="currentColor" />
                     </svg>
                 </button>
+            </div>
+
+            <!-- Modal -->
+            <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center z-50">
+                <div class="relative w-full max-w-3xl p-4">
+                    <button id="closeVideoModal"
+                        class="absolute top-2 right-2 text-white text-3xl font-bold">&times;</button>
+                    <div class="aspect-w-16 aspect-h-9 h-[300px] sm:h-[500px]">
+                        <iframe id="youtubeVideo" class="w-full h-full" src="" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -231,7 +252,8 @@
     <!-- start Product Catalogues Section -->
     <section class="max-w-8xl mx-auto px-6 sm:px-6 lg:px-14 pt-16 lg:py-20 ">
         <div class="text-center mb-12">
-            <h2 class="text-[32px] sm:text-5xl leading-[100%] lg:text-[56px] font-normal font-forum text-[#1C1C1C] mb-4">
+            <h2
+                class="text-[32px] sm:text-5xl leading-[100%] lg:text-[56px] font-normal font-forum text-[#1C1C1C] mb-4">
                 Quality Assurance & Certifications
             </h2>
             <p class="max-w-4xl mx-auto text-gray-600 text-base sm:text-lg">
@@ -282,7 +304,8 @@
         <div class="max-w-8xl mx-auto px-6 sm:px-6 lg:px-14 py-16 lg:py-20">
             <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-2 sm:gap-6 pb-16">
                 <div class="max-w-lg">
-                    <h1 class="text-[32px] sm:text-5xl leading-[100%] lg:text-[56px] font-normal mb-2 font-forum text-title max-w-sm">
+                    <h1
+                        class="text-[32px] sm:text-5xl leading-[100%] lg:text-[56px] font-normal mb-2 font-forum text-title max-w-sm">
                         Our Design Philosophy
                     </h1>
                 </div>
@@ -298,7 +321,8 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
                 <div class="text-left">
                     <div class="flex justify-start  lg:justify-start mb-4">
-                        <img class="sm:w-[80px] w-[64px]" src="./assests/img/icon/Timeless-Aesthetics.svg" alt="Timeless Aesthetics">
+                        <img class="sm:w-[80px] w-[64px]" src="./assests/img/icon/Timeless-Aesthetics.svg"
+                            alt="Timeless Aesthetics">
                     </div>
                     <h3 class="text-[22px] lg:text-[32px] font-normal font-forum text-[#0C141DE5] mb-1 sm:mb-3">
                         Timeless Aesthetics
@@ -324,7 +348,8 @@
                 </div>
                 <div class="text-left">
                     <div class="flex justify-start  lg:justify-start mb-4">
-                        <img class="sm:w-[80px] w-[64px]" src="./assests/img/icon/Form-Meets-Function.svg" alt="Form Meets Function">
+                        <img class="sm:w-[80px] w-[64px]" src="./assests/img/icon/Form-Meets-Function.svg"
+                            alt="Form Meets Function">
                     </div>
                     <h3 class="text-[22px] lg:text-[32px] font-normal font-forum text-[#0C141DE5] mb-1 sm:mb-3">
                         Form Meets Function
@@ -340,11 +365,12 @@
     <!-- end Culture & Values Section -->
 
     <!--start Experience Passero in Person -->
-    <section class="pt-12 lg:pt-20">
+    <section class="pt-12 lg:pt-0">
         <div class="grid grid-cols-1 lg:grid-cols-2">
             <div class="max-w-8xl mx-auto px-6 sm:px-6 lg:px-14 py-16 lg:py-20 flex flex-col justify-center bg-no-repeat bg-center bg-cover"
                 style="background-image: url(./assests/img/about/Experience-Passero-Person.png);">
-                <h2 class="text-[32px] sm:text-5xl leading-[100%] lg:text-[56px] font-formal font-forum text-white mb-6">
+                <h2
+                    class="text-[32px] sm:text-5xl leading-[100%] lg:text-[56px] font-formal font-forum text-white mb-6">
                     Experience Passero in Person
                 </h2>
                 <p class="text-[#FFFFFFC7] text-sm lg:text-[18px] font-Poppins font-normal leading-relaxed mb-8">
@@ -499,7 +525,7 @@
                             <p class="font-semibold text-[#0C141DE5] text-base font-poppins mb-1">Address</p>
                             <p class="text-[#0C141DE5] font-normal text-base">
                                 <a href="https://www.google.com/maps/place/SURVEY+NO.+72/P1/P2,+KANDLA+ROAD,+8-A+NATIONAL+HIGHWAY+TIMDI,+MORBI-363642+(GUJ)+INDIA"
-                                    target="_blank" class="underline hover:text-[#935C10] transition">
+                                    target="_blank" class="over:text-[#935C10] transition">
                                     SURVEY NO. 72/P1/P2, KANDLA ROAD, 8-A NATIONAL HIGHWAY TIMDI, MORBI-363642 (GUJ)
                                     INDIA
                                 </a>
@@ -548,6 +574,38 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const openBtn = document.getElementById('openVideoModal');
+        const closeBtn = document.getElementById('closeVideoModal');
+        const modal = document.getElementById('videoModal');
+        const iframe = document.getElementById('youtubeVideo');
+
+        const youtubeURL = "https://www.youtube.com/embed/Rx5Ygt_hP4E?autoplay=1&si=sYAYgqN6HxfL-Gxj";
+
+        // Open modal and load video
+        openBtn.addEventListener('click', () => {
+            iframe.src = youtubeURL;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        });
+
+        // Close modal and stop video
+        closeBtn.addEventListener('click', () => {
+            iframe.src = "";
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        });
+
+        // Close modal when clicking outside iframe
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                iframe.src = "";
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
+        });
+    </script>
 
     <!-- JS -->
     <script src="./assests/js/dev-script.js"></script>
