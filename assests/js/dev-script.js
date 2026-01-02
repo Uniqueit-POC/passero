@@ -291,37 +291,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // start Collection Details nav tabs section
 const tabs = document.querySelectorAll("#filter-tabs .tab");
-const tiles = document.querySelectorAll("#tile-grid .tile");
+const items = document.querySelectorAll("#tile-grid .tile-item");
 
 function filterTiles(category) {
-  tiles.forEach((tile) => {
-    if (category === "all" || tile.dataset.category === category) {
-      tile.classList.remove("hidden");
+  items.forEach((item) => {
+    if (category === "all" || item.dataset.category === category) {
+      item.classList.remove("hidden");
     } else {
-      tile.classList.add("hidden");
+      item.classList.add("hidden");
     }
   });
 }
 
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => {
+
     tabs.forEach((t) => {
-      t.classList.remove("text-[#935C10]");
-      t.classList.remove("border-b-[#935C10]");
-      t.classList.add("text-[#0C141DE5]");
-      t.classList.add("border-transparent");
+      t.classList.remove("text-[#935C10]", "border-b-[#935C10]");
+      t.classList.add("text-[#0C141DE5]", "border-transparent");
     });
 
-    tab.classList.add("text-[#935C10]");
-    tab.classList.add("border-b-[#935C10]");
-    tab.classList.remove("text-[#0C141DE5]");
-    tab.classList.remove("border-transparent");
-    const category = tab.dataset.filter;
-    filterTiles(category);
+    tab.classList.add("text-[#935C10]", "border-b-[#935C10]");
+    tab.classList.remove("text-[#0C141DE5]", "border-transparent");
+
+    filterTiles(tab.dataset.filter);
   });
 });
 
 filterTiles("all");
+
 //  ------------end Collection Details nav tabs section ------------
 
 // ------------ start section More Collections You'll Love slider ------------
