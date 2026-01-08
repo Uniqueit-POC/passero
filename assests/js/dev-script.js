@@ -230,34 +230,34 @@ document.addEventListener("DOMContentLoaded", () => {
   const contentImage = document.querySelector(".timeline-image");
 
   const timelineData = {
-    2015: {
+    2021: {
       title: "The Beginning",
-      text: "Passero Vitrified was established with a vision to create high-quality vitrified tiles using modern technology and a design-first mindset.",
+      text: "Passero Vitrified was founded with a clear vision to create high-quality vitrified tiles driven by modern technology and a design-first approach.",
       img: "./assests/img/about/The-Beginning.jpg",
     },
-    2017: {
-      title: "Manufacturing Expansion",
-      text: "Installed advanced machinery and expanded production capacity to meet growing domestic and export demand.",
+    2022: {
+      title: "Surface Expansion",
+      text: "Launched more than 10 unique surface finishes in the Indian market and marked our first major exhibition presence in Rajkot.",
       img: "assests/img/about/Manufacturing-Expansion.png",
     },
-    2019: {
-      title: "National Presence",
-      text: "Introduced multiple new collections and built a strong dealer network across major Indian cities.",
+    2023: {
+      title: "Market Presence",
+      text: "Expanded our industry footprint with a successful exhibition in Morbi, strengthening our brand visibility in the tile manufacturing hub.",
       img: "assests/img/about/National-Presence.png",
     },
-    2022: {
-      title: "Global Reach",
-      text: "Strengthened export operations, supplying to over 15+ countries with internationally certified quality standards.",
+    2024: {
+      title: "Retail Entry",
+      text: "Participated in the prestigious ACETECH exhibition in Mumbai, opened our first exclusive brand outlet in Ujjain, and announced plans to enter sanitaryware manufacturing.",
       img: "./assests/img/about/Global-Reach.png",
     },
-    2024: {
-      title: "Innovation & Technology Upgrade",
-      text: "Upgraded manufacturing lines with latest digital printing, polishing, and automated quality control systems.",
+    2025: {
+      title: "Store Growth",
+      text: "Showcased our collections at the Delhi exhibition and opened new Passero brand outlets in Dewas and Indore. ",
       img: "./assests/img/about/Innovation-Technology-Upgrade.png",
     },
-    2025: {
-      title: "Brand Store Launch",
-      text: "Transitioned from traditional distribution to exclusive Passero Brand Stores, offering premium customer experience and designer collaborations.",
+    2026: {
+      title: "Future Plans",
+      text: "Planning to expand our presence further with the launch of a new exclusive brand outlet in Ahmedabad.",
       img: "./assests/img/about/Brand-Store-Launch.png",
     },
   };
