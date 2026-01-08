@@ -237,11 +237,11 @@
                 <div class="relative w-full max-w-3xl p-4">
                     <button id="closeVideoModal"
                         class="absolute top-2 right-2 text-white text-3xl font-bold">&times;</button>
-                    <div class="aspect-w-16 aspect-h-9 h-[300px] sm:h-[500px]">
-                        <iframe id="youtubeVideo" class="w-full h-full" src="" title="YouTube video player"
-                            frameborder="0"
+                   <div class="aspect-w-16 aspect-h-9 h-[300px] sm:h-[500px]">
+                        <iframe id="youtubeVideo" class="w-full h-full" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        </iframe>
                     </div>
                 </div>
             </div>
@@ -568,18 +568,21 @@
             </div>
         </div>
     </footer>
-
     <script>
         const openBtn = document.getElementById('openVideoModal');
         const closeBtn = document.getElementById('closeVideoModal');
         const modal = document.getElementById('videoModal');
         const iframe = document.getElementById('youtubeVideo');
 
-        const youtubeURL = "https://www.youtube.com/embed/Rx5Ygt_hP4E?autoplay=1&si=sYAYgqN6HxfL-Gxj";
+        const youtubeURL = "https://youtu.be/ktsdjW0LtpE?si=L7jNPHoiFW44KxaD";
+
+        // Extract video ID safely
+        const videoId = youtubeURL.match(/(?:youtu\.be\/|v=)([^?]+)/)[1];
+        const embedURL = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
 
         // Open modal and load video
         openBtn.addEventListener('click', () => {
-            iframe.src = youtubeURL;
+            iframe.src = embedURL;
             modal.classList.remove('hidden');
             modal.classList.add('flex');
         });
