@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Passero Tiles & Bathware</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/svg+xml" href="./assests/img/icon/Frame.svg">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assests/css/dev-style.css">
+</head>
+
+<body class="bg-[#F8F3EC]">
+    <!-- start NAVBAR -->
+    <header id="main-nav"
+        class="border-b border-[#1F32473D] fixed inset-x-0 top-0 z-30 transition-all duration-300 bg-transparent">
+        <nav class="max-w-[1350px] mx-auto px-6 py-4 grid grid-cols-[1fr_auto_1fr] items-center gap-4">
+            <div class="flex items-center gap-3">
+                <button id="mobile-toggle" class="md:hidden text-white">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 8H20M4 16H20" stroke="currentColor" stroke-opacity="0.9" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <ul id="nav-left" class="hidden md:flex gap-4 items-center">
+                    <li><a href="about-us.html" class="nav-link text-[#0C141DE5] font-semibold text-base">About Us</a>
+                    </li>
+                    <li><a href="Collection.html"
+                            class="nav-link text-[#0C141DE5] font-semibold text-base">Collections</a>
+                    </li>
+                    <li><a href="Why-Passero.html" class="nav-link text-[#0C141DE5] font-semibold text-base">Why
+                            Passero</a></li>
+                    <li><a href="Brand-Stores.html" class="nav-link text-[#0C141DE5] font-semibold text-base">Brand
+                            Stores</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex justify-center">
+                <a href="index.html" id="logo-wrapper" class="sm:w-[189px] sm:h-[64px] w-[142px] h-[48px]">
+                    <img src="./assests/img/logo/colo-logo.png" id="logo-img"
+                        data-light="./assests/img/logo/colo-logo.png" data-dark="./assests/img/logo/colo-logo.png"
+                        class="object-contain transition-all duration-300" />
+                </a>
+            </div>
+            <div class="flex justify-end items-center gap-3">
+                <div id="nav-right" class="hidden md:flex items-center gap-4">
+                    <a href="Downloads.html" class="nav-link text-[#0C141DE5] font-semibold text-base">Downloads</a>
+                    <a href="News-Events.html" class="nav-link text-[#0C141DE5] font-semibold text-base">News &
+                        Events</a>
+                    <a href="contact-us.html" id="contact-btn"
+                        class="nav-link contact-btn border border-[#152231] font-semibold text-base text-black bg-[#152231] px-4 py-2 rounded transition-all duration-300 ease-in-out hover:bg-transparent hover:text-[#0c141d] hover:scale-105 hover:shadow-md">
+                        Contact Us
+                    </a>
+                </div>
+                <a href="tel:+911234567890" class="md:hidden text-white"><i class="fa fa-phone"
+                        style="color: rgba(12, 20, 29, 0.898);"></i></a>
+            </div>
+        </nav>
+    </header>
+    <!-- Mobile Sidebar Backdrop -->
+    <div id="sidebar-backdrop" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity duration-300">
+    </div>
+
+    <!-- Mobile Sidebar -->
+    <aside id="mobile-sidebar"
+        class="fixed top-0 left-0 h-full w-[280px] bg-[#F8F3EC]  z-50 transform -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto">
+        <div class="flex flex-col h-full">
+            <div class="flex items-center justify-between p-6 border-b border-gray-300">
+                <img src="./assests/img/logo/colo-logo.png" alt="Passero Logo" class="h-10" />
+                <button id="sidebar-close" class="text-gray-700 text-2xl hover:text-gray-900">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <nav class="flex-1 py-6">
+                <ul class="space-y-1">
+                    <li>
+                        <a href="about-us.html"
+                            class="block px-6 py-2 text-[#0C141DE5] font-forum text-2xl font-normal hover:bg-gray-200 transition-colors">
+                            About Us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Collection.html"
+                            class="block px-6 py-2 text-[#0C141DE5] font-forum text-2xl font-normal hover:bg-gray-200 transition-colors">
+                            Collections
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Why-Passero.html"
+                            class="block px-6 py-2 text-[#0C141DE5] font-forum text-2xl font-normal hover:bg-gray-200 transition-colors">
+                            Why Passero
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Brand-Stores.html"
+                            class="block px-6 py-2 text-[#0C141DE5] font-forum text-2xl font-normal hover:bg-gray-200 transition-colors">
+                            Brand Stores
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Downloads.html"
+                            class="block px-6 py-2 text-[#0C141DE5] font-forum text-2xl font-normal hover:bg-gray-200 transition-colors">
+                            Downloads
+                        </a>
+                    </li>
+                    <li>
+                        <a href="News-Events.html"
+                            class="block px-6 py-2 text-[#0C141DE5] font-forum text-2xl font-normal hover:bg-gray-200 transition-colors">
+                            News & Events
+                        </a>
+                    </li>
+                </ul>
+                <div class="px-6 mt-6">
+                    <a href="contact-us.html"
+                        class="flex items-center justify-center gap-2 w-full bg-[#0c141d] text-white py-3 rounded hover:bg-[#1a2532] transition-colors">
+                        <i class="fa fa-phone"></i>
+                        <span class="font-bold font-sm font-poppins">Contact Us</span>
+                    </a>
+                </div>
+            </nav>
+            <div class="flex border-t border-gray-300 p-5">
+                <p class="text-[#0C141DE5] text-base font-normal mb-3">Follow us on social media</p>
+                <div class="flex gap-2">
+                    <a href="#" class="transition-colors">
+                        <img src="./assests/img/icon/tabler-icon-brand-facebook.svg" alt="facebook">
+                    </a>
+                    <a href="#" class="transition-colors">
+                        <img src="./assests/img/icon/tabler-icon-brand-instagram.svg" alt="instagram">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!-- end NAVBAR -->
+
+    <!-- Hero Section -->
+    <section class="bg-[#FAF5F0] px-6 sm:px-0">
+        <div class="max-w-4xl mx-auto py-12 lg:py-6 mt-20 lg:mt-20 z-10 text-center">
+            <p class="pb-3 text-[#0F1924B8] font-normal font-poppins text-center text-base sm:text-lg">
+                Published 06 February, 2024
+            </p>
+            <h2
+                class="text-[32px] sm:text-5xl leading-[100%] lg:text-[50px] font-normal font-forum text-[#1C1C1C] mb-4">
+                A New Era in Ceramics: Passero Vitrified LLP Launches First Unit
+            </h2>
+            <div class="flex flex justify-center items-center gap-3">
+                <span class="text-[#0F1924B8] font-normal font-poppins text-base sm:text-lg">
+                    Share :
+                </span>
+                <span class="flex">
+                    <a href=""><img src="./assests/img/icon/x.svg" alt="x"></a>
+                    <a href=""><img src="./assests/img/icon/facebook.svg" alt="facebook"></a>
+                    <a href=""><img src="./assests/img/icon/pintrest.svg" alt="pintrest"></a>
+                    <a href=""><img src="./assests/img/icon/instagram.svg" alt="instagram"></a>
+                </span>
+            </div>
+
+            <div class="py-12">
+                <img src="./assests/img/News-Events/news-1.JPG"
+                    class="w-full h-[187px] sm:h-[500px] rounded-xl shadow-[#00000024]" alt="News-Events-Details">
+            </div>
+
+            <div class="text-start">
+                <p class="pb-10 text-[#0F1924B8] font-normal font-poppins text-start text-base sm:text-lg">
+                    In the pursuit of turning your dream home into a reality, every detail matters. From the foundation
+                    to the finishing touches, every element contributes to the overall ambiance and comfort of your
+                    residence. At Passero Vitrified, we understand the significance of this journey, and we are
+                    committed to providing you with top-notch building materials that ensure your dream home becomes a
+                    haven of luxury and style.
+                </p>
+
+                <h2
+                    class="text-[32px] sm:text-5xl leading-[100%] lg:text-[44px] font-normal font-forum text-[#0C141DE5] mb-3">
+                    Elevate Your Space with Passero Vitrified Tiles:
+                </h2>
+                <p class="pb-10 text-[#0F1924B8] font-normal font-poppins text-start text-base sm:text-lg">
+                    The foundation of any beautiful home starts with the right flooring, and Passero Vitrified Tiles
+                    offer the perfect blend of elegance and durability. Our extensive range of tiles caters to various
+                    styles and preferences, whether you envision a sleek, modern aesthetic or a more classic and
+                    timeless look. With a commitment to quality, our tiles not only enhance the visual appeal of your
+                    home but also stand the test of time, ensuring lasting beauty for years to come.
+                </p>
+
+                <h2
+                    class="text-[32px] sm:text-5xl leading-[100%] lg:text-[44px] font-normal font-forum text-[#0C141DE5] mb-3">
+                    Sanitaryware Solutions for Ultimate Comfort:
+                </h2>
+                <p class="pb-10 text-[#0F1924B8] font-normal font-poppins text-start text-base sm:text-lg">
+                    Creating a dream home involves paying attention to the finer details, and Passero Vitrified is your
+                    trusted partner in providing high-quality sanitaryware. Our products are designed to not only meet
+                    the functional requirements of your space but also add a touch of sophistication. From stylish
+                    faucets to efficient bathroom fixtures, our sanitaryware solutions contribute to the overall comfort
+                    and luxury of your dream home.
+                </p>
+
+                <h2
+                    class="text-[32px] sm:text-5xl leading-[100%] lg:text-[44px] font-normal font-forum text-[#0C141DE5] mb-3">
+                    Designer Tiles for Personalized Elegance:
+                </h2>
+                <p class="pb-10 text-[#0F1924B8] font-normal font-poppins text-start text-base sm:text-lg">
+                    Passero Vitrified takes pride in offering a stunning collection of designer tiles that allow you to
+                    infuse your personality into every corner of your residence. Whether you're looking for intricate
+                    patterns, bold colors, or unique textures, our designer tiles provide the perfect canvas for your
+                    creativity. Transform your dream home into a reflection of your style with our diverse and
+                    customizable options.
+                </p>
+
+                <!-- NEW CONTENT START -->
+                <h2
+                    class="text-[32px] sm:text-5xl leading-[100%] lg:text-[44px] font-normal font-forum text-[#0C141DE5] mb-3">
+                    A New Era in Ceramics: Passero Vitrified LLP
+                </h2>
+                <p class="pb-6 text-[#0F1924B8] font-normal font-poppins text-start text-base sm:text-lg">
+                    The year 2022 marked a significant milestone for the Indian ceramic industry with the incorporation
+                    of Passero Vitrified LLP on July 14, 2022. Based in the global ceramic hub of Morbi, Gujarat, the
+                    company officially launched its first manufacturing unit with a vision to redefine high-quality tile
+                    production for both residential and commercial spaces.
+                </p>
+
+                <h2
+                    class="text-[32px] sm:text-5xl leading-[100%] lg:text-[44px] font-normal font-forum text-[#0C141DE5] mb-3">
+                    A Foundation of Quality and Innovation
+                </h2>
+                <p class="pb-10 text-[#0F1924B8] font-normal font-poppins text-start text-base sm:text-lg">
+                    Passero Vitrified LLP was established with a mission to deliver state-of-the-art upgrades in tile
+                    collection and manufacturing processes. Strategically located on the 8-A National Highway in
+                    Timbdi, the facility ensures seamless access to domestic markets while leveraging the proximity of
+                    Mundra Port for efficient global exports. The manufacturing unit specializes in Glazed Vitrified
+                    Tiles (GVT) and Polished Glazed Vitrified Tiles (PGVT), offering a refined balance of aesthetic
+                    elegance and long-lasting structural durability.
+                </p>
+                <!-- NEW CONTENT END -->
+            </div>
+
+
+            <div class="flex justify-start items-center gap-3 border-t border-[#1F32473D] pt-5">
+                <span class="text-[#0F1924B8] font-normal font-poppins text-base sm:text-lg">
+                    Share :
+                </span>
+
+                <span class="flex items-center gap-3">
+                    <a href="https://twitter.com/intent/tweet?url=https://yourwebsite.com/blog-page&text=Check%20out%20this%20blog"
+                        target="_blank" rel="noopener noreferrer">
+                        <img src="./assests/img/icon/x.svg" alt="x">
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://yourwebsite.com/blog-page"
+                        target="_blank" rel="noopener noreferrer">
+                        <img src="./assests/img/icon/facebook.svg" alt="facebook">
+                    </a>
+                    <a href="https://pinterest.com/pin/create/button/?url=https://yourwebsite.com/blog-page&description=Amazing%20Blog"
+                        target="_blank" rel="noopener noreferrer">
+                        <img src="./assests/img/icon/pintrest.svg" alt="pintrest">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                        <img src="./assests/img/icon/instagram.svg" alt="instagram">
+                    </a>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- start Recent Posts Section -->
+    <section class="bg-white">
+        <div class="max-w-8xl mx-auto p-6 sm:px-6 lg:px-14 lg:py-6 border-t border-[#1F32473D]">
+            <h2 class="text-[32px] sm:text-5xl leading-[100%] lg:text-[50px] font-normal font-forum text-[#1C1C1C]">
+                Recent Posts
+            </h2>
+            <div class="mt-9">
+                <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-8">
+                     <a href="Passero-Vitrified-LLP-Showcases-Excellence-at-GPBS-2024.html">
+                    <div class="">
+                        <div class="aspect-square bg-gradient-to-br from-gray-200 to-gray-300">
+                            <img src="./assests/img/News-Events/news-6.jpg"
+                                alt="Passero Vitrified LLP Showcases Excellence at GPBS 2024" class="w-full h-full object-contain">
+                        </div>
+                        <div class="py-5 sm:pt-5 sm:pb-0">
+                            <h3 class="text-2xl font-normal text-[#0C141DE5] font-forum mb-1">
+                                Passero Vitrified LLP Showcases Excellence at GPBS 2024
+                            </h3>
+                            <p class="text-sm font-poppins font-normal text-[#0F1924B8] ">
+                                08 Nov 2024
+                            </p>
+                        </div>
+                    </div>
+                    </a>
+                   <a href="Redefining-Indian-Architecture-at-ACETECH-Mumbai-2024.html">
+                    <div class="">
+                        <div class="aspect-square bg-gradient-to-br from-gray-200 to-gray-300">
+                            <img src="./assests/img/News-Events/news-7.jpg"
+                                alt="Redefining Indian Architecture at ACETECH Mumbai 2024" class="w-full h-full object-contain">
+                        </div>
+                        <div class="py-5 sm:pt-5 sm:pb-0">
+                            <h3 class="text-2xl font-normal text-[#0C141DE5] font-forum mb-1">
+                                Redefining Indian Architecture at ACETECH Mumbai 2024
+                            </h3>
+                            <p class="text-sm font-poppins font-normal text-[#0F1924B8] ">
+                                08 Nov 2024
+                            </p>
+                        </div>
+                    </div>
+                    </a>
+                   <a href="Showcasing-Indian-Excellence-at-Vibrant-Buildcon-2025.html">
+                    <div class="">
+                        <div class="aspect-square bg-gradient-to-br from-gray-200 to-gray-300">
+                            <img src="./assests/img/News-Events/news-8.jpg"
+                                alt="Showcasing Indian Excellence at Vibrant Buildcon 2025" class="w-full h-full object-contain">
+                        </div>
+                        <div class="py-5 sm:pt-5 sm:pb-0">
+                            <h3 class="text-2xl font-normal text-[#0C141DE5] font-forum mb-1">
+                                Showcasing Indian Excellence at Vibrant Buildcon 2025
+                            </h3>
+                            <p class="text-sm font-poppins font-normal text-[#0F1924B8] ">
+                                08 Nov 2024
+                            </p>
+                        </div>
+                    </div>
+                    </a>
+                     <a href="The-Ujjain-Flagship-Showroom.html">
+                    <div class="">
+                        <div class="aspect-square bg-gradient-to-br from-gray-200 to-gray-300">
+                            <img src="./assests/img/News-Events/news-9.jpg"
+                                alt="Expanding Presence in Central India: The Ujjain Flagship Showroom" class="w-full h-full object-contain">
+                        </div>
+                        <div class="py-5 sm:pt-5 sm:pb-0">
+                            <h3 class="text-2xl font-normal text-[#0C141DE5] font-forum mb-1">
+                                Expanding Presence in Central India: The Ujjain Flagship Showroom
+                            </h3>
+                            <p class="text-sm font-poppins font-normal text-[#0F1924B8] ">
+                                08 Nov 2024
+                            </p>
+                        </div>
+                    </div>
+                    </a>
+                     <a href="Direct-Factory-Access-to-Premium-Tiles-Bathware.html">
+                    <div class="">
+                        <div class="aspect-square bg-gradient-to-br from-gray-200 to-gray-300">
+                            <img src="./assests/img/News-Events/news-10.JPG"
+                                alt="New Dewas Outlet: Direct Factory Access to Premium Tiles & Bathware" class="w-full h-full object-contain">
+                        </div>
+                        <div class="py-5 sm:pt-5 sm:pb-0">
+                            <h3 class="text-2xl font-normal text-[#0C141DE5] font-forum mb-1">
+                                New Dewas Outlet: Direct Factory Access to Premium Tiles & Bathware
+                            </h3>
+                            <p class="text-sm font-poppins font-normal text-[#0F1924B8] ">
+                                08 Nov 2024
+                            </p>
+                        </div>
+                    </div>
+                    </a>
+                     <a href="Premium-Tiles-Sanitaryware-Under-One-Roof.html">
+                    <div class="">
+                        <div class="aspect-square bg-gradient-to-br from-gray-200 to-gray-300">
+                            <img src="./assests/img/News-Events/news-11.jpg"
+                                alt="New Indore Outlet: Premium Tiles & Sanitaryware Under One Roof" class="w-full h-full object-contain">
+                        </div>
+                        <div class="py-5 sm:pt-5 sm:pb-0">
+                            <h3 class="text-2xl font-normal text-[#0C141DE5] font-forum mb-1">
+                                New Indore Outlet: Premium Tiles & Sanitaryware Under One Roof
+                            </h3>
+                            <p class="text-sm font-poppins font-normal text-[#0F1924B8] ">
+                                08 Nov 2024
+                            </p>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Recent Posts Section -->
+
+    <!--start Experience Passero in Person -->
+    <section class="pt-12 lg:pt-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2">
+            <div class="max-w-8xl mx-auto p-6 sm:px-6 lg:px-14 lg:py-10 flex flex-col justify-center bg-no-repeat bg-center bg-cover"
+                style="background-image: url(./assests/img/about/Experience-Passero-Person.png);">
+                <h2
+                    class="text-[32px] sm:text-5xl leading-[100%] lg:text-[50px] font-formal font-forum text-white mb-6">
+                    Experience Passero in Person
+                </h2>
+                <p class="text-[#FFFFFFC7] text-sm lg:text-[18px] font-Poppins font-normal leading-relaxed mb-8">
+                    Explore our exclusive brand stores designed to offer a curated and immersive tile selection
+                    experience. Discover premium collections, full-space mockups, and expert guidance to help you
+                    choose the perfect surfaces for your project.
+                </p>
+                <div class="space-y-4 mb-8">
+                    <div class="flex items-start gap-3">
+                        <div class="">
+                            <img src="./assests/img/icon/tabler-icon-circle-check-filled.svg" alt="">
+                        </div>
+                        <div class="flex">
+                            <p class="text-white text-base lg:text-base  font-Poppins font-bold leading-relaxed">Curated
+                                Displays&nbsp;&nbsp;- <span
+                                    class="text-white text-base lg:text-base  font-Poppins font-normal leading-relaxed">&nbsp;&nbsp;See
+                                    tiles in real-life interior setups</span></p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                        <div class="">
+                            <img src="./assests/img/icon/tabler-icon-circle-check-filled.svg" alt="">
+                        </div>
+                        <div class="flex">
+                            <p class="text-white text-base lg:text-base  font-Poppins font-bold leading-relaxed">Expert
+                                Assistance&nbsp;&nbsp;- <span
+                                    class="text-white text-base lg:text-base  font-Poppins font-normal leading-relaxed">Guidance
+                                    from trained design consultants</span></p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                        <div class="">
+                            <img src="./assests/img/icon/tabler-icon-circle-check-filled.svg" alt="">
+                        </div>
+                        <div class="flex">
+                            <p class="text-white text-base lg:text-base  font-Poppins font-bold leading-relaxed">Latest
+                                Collections&nbsp;&nbsp;- <span
+                                    class="text-white text-base lg:text-base  font-Poppins font-normal leading-relaxed">Access
+                                    to our newest and premium ranges</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <a href="Brand-Stores.html" class="inline-flex w-full sm:w-fit bg-white text-[#0C141DE5] px-8 py-3 rounded-md flex items-center justify-center sm:items-start sm:justify-start gap-2 text-sm font-bold
+                           transition-transform transition-colors duration-300 ease-in-out
+                           hover:bg-gray-800 hover:text-white hover:scale-105 hover:shadow-lg">
+                        Visit Our Stores
+                        <svg class="stroke-current group-hover:text-white" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L15 16M19 12L15 8" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="relative h-[280px] sm:h-[550px]">
+                <img src="./assests/img/about/Experience-Passero-Person-right.jpg" alt="Tile Selection Experience"
+                    class="w-full h-full object-cover">
+            </div>
+        </div>
+    </section>
+    <!--start Experience Passero in Person -->
+
+    <!-- Footer Section -->
+    <footer class="bg-[#F8F3EC]">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-14 pt-12 lg:pt-20 pb-6 lg:pb-3">
+            <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 mb-12">
+                <div class="lg:col-span-1">
+                    <div class="mb-6">
+                        <img src="./assests/img/logo/colo-logo.png" id="logo-img"
+                            data-light="./assests/img/logo/logo.svg" data-dark="./assests/img/logo/colo-logo.png"
+                            class="object-contain transition-all duration-300">
+                    </div>
+                    <p class="text-[#0C141DE5] text-sm font-normal font-poppins leading-relaxed">
+                        Passero Vitrified creates premium surfaces crafted for design, durability, and modern
+                        living.
+                    </p>
+                    <div>
+                        <p class="font-semibold text-[#0C141DE5] text-base font-poppins mb-1">Contact Us
+                        </p>
+                        <a href="tel:+917807881081"
+                            class="underline text-[#0C141DE5] font-normal text-base hover:text-[#935C10] block">+91
+                            78078 81081</a>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-[#0C141DE5] text-base font-poppins mb-1">Write us</p>
+                        <a href="mailto:info@passerovitrified.com"
+                            class="underline text-[#0C141DE5] font-normal text-base hover:text-[#935C10] ">info@passerovitrified.com</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-forum text-2xl font-normal text-[#935C10] mb-4">Company</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about-us.html"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">About
+                                Us</a></li>
+                        <li><a href="Brand-Stores.html"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Brand
+                                Stores</a>
+                        </li>
+                        <li><a href="Career.html"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Career</a>
+                        </li>
+                        <li><a href="contact-us.html"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Contact
+                                Us</a></li>
+                        <li><a href="Why-Passero.html"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Why
+                                Passero</a></li>
+                        <li><a href="Packing-Details.html"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Packing
+                                Details</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-forum text-2xl font-normal text-[#935C10] mb-4">Products</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Floor
+                                Tiles</a></li>
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Wall
+                                Tiles</a></li>
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Outdoor
+                                Tiles</a>
+                        </li>
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Full
+                                Body Tiles</a>
+                        </li>
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Large
+                                Slabs</a></li>
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Special
+                                Finishes</a>
+                        </li>
+                        <li><a href="collection.html"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">View
+                                All
+                                Products</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-forum text-2xl font-normal text-[#935C10] mb-4">Resources</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Downloads</a>
+                        </li>
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">News
+                                & Events</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-forum text-2xl font-normal text-[#935C10] mb-4">Product & Series</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Matt
+                                Series</a>
+                        </li>
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Carving
+                                Series</a>
+                        </li>
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Leather
+                                Series</a>
+                        </li>
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Glossy
+                                Series</a>
+                        </li>
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">High
+                                Gloss Series</a>
+                        </li>
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Fabric
+                                Series</a>
+                        </li>
+                        <li><a href="#"
+                                class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-gray-900 transition-colors">Lapatto
+                                Series</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="border-t border-[#1F32473D] py-6 flex flex-row justify-between items-center gap-4">
+                <p class="font-poppins font-normal text-sm leading-[22px] tracking-normal text-[#0C141DE5]">
+                    <strong>Address:- </strong> SURVEY NO. 72/P1/P2, KANDLA ROAD, 8-A NATIONAL HIGHWAY TIMDI,
+                    MORBI-363642 (GUJ) INDIA
+                </p>
+                <div class="flex gap-4">
+                    <a href="https://www.instagram.com/passero_tiles_and_bathware/?igsh=Y2dvcmFxcGpudndk#"
+                        class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-[#935C10] transition-colors">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16.5 7.5V7.51M4 8C4 6.93913 4.42143 5.92172 5.17157 5.17157C5.92172 4.42143 6.93913 4 8 4H16C17.0609 4 18.0783 4.42143 18.8284 5.17157C19.5786 5.92172 20 6.93913 20 8V16C20 17.0609 19.5786 18.0783 18.8284 18.8284C18.0783 19.5786 17.0609 20 16 20H8C6.93913 20 5.92172 19.5786 5.17157 18.8284C4.42143 18.0783 4 17.0609 4 16V8ZM9 12C9 12.7956 9.31607 13.5587 9.87868 14.1213C10.4413 14.6839 11.2044 15 12 15C12.7956 15 13.5587 14.6839 14.1213 14.1213C14.6839 13.5587 15 12.7956 15 12C15 11.2044 14.6839 10.4413 14.1213 9.87868C13.5587 9.31607 12.7956 9 12 9C11.2044 9 10.4413 9.31607 9.87868 9.87868C9.31607 10.4413 9 11.2044 9 12Z"
+                                stroke="#935C10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/passero_tiles_and_bathware/?igsh=Y2dvcmFxcGpudndk#"
+                        class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-[#935C10] transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="#935C10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M8 11v5" />
+                            <path d="M8 8v.01" />
+                            <path d="M12 16v-5" />
+                            <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+                            <path
+                                d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4l0 -10" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/passero_tiles_and_bathware/?igsh=Y2dvcmFxcGpudndk#"
+                        class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-[#935C10] transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="#935C10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-brand-pinterest">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M8 20l4 -9" />
+                            <path
+                                d="M10.7 14c.437 1.263 1.43 2 2.55 2c2.071 0 3.75 -1.554 3.75 -4a5 5 0 1 0 -9.7 1.7" />
+                            <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/passero_tiles_and_bathware/?igsh=Y2dvcmFxcGpudndk#"
+                        class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-[#935C10] transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="#935C10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8" />
+                            <path d="M10 9l5 3l-5 3l0 -6" />
+                        </svg>
+                    </a>
+                    <a href="#"
+                        class="font-poppins text-[#0C141DE5] text-base  font-normal hover:text-[#935C10] transition-colors">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7 10V14H10V21H14V14H17L18 10H14V8C14 7.73478 14.1054 7.48043 14.2929 7.29289C14.4804 7.10536 14.7348 7 15 7H18V3H15C13.6739 3 12.4021 3.52678 11.4645 4.46447C10.5268 5.40215 10 6.67392 10 8V10H7Z"
+                                stroke="#935C10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-[#1F32473D] pt-3 flex flex-row justify-center items-center gap-4">
+                <p class="font-poppins font-normal text-sm leading-[22px] tracking-normal text-[#0C141DE5]"> © 2025 All
+                    Rights Reserved by <span class="font-forum text-lg font-normal text-[#935C10] mb-3"><a
+                            href="">Passero Vitrified</a></span> Developed by <span
+                        class="font-forum text-lg font-normal text-[#935C10] mb-4"><a
+                            href="https://theuniqueitsolution.com/">Unique IT Solution</a></span>.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Modal -->
+    <div id="catalogModal" class="modal">
+        <div class="modal-content bg-gray-900 text-white rounded-2xl max-w-2xl w-full mx-4 p-8 md:p-14 relative"
+            style="background-image: url(./assests/img/Downloads/Download-Dialog-bg.png);">
+            <button onclick="closeModal()"
+                class="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+
+            <div class="text-center">
+                <h2 class="text-xl sm:text-2xl lg:text-[44px] font-normal font-forum text-white mb-6 mb-3">
+                    Get the Latest Passero Updates
+                </h2>
+                <p class="mb-12 text-[#FFFFFFC7] font-normal text-base lg:text-base  leading-relaxed">
+                    Share your mobile number to receive product details, catalog updates, and
+                    helpful information from Passero. Our team may also assist you with
+                    product selection or store guidance, if required.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-stretch">
+                    <div class="relative flex-1 max-w-sm">
+                        <input type="tel" placeholder="Enter your mobile number"
+                            class="w-full px-4 py-3 rounded bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        <button class="absolute right-3 top-1/2 transform -translate-y-1/2">
+                            <img src="./assests/img/icon/tabler-icon-device-tablet.svg" alt="">
+                        </button>
+                    </div>
+                    <button
+                        class="flex bg-[#F1C17E] text-[#0C141DE5] px-8 py-3 rounded text-sm font-bold transition-transform transition-colors duration-300 ease-in-out hover:bg-white hover:scale-105 hover:shadow-lg">
+                        Download Now
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L15 16M19 12L15 8" stroke="#0C141DE5" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- // ------------ start download in model open ------------ -->
+    <script>
+        function openModal() {
+            document.getElementById('catalogModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('catalogModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        document.getElementById('catalogModal').addEventListener('click', function (e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+    <!-- // ------------ end download in model open ------------ -->
+    <!-- JS -->
+    <script src="./assests/js/dev-script.js"></script>
+
+</body>
+
+</html>
