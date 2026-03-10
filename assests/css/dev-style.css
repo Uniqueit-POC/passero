@@ -253,3 +253,18 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+  @keyframes slideInEffect {
+      from {
+          opacity: 0;
+          transform: translateY(30px);
+      }
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+
+  .slide-active .slide-content {
+      animation: slideInEffect 0.8s ease-out forwards;
+      animation-delay: 0.3s; /* Delay text until slide moves */
+  }
