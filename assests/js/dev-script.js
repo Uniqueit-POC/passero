@@ -149,30 +149,22 @@ if (mobileToggle && mobileSidebar && sidebarBackdrop) {
 
 /* ------------ start hero side bar ------------ */
 document.addEventListener("DOMContentLoaded", () => {
-  const slidesContainer = document.querySelector(".slides");
-  const slides = document.querySelectorAll(".slides > div");
+
+  const slidesContainer = document.getElementById("slide-wrapper");
+  const slides = document.querySelectorAll(".slide");
   const prevBtn = document.getElementById("prev");
   const nextBtn = document.getElementById("next");
-  const indicators = document.querySelectorAll(".indicators li");
 
   let index = 0;
   const total = slides.length;
-  const intervalTime = 5000;
+  const intervalTime = 6000;
   let autoSlide;
 
   function updateSlider() {
-    if (!slidesContainer) return;
-
     slidesContainer.style.transform = `translateX(-${index * 100}%)`;
 
-    indicators.forEach((dot, i) => {
-      dot.classList.remove("w-6", "bg-[#FFFFFF99]");
-      dot.classList.add("w-2", "bg-[#FFFFFF52]");
-
-      if (i === index) {
-        dot.classList.remove("w-2", "bg-[#FFFFFF52]");
-        dot.classList.add("w-6", "bg-[#FFFFFF99]");
-      }
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === index);
     });
   }
 
@@ -195,30 +187,30 @@ document.addEventListener("DOMContentLoaded", () => {
     startAuto();
   }
 
-  if (nextBtn) {
-    nextBtn.addEventListener("click", () => {
-      nextSlide();
-      resetAuto();
-    });
-  }
-
-  if (prevBtn) {
-    prevBtn.addEventListener("click", () => {
-      prevSlide();
-      resetAuto();
-    });
-  }
-
-  indicators.forEach((dot, i) => {
-    dot.addEventListener("click", () => {
-      index = i;
-      updateSlider();
-      resetAuto();
-    });
+  nextBtn?.addEventListener("click", () => {
+    nextSlide();
+    resetAuto();
   });
 
-  updateSlider();
-  startAuto();
+  prevBtn?.addEventListener("click", () => {
+    prevSlide();
+    resetAuto();
+  });
+
+  // 🔥 MAIN FIX (FIRST SLIDE ANIMATION)
+  slides.forEach(slide => slide.classList.remove("active"));
+
+  // Force reflow
+  void slides[0].offsetWidth;
+
+  // Add active again → animation triggers
+  slides[0].classList.add("active");
+
+  setTimeout(() => {
+    updateSlider();
+    startAuto();
+  }, 100);
+
 });
 /* ------------ start hero side bar ------------ */
 
